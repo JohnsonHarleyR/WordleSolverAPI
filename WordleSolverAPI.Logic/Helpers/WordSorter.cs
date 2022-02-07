@@ -50,7 +50,7 @@ namespace WordleSolverAPI.Logic
             for (int i = 0; i < 6; i++)
             {
                 // figure out the most common letter in possible answers - TODO improve this part?
-                string[] mostCommonLetters = GetMostCommonLetters(possibleWords, 5); // 3 is the sweet spot, it seems
+                string[] mostCommonLetters = GetMostCommonLetters(possibleWords, 3); // 3 is the sweet spot, it seems
                 //string mostCommonLetter = GetMostCommonLetter(endResult.PossibleWords);
 
                 // get list of words that includes that letter
@@ -65,9 +65,9 @@ namespace WordleSolverAPI.Logic
                     //newGuessWord = GetGuessWordByCompleteLetterDistribution(possibleWords);
 
                     // the below one tends to be slightly more accurate while the last one is much faster
-                    newGuessWord = GetInitialGuessWord(GetListOfWordsWithLetters(mostCommonLetters, possibleWords),
-                        possibleWords, mostCommonLetters);
-                    //newGuessWord = ChooseRandomWord(GetListOfWordsWithLetters(mostCommonLetters, possibleWords), random);
+                    //newGuessWord = GetInitialGuessWord(GetListOfWordsWithLetters(mostCommonLetters, possibleWords),
+                    //possibleWords, mostCommonLetters);
+                    newGuessWord = ChooseRandomWord(GetListOfWordsWithLetters(mostCommonLetters, possibleWords), random);
                 }
                 //else if (i == 5)
                 //{

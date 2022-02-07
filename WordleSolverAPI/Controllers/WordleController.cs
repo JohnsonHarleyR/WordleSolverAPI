@@ -101,5 +101,11 @@ namespace WordleSolverAPI.Controllers
             return new JsonResult(WordSorter.GetUserWordsNotIncluded());
         }
 
+        [HttpGet]
+        public ActionResult AnalyzeFailedPositionFrequencies()
+        {
+            return new JsonResult(FailAnalyzer.AnalyzeFailedPositionLetters());
+        }
+
     }
 }
