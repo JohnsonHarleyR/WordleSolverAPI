@@ -8,6 +8,28 @@ namespace WordleSolverAPI.Logic
 {
     public static class FailAnalyzer
     {
+        public static List<string> GetFailingWords(int startIndex, int howMany)
+        {
+            List<string> allWords = WordSorter.GetAllWords();
+            int endIndex = startIndex + howMany;
+            if (endIndex >= allWords.Count)
+            {
+                endIndex = allWords.Count - 1;
+            }
+
+            List<string> failedWord = new List<string>();
+            for (int i = startIndex; i <= endIndex; i++)
+            {
+                string word = allWords[i];
+                WordleGuesses result = WordSorter.GuessWordleSolution(word);
+                if (!result.DidWin)
+                {
+                    failedWord.Add(result.CorrectAnswer);
+                }
+            }
+            return failedWord;
+        }
+
         public static List<PositionLetterFrequencies> AnalyzeFailedPositionLetters()
         {
             List<string> failedWords = GetFailedWords();
@@ -100,8 +122,8 @@ namespace WordleSolverAPI.Logic
         public static List<string> GetFailedWords()
         {
             //string dictionaryPath = $".\\files\\word-list.txt";
-            //string dictionaryPath = $".\\files\\failed-words.txt";
             string dictionaryPath = $".\\files\\failed-words.txt";
+            //string dictionaryPath = $".\\files\\failed-words2.txt";
 
             string word;
             List<string> wordList = new List<string>();

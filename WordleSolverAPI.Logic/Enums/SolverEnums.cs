@@ -6,4 +6,16 @@
         WrongPosition,
         Incorrect
     }
+
+    public enum StartMode
+    {
+        Guess,
+        Strict
+    }
+
+    public enum SolveMode
+    {
+        Normal,
+        Turbo
+    }
 }

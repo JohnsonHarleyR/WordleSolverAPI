@@ -86,7 +86,7 @@ namespace WordleSolverAPI.Controllers
         [HttpGet]
         public ActionResult GetFailedWords(int startIndex, int howMany)
         {
-            return new JsonResult(WordSorter.GetFailingWords(startIndex, howMany));
+            return new JsonResult(FailAnalyzer.GetFailingWords(startIndex, howMany));
         }
 
         [HttpGet]

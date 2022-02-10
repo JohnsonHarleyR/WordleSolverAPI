@@ -13,30 +13,12 @@ namespace WordleSolverAPI.Logic
                                                             "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v",
                                                             "w", "x", "y", "z"};
 
-        public static List<string> GetFailingWords(int startIndex, int howMany)
-        {
-            List<string> allWords = GetAllWords();
-            int endIndex = startIndex + howMany;
-            if (endIndex >= allWords.Count)
-            {
-                endIndex = allWords.Count - 1;
-            }
 
-            List<string> failedWord = new List<string>();
-            for (int i = startIndex; i <= endIndex; i++)
-            {
-                string word = allWords[i];
-                WordleGuesses result = GuessWordleSolution(word);
-                if (!result.DidWin)
-                {
-                    failedWord.Add(result.CorrectAnswer);
-                }
-            }
-            return failedWord;
-        }
         public static WordleGuesses GuessWordleSolution(string correctAnswer)
         {
             DateTime beginningTime = DateTime.Now;
+            StartMode startMode = StartMode.Strict;
+            SolveMode solveMode = SolveMode.Normal;
 
             Random random = new Random();
             WordleGuesses endResult = new WordleGuesses();
@@ -50,39 +32,76 @@ namespace WordleSolverAPI.Logic
             for (int i = 0; i < 6; i++)
             {
                 // figure out the most common letter in possible answers - TODO improve this part?
-                string[] mostCommonLetters = GetMostCommonLetters(possibleWords, 3); // 3 is the sweet spot, it seems
-                //string mostCommonLetter = GetMostCommonLetter(endResult.PossibleWords);
+                string[] mostCommonLetters;
+                if (startMode == StartMode.Guess)
+                {
+                    mostCommonLetters = GetMostCommonLetters(possibleWords, 3); // 3 is the sweet spot, it seems
+                }
+                else
+                {
+                    mostCommonLetters = GetMostCommonLetters(possibleWords, 5); // 3 is the sweet spot, it seems
+                }
 
-                // get list of words that includes that letter
-                //string newGuessWord = ChooseRandomWord(GetListOfWordsWithLetters(mostCommonLetters, endResult.PossibleWords), random);
-                //string newGuessWord = ChooseRandomWord(GetListOfWordsWithLetter(mostCommonLetter, endResult.PossibleWords), random);
+                // temporary - add possible word count to solution if halfway through
+                if (i == 3)
+                {
+                    endResult.RemainingPossibleAt3 = possibleWords.Count;
+                }
 
                 string newGuessWord;
                 if (i == 0)
                 {
-                    //List<string> wordsWithCommonLetters = GetListOfWordsWithLetters(mostCommonLetters, possibleWords);
-                    //newGuessWord = FindMostProbableWord(wordsWithCommonLetters);
-                    //newGuessWord = GetGuessWordByCompleteLetterDistribution(possibleWords);
 
                     // the below one tends to be slightly more accurate while the last one is much faster
-                    //newGuessWord = GetInitialGuessWord(GetListOfWordsWithLetters(mostCommonLetters, possibleWords),
-                    //possibleWords, mostCommonLetters);
-                    newGuessWord = ChooseRandomWord(GetListOfWordsWithLetters(mostCommonLetters, possibleWords), random);
+                    if (startMode == StartMode.Guess)
+                    {
+                        newGuessWord = ChooseRandomWord(GetListOfWordsWithLetters(mostCommonLetters, possibleWords), random);
+                    }
+                    else
+                    {
+                        newGuessWord = GetInitialGuessWord(GetListOfWordsWithLetters(mostCommonLetters, possibleWords),
+                        possibleWords, mostCommonLetters);
+                    }
+
+
                 }
-                //else if (i == 5)
-                //{
-                //    List<string> allWords = GetAllWords();
-                //    newGuessWord = FindMostProbableWordCompareAll(possibleWords, allWords);
-                //}
                 else
                 {
-                    WordGuess lastGuess = endResult.Guesses[i - 1];
-                    //LetterPosition[] lastResults = endResult.Guesses[i - 1].Result;
-                    //newGuessWord = GetProbableWordFromUnknownLetters(lastResults, possibleWords);
-                    newGuessWord = GetGuessWordByLetterDistribution(possibleWords, lastGuess);
-                    if (correctAnswer != "error" && newGuessWord == "error")
+                    // change the mode under certain circumstances
+                    if ((i == 3 && possibleWords.Count > 10) ||
+                        (i > 3 && possibleWords.Count > i))
                     {
-                        hasError = true;
+                        solveMode = SolveMode.Turbo;
+                    }
+                    else
+                    {
+                        solveMode = SolveMode.Normal;
+                    }
+
+                    WordGuess lastGuess = endResult.Guesses[i - 1];
+
+                    // guess differently depending on solving mode
+                    if (solveMode == SolveMode.Normal)
+                    {
+                        newGuessWord = GetGuessWordByLetterDistribution(possibleWords, lastGuess);
+                        if (correctAnswer != "error" && newGuessWord == "error")
+                        {
+                            hasError = true;
+                        }
+                    }
+                    else if (solveMode == SolveMode.Turbo) // This is where failing words will become accounted for
+                    {
+                        newGuessWord = GetGuessWordByLetterDistribution(possibleWords, lastGuess);
+                        if (correctAnswer != "error" && newGuessWord == "error")
+                        {
+                            hasError = true;
+                        }
+                    }
+                    else
+                    {
+                        throw new Exception(
+                            "That solving mode is not accounted for " +
+                            "with any logic in order to guess a new word.");
                     }
 
                     //List<LetterPosition> lastCorrectLetters = GetCorrectLetters(endResult.Guesses[i - 1].Result);
@@ -121,6 +140,8 @@ namespace WordleSolverAPI.Logic
 
             int correctAnswerCount = 0;
             int guessesCount = 0;
+            int remainingAt3SuccessCount = 0;
+            int remainingAt3FailCount = 0;
             double millisecondsCount = 0;
             List<string> failedWords = new List<string>();
             List<string> errorWords = new List<string>();
@@ -134,10 +155,12 @@ namespace WordleSolverAPI.Logic
                 {
                     correctAnswerCount++;
                     guessesCount += result.GuessCount;
+                    remainingAt3SuccessCount += result.RemainingPossibleAt3;
                 }
                 else
                 {
                     failedWords.Add(result.CorrectAnswer);
+                    remainingAt3FailCount += result.RemainingPossibleAt3;
                 }
 
                 if (result.HasError)
@@ -156,6 +179,8 @@ namespace WordleSolverAPI.Logic
                 CorrectAnswerRate = (double)correctAnswerCount / timesToRun,
                 AverageGuessesToWin = (double)guessesCount / timesToRun,
                 AverageMilliseconds = millisecondsCount / timesToRun,
+                AverageRemainingAt3Success = (double)remainingAt3SuccessCount / (timesToRun - failedWords.Count),
+                AverageRemainingAt3Fail = (double)remainingAt3FailCount / failedWords.Count,
                 FailedWords = failedWords,
                 ErrorWords = errorWords,
                 CorrectAnswerRateNoErrors = (double)(correctAnswerCount - errorWords.Count) /

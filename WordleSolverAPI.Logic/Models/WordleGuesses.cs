@@ -10,6 +10,7 @@ namespace WordleSolverAPI.Logic.Models
         public int GuessCount { get; set; }
         public TimeSpan TimeToSolve { get; set; }
         public List<WordGuess> Guesses { get; set; }
+        public int RemainingPossibleAt3 { get; set; }
         public bool IsFinished { get; set; }
         public bool HasError { get; set; }
 

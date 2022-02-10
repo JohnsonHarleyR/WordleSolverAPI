@@ -7,6 +7,8 @@ namespace WordleSolverAPI.Logic.Models
         public double CorrectAnswerRate { get; set; }
         public double AverageGuessesToWin { get; set; }
         public double AverageMilliseconds { get; set; }
+        public double AverageRemainingAt3Success { get; set; }
+        public double AverageRemainingAt3Fail { get; set; }
         public List<string> FailedWords { get; set; }
         public List<string> ErrorWords { get; set; }
         public double CorrectAnswerRateNoErrors { get; set; }
