@@ -22,6 +22,7 @@ namespace WordleSolverAPI.Logic
             WordleGuesses endResult = new WordleGuesses();
             endResult.CorrectAnswer = correctAnswer;
             bool hasError = false;
+            bool endsWithS = false;
 
             // first get all possible words
             List<string> possibleWords = GetAllWords();
@@ -42,10 +43,23 @@ namespace WordleSolverAPI.Logic
                     mostCommonLetters = GetMostCommonLetters(possibleWords, 5); // 3 is the sweet spot, it seems
                 }
 
-                // temporary - add possible word count to solution if halfway through
+                // add possible word count to solution if halfway through
                 if (i == 3)
                 {
                     endResult.RemainingPossibleAt3 = possibleWords.Count;
+                }
+                else if (i == 1) // check if it ends with S! right after first guess!
+                {
+                    // NOTE: with current logic, the first guess should end with s.
+                    WordGuess lastGuess = endResult.Guesses[0];
+                    if (lastGuess.Result[lastGuess.Result.Length - 1].Status == LetterStatus.Correct)
+                    {
+                        endsWithS = true;
+                    }
+                    else
+                    {
+                        endsWithS = false;
+                    }
                 }
 
                 string newGuessWord;
@@ -91,6 +105,29 @@ namespace WordleSolverAPI.Logic
                     }
                     else if (solveMode == SolveMode.Turbo) // This is where failing words will become accounted for
                     {
+                        List<string> concernedWords = possibleWords;
+
+                        // if the word does not end in s, then do some further narrowing down
+                        if (!endsWithS)
+                        {
+                            bool canHaveE = FailAnalyzer.CanHaveEIn3(possibleWords);
+                            if (canHaveE)
+                            {
+                                int eIn3Count = concernedWords.Where(word =>
+                                    word.Substring(3, 1) == "e").ToList().Count;
+                                double chanceOfEIn3 = FailAnalyzer.GetPercent(eIn3Count, possibleWords.Count);
+                                if (chanceOfEIn3 < 100 && chanceOfEIn3 > 50)
+                                {
+                                    concernedWords = concernedWords.Where(word =>
+                                    word.Substring(3, 1) == "e").ToList();
+                                }
+                                else if (chanceOfEIn3 > 0 && chanceOfEIn3 <= 50)
+                                {
+                                    concernedWords = concernedWords.Where(word =>
+                                    word.Substring(3, 1) != "e").ToList();
+                                }
+                            }
+                        }
                         //bool allWordsAreTies = FailAnalyzer.AllWordsAreTies(possibleWords, 1);
                         //failingWords = FailAnalyzer.GetPossibleFailedWords(possibleWords, failingWords);
 
@@ -153,7 +190,7 @@ namespace WordleSolverAPI.Logic
                         //    newGuessWord = GetGuessWordByLetterDistribution(concernedList, lastGuess);
                         //}
 
-                        newGuessWord = GetGuessWordByLetterDistribution(possibleWords, lastGuess);
+                        newGuessWord = GetGuessWordByLetterDistribution(concernedWords, lastGuess);
                         if (correctAnswer != "error" && newGuessWord == "error")
                         {
                             hasError = true;
@@ -210,6 +247,12 @@ namespace WordleSolverAPI.Logic
                  word.Substring(4, 1) != "s").ToList();
             }
 
+            // make sure they're not requesting to run it more times than possible - fix if so
+            if (timesToRun > allWords.Count)
+            {
+                timesToRun = allWords.Count;
+            }
+
             int correctAnswerCount = 0;
             int guessesCount = 0;
             int remainingAt3SuccessCount = 0;
@@ -252,6 +295,10 @@ namespace WordleSolverAPI.Logic
 
                 //guessesCount += result.GuessCount;
                 millisecondsCount += result.TimeToSolve.Milliseconds;
+
+                // remove word from possible words and failing words
+                allWords = allWords.Where(word => word != correctAnswer).ToList();
+                allFailingWords = allFailingWords.Where(word => word != correctAnswer).ToList();
             }
 
             failedWords.Sort();

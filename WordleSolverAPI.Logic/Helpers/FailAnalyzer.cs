@@ -130,6 +130,19 @@ namespace WordleSolverAPI.Logic
             return percentRounded;
         }
 
+        // often, failing words are due to words with e in index 3. Help eliminate these.
+        public static bool CanHaveEIn3(List<string> possibleWords)
+        {
+            foreach (var word in possibleWords)
+            {
+                if (word.Substring(3, 1) == "e")
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
         public static bool HasDoubleLetters(string word)
         {
             string[] doubleLettersInWord = GetDoubleLettersFromWord(word);
