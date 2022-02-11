@@ -11,6 +11,8 @@ namespace WordleSolverAPI.Logic.Models
         public double AverageRemainingAt3Fail { get; set; }
         public List<string> FailedWords { get; set; }
         public List<string> ErrorWords { get; set; }
+        public List<string> FailedWordsNotOnFailList { get; set; }
+        public List<string> NewSuccessWords { get; set; }
         public double CorrectAnswerRateNoErrors { get; set; }
     }
 }

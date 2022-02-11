@@ -22,9 +22,9 @@ namespace WordleSolverAPI.Controllers
         }
 
         [HttpGet]
-        public ActionResult GetSolverStatistics(int timesToRun)
+        public ActionResult GetSolverStatistics(int timesToRun, bool allowWordsEndingInS)
         {
-            return new JsonResult(WordSorter.GetStatistics(timesToRun));
+            return new JsonResult(WordSorter.GetStatistics(timesToRun, allowWordsEndingInS));
         }
 
         [HttpGet]
@@ -113,5 +113,11 @@ namespace WordleSolverAPI.Controllers
             return new JsonResult(FailAnalyzer.AnalyzeFailedPositionLetters());
         }
 
+
+        [HttpGet]
+        public ActionResult GetPercentOfWordsWithPattern(string pattern, bool checkFailing)
+        {
+            return new JsonResult(WordSorter.GetPercentOfWordsWithPattern(pattern, checkFailing));
+        }
     }
 }
