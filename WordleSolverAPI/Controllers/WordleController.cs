@@ -113,11 +113,23 @@ namespace WordleSolverAPI.Controllers
             return new JsonResult(FailAnalyzer.AnalyzeFailedPositionLetters());
         }
 
+        //[HttpGet]
+        //public ActionResult GetWordsWithPattern(string pattern, bool checkFailing = false, bool includeSEnding = true)
+        //{
+        //    return new JsonResult(WordSorter.GetWordsWithPattern(pattern, checkFailing, includeSEnding));
+        //}
 
         [HttpGet]
-        public ActionResult GetPercentOfWordsWithPattern(string pattern, bool checkFailing)
+        public ActionResult GetWordsWithPatternAndAnalysis(string pattern, bool checkFailing = false, bool includeSEnding = true)
         {
-            return new JsonResult(WordSorter.GetPercentOfWordsWithPattern(pattern, checkFailing));
+            return new JsonResult(WordSorter.AnalyzePattern(pattern, checkFailing, includeSEnding));
         }
+
+
+        //[HttpGet]
+        //public ActionResult GetPercentOfWordsWithPattern(string pattern, bool checkFailing = false, bool includeSEnding = true)
+        //{
+        //    return new JsonResult(WordSorter.GetPercentOfWordsWithPattern(pattern, checkFailing, includeSEnding));
+        //}
     }
 }

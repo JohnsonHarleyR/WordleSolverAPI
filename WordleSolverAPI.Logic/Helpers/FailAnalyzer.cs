@@ -121,6 +121,47 @@ namespace WordleSolverAPI.Logic
 
         //}
 
+        public static PatternAnalysis GetPatternsByPercents(List<string> words, bool includeExamples = false)
+        {
+            List<StringPercentContainer> patternPercents = new List<StringPercentContainer>();
+
+            // determine existing patterns
+            List<string> allPatterns = new List<string>();
+            for (int i = 0; i < words.Count - 1; i++)
+            {
+                for (int n = i + 1; n < words.Count; n++)
+                {
+                    string newPattern = GetPatternStringFromWords(words[i], words[n]);
+                    if (!allPatterns.Contains(newPattern))
+                    {
+                        allPatterns.Add(newPattern);
+                    }
+                }
+            }
+
+            // once all patterns have been determined, get a percent for all of them
+            foreach (var pattern in allPatterns)
+            {
+                List<string> wordsWithPattern = MatchWordsToPattern(words, pattern, true);
+                StringPercentContainer newPercent = new StringPercentContainer()
+                {
+                    String = pattern,
+                    Percent = GetPercent(wordsWithPattern.Count, words.Count),
+                };
+                if (includeExamples)
+                {
+                    newPercent.ExampleList = wordsWithPattern;
+                }
+                patternPercents.Add(newPercent);
+            }
+
+            // return sorted patterns
+            return new PatternAnalysis()
+            {
+                FurtherPatternStatistics = patternPercents.OrderBy(p => p.Percent).Reverse().ToList()
+            };
+        }
+
         public static double GetPercent(int count, int totalCount)
         {
             double dec = (double)count / totalCount;
