@@ -27,6 +27,7 @@ namespace WordleSolverAPI.Logic
 
             // first get all possible words
             List<string> possibleWords = GetAllWords();
+            List<string> failingWords = FailAnalyzer.GetFailedWords();
 
             // guess up to 6 times to get correct answer
             for (int i = 0; i < 6; i++)
@@ -91,7 +92,92 @@ namespace WordleSolverAPI.Logic
                     }
                     else if (solveMode == SolveMode.Turbo) // This is where failing words will become accounted for
                     {
-                        newGuessWord = GetGuessWordByLetterDistribution(possibleWords, lastGuess);
+                        bool allWordsAreTies = FailAnalyzer.AllWordsAreTies(possibleWords, 1);
+                        failingWords = FailAnalyzer.GetPossibleFailedWords(possibleWords, failingWords);
+
+                        List<string> concernedList = possibleWords;
+                        double chanceOfFailingWord = FailAnalyzer.GetPercent(failingWords.Count, possibleWords.Count);
+                        if (chanceOfFailingWord > 50)
+                        {
+                            if (!allWordsAreTies)
+                            {
+                                concernedList = failingWords;
+                            }
+                        }
+
+                        int doubleLettersCount = FailAnalyzer.GetWordsWithDoubleLetters(concernedList).Count;
+                        double chanceOfDoubleLetters = FailAnalyzer.GetPercent(doubleLettersCount, concernedList.Count);
+                        if (chanceOfDoubleLetters > 50 && chanceOfDoubleLetters < 100)
+                        {
+                            concernedList = concernedList.Where(word => FailAnalyzer.HasDoubleLetters(word)).ToList();
+                        }
+                        else if (chanceOfDoubleLetters <= 50 && chanceOfDoubleLetters > 0)
+                        {
+                            concernedList = concernedList.Where(word => !FailAnalyzer.HasDoubleLetters(word)).ToList();
+                        }
+
+                        int multipleLetterCount = FailAnalyzer.GetWordsWithMultipleLetter(concernedList).Count;
+                        double chanceOfMultipleLetter = FailAnalyzer.GetPercent(multipleLetterCount, concernedList.Count);
+                        if (chanceOfMultipleLetter > 50 && chanceOfMultipleLetter < 100)
+                        {
+                            int twoMultipleLettersCount = FailAnalyzer.GetWordsWithTwoMultipleLetters(concernedList).Count;
+                            double chanceOfTwoMultipleLetters = FailAnalyzer.GetPercent(twoMultipleLettersCount, concernedList.Count);
+                            if (chanceOfTwoMultipleLetters > 50 && chanceOfTwoMultipleLetters < 100)
+                            {
+                                concernedList = concernedList.Where(word => FailAnalyzer.HasTwoMultipleLetters(word)).ToList();
+                            }
+                            else
+                            {
+                                if (chanceOfMultipleLetter < 100)
+                                {
+                                    concernedList = concernedList.Where(word => FailAnalyzer.HasMultipleLetter(word)).ToList();
+
+                                }
+                            }
+
+                        }
+                        else if (chanceOfMultipleLetter <= 50 && chanceOfMultipleLetter > 0)
+                        {
+                            concernedList = concernedList.Where(word => !FailAnalyzer.HasMultipleLetter(word)).ToList();
+                        }
+
+                        //List<string> wordsWithS = concernedList.Where(w =>
+                        //w.Substring(4, 1) == "s").ToList();
+                        //double chanceEndsWithS = FailAnalyzer.GetPercent(wordsWithS.Count, concernedList.Count);
+                        //if (chanceEndsWithS > 50 && chanceEndsWithS < 100)
+                        //{
+                        //    concernedList = concernedList.Where(w =>
+                        //w.Substring(4, 0) == "s").ToList();
+                        //}
+                        //else if (chanceEndsWithS <= 50 && chanceEndsWithS > 0)
+                        //{
+                        //    concernedList = concernedList.Where(w =>
+                        //w.Substring(4, 0) != "s").ToList();
+                        //}
+                        if (i == 5 && allWordsAreTies)
+                        {
+                            newGuessWord = ChooseRandomWord(concernedList, random);
+                        }
+                        else if (allWordsAreTies)
+                        {
+                            newGuessWord = GetGuessWordByCompleteLetterDistribution(concernedList, GetAllWords());
+                        }
+                        else
+                        {
+                            newGuessWord = GetGuessWordByLetterDistribution(concernedList, lastGuess);
+                        }
+                        //newGuessWord = GetGuessWordByLetterDistribution(concernedList, lastGuess);
+                        //if (allWordsAreTies && i == 5)
+                        //{
+                        //    newGuessWord = ChooseRandomWord(concernedList, random);
+                        //    //newGuessWord = GetGuessWordByLetterDistribution(concernedList, lastGuess);
+                        //    //newGuessWord = GetGuessWordByCompleteLetterDistribution(concernedList, GetAllWords());
+                        //}
+                        //else
+                        //{
+                        //    newGuessWord = GetGuessWordByLetterDistribution(concernedList, lastGuess);
+                        //}
+
                         if (correctAnswer != "error" && newGuessWord == "error")
                         {
                             hasError = true;
@@ -1050,6 +1136,34 @@ namespace WordleSolverAPI.Logic
                 }
             }
             return doesExist;
+        }
+
+        /// <summary>
+        /// This provides a list of all failing words in a range of words.
+        /// </summary>
+        /// <param name="startIndex"></param>
+        /// <param name="howMany"></param>
+        /// <returns></returns>
+        public static List<string> GetFailingWords(int startIndex, int howMany)
+        {
+            List<string> allWords = GetAllWords();
+            int endIndex = startIndex + howMany;
+            if (endIndex >= allWords.Count)
+            {
+                endIndex = allWords.Count - 1;
+            }
+
+            List<string> failedWord = new List<string>();
+            for (int i = startIndex; i <= endIndex; i++)
+            {
+                string word = allWords[i];
+                WordleGuesses result = GuessWordleSolution(word);
+                if (!result.DidWin)
+                {
+                    failedWord.Add(result.CorrectAnswer);
+                }
+            }
+            return failedWord;
         }
 
     }

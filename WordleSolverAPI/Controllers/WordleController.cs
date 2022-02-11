@@ -28,6 +28,12 @@ namespace WordleSolverAPI.Controllers
         }
 
         [HttpGet]
+        public ActionResult AnalyzeFailedWords()
+        {
+            return new JsonResult(FailAnalyzer.GetFailedWordAnalysis());
+        }
+
+        [HttpGet]
         public ActionResult GetWordleGuesses(string correctAnswer)
         {
             WordleGuesses result = WordSorter.GuessWordleSolution(correctAnswer);
@@ -86,7 +92,7 @@ namespace WordleSolverAPI.Controllers
         [HttpGet]
         public ActionResult GetFailedWords(int startIndex, int howMany)
         {
-            return new JsonResult(FailAnalyzer.GetFailingWords(startIndex, howMany));
+            return new JsonResult(WordSorter.GetFailingWords(startIndex, howMany));
         }
 
         [HttpGet]
