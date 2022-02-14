@@ -16,6 +16,8 @@
     public enum SolveMode
     {
         Normal,
-        Turbo
+        Turbo,
+        Pattern,
+        Letters
     }
 }

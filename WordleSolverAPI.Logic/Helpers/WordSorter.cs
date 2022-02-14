@@ -83,9 +83,11 @@ namespace WordleSolverAPI.Logic
                 {
                     // change the mode under certain circumstances
                     if ((i == 3 && possibleWords.Count > 10) ||
-                        (i > 3 && possibleWords.Count > i))
+                        (i > 3 && possibleWords.Count > 5 - i))
                     {
                         solveMode = SolveMode.Turbo;
+                        //solveMode = SolveMode.Letters;
+                        //solveMode = SolveMode.Pattern;
                     }
                     else
                     {
@@ -102,6 +104,49 @@ namespace WordleSolverAPI.Logic
                         {
                             hasError = true;
                         }
+                    }
+                    else if (solveMode == SolveMode.Pattern)
+                    {
+                        List<string> concernedWords = possibleWords;
+                        concernedWords = GetMostLikelyWordsByPatterns(concernedWords);
+
+                        newGuessWord = GetGuessWordByLetterDistribution(concernedWords, lastGuess);
+                        if (correctAnswer != "error" && newGuessWord == "error")
+                        {
+                            hasError = true;
+                        }
+
+                    }
+                    else if (solveMode == SolveMode.Letters)
+                    {
+                        string matchString = "";
+                        for (int n = 0; n < 5; n++)
+                        {
+                            string newLetter = GetMostCommonLetterInPosition(possibleWords, n);
+                            matchString += newLetter;
+                        }
+
+                        // now get a list of all the words with a match percent
+                        //List<StringPercentContainer> matchPercents = GetWordMatchPercentsWithPosition(matchString, possibleWords);
+                        List<StringPercentContainer> commonLetterMatchPercents = GetLettersMatchPercents(mostCommonLetters, possibleWords);
+                        //StringPercentContainer wMatchP = matchPercents[0];
+                        StringPercentContainer lMatchP = commonLetterMatchPercents[0];
+                        //string newG = "";
+                        //if (wMatchP.Percent > lMatchP.Percent)
+                        //{
+                        //    newG = wMatchP.String;
+                        //}
+                        //else
+                        //{
+                        //    newG = lMatchP.String;
+                        //}
+
+                        newGuessWord = lMatchP.String;
+                        if (correctAnswer != "error" && newGuessWord == "error")
+                        {
+                            hasError = true;
+                        }
+
                     }
                     else if (solveMode == SolveMode.Turbo) // This is where failing words will become accounted for
                     {
@@ -189,67 +234,6 @@ namespace WordleSolverAPI.Logic
                                 }
                             }
                         }
-                        //bool allWordsAreTies = FailAnalyzer.AllWordsAreTies(possibleWords, 1);
-                        //failingWords = FailAnalyzer.GetPossibleFailedWords(possibleWords, failingWords);
-
-                        //List<string> concernedList = possibleWords;
-                        //double chanceOfFailingWord = FailAnalyzer.GetPercent(failingWords.Count, possibleWords.Count);
-                        //if (chanceOfFailingWord > 50)
-                        //{
-                        //    if (!allWordsAreTies)
-                        //    {
-                        //        concernedList = failingWords;
-                        //    }
-                        //}
-
-                        //int doubleLettersCount = FailAnalyzer.GetWordsWithDoubleLetters(concernedList).Count;
-                        //double chanceOfDoubleLetters = FailAnalyzer.GetPercent(doubleLettersCount, concernedList.Count);
-                        //if (chanceOfDoubleLetters > 50 && chanceOfDoubleLetters < 100)
-                        //{
-                        //    concernedList = concernedList.Where(word => FailAnalyzer.HasDoubleLetters(word)).ToList();
-                        //}
-                        //else if (chanceOfDoubleLetters <= 50 && chanceOfDoubleLetters > 0)
-                        //{
-                        //    concernedList = concernedList.Where(word => !FailAnalyzer.HasDoubleLetters(word)).ToList();
-                        //}
-
-                        //int multipleLetterCount = FailAnalyzer.GetWordsWithMultipleLetter(concernedList).Count;
-                        //double chanceOfMultipleLetter = FailAnalyzer.GetPercent(multipleLetterCount, concernedList.Count);
-                        //if (chanceOfMultipleLetter > 50 && chanceOfMultipleLetter < 100)
-                        //{
-                        //    int twoMultipleLettersCount = FailAnalyzer.GetWordsWithTwoMultipleLetters(concernedList).Count;
-                        //    double chanceOfTwoMultipleLetters = FailAnalyzer.GetPercent(twoMultipleLettersCount, concernedList.Count);
-                        //    if (chanceOfTwoMultipleLetters > 50 && chanceOfTwoMultipleLetters < 100)
-                        //    {
-                        //        concernedList = concernedList.Where(word => FailAnalyzer.HasTwoMultipleLetters(word)).ToList();
-                        //    }
-                        //    else
-                        //    {
-                        //        if (chanceOfMultipleLetter < 100)
-                        //        {
-                        //            concernedList = concernedList.Where(word => FailAnalyzer.HasMultipleLetter(word)).ToList();
-
-                        //        }
-                        //    }
-
-                        //}
-                        //else if (chanceOfMultipleLetter <= 50 && chanceOfMultipleLetter > 0)
-                        //{
-                        //    concernedList = concernedList.Where(word => !FailAnalyzer.HasMultipleLetter(word)).ToList();
-                        //}
-
-                        //if (i == 5 && allWordsAreTies)
-                        //{
-                        //    newGuessWord = ChooseRandomWord(concernedList, random);
-                        //}
-                        //else if (allWordsAreTies)
-                        //{
-                        //    newGuessWord = GetGuessWordByCompleteLetterDistribution(concernedList, GetAllWords());
-                        //}
-                        //else
-                        //{
-                        //    newGuessWord = GetGuessWordByLetterDistribution(concernedList, lastGuess);
-                        //}
 
                         // if it is er or ed, check for other stuff
                         if (isEd || isEr)
@@ -334,6 +318,146 @@ namespace WordleSolverAPI.Logic
             endResult.IsFinished = true;
             endResult.HasError = hasError;
             return endResult;
+        }
+
+        public static List<StringPercentContainer> GetLettersMatchPercents(string[] letters, List<string> allWords)
+        {
+            List<StringPercentContainer> matchPercents = new List<StringPercentContainer>();
+            foreach (var word in allWords)
+            {
+                string editedWord = word;
+                int matchCount = 0;
+                for (int n = 0; n < letters.Length; n++)
+                {
+                    string letter = letters[n];
+                    for (int i = 0; i < editedWord.Length; i++)
+                    {
+                        if (editedWord.Substring(i, 1) == letter)
+                        {
+                            matchCount++;
+                            editedWord = editedWord.Remove(i, 1);
+                            break;
+                        }
+                    }
+                }
+
+                StringPercentContainer newContainer = new StringPercentContainer()
+                {
+                    String = word,
+                    Percent = FailAnalyzer.GetPercent(matchCount, 5)
+                };
+                matchPercents.Add(newContainer);
+            }
+
+            matchPercents = matchPercents.OrderBy(p => p.Percent).Reverse().ToList();
+            return matchPercents;
+        }
+
+        public static List<StringPercentContainer> GetWordMatchPercentsWithPosition(string matchWord, List<string> allWords)
+        {
+            List<StringPercentContainer> matchPercents = new List<StringPercentContainer>();
+            foreach (var word in allWords)
+            {
+                int matchCount = 0;
+                for (int i = 0; i < 5; i++)
+                {
+                    if (word.Substring(i, 1) == matchWord.Substring(i, 1))
+                    {
+                        matchCount++;
+                    }
+                }
+                StringPercentContainer newContainer = new StringPercentContainer()
+                {
+                    String = word,
+                    Percent = FailAnalyzer.GetPercent(matchCount, 5)
+                };
+                matchPercents.Add(newContainer);
+            }
+
+            matchPercents = matchPercents.OrderBy(p => p.Percent).Reverse().ToList();
+            return matchPercents;
+        }
+
+        public static List<string> GetMostLikelyWordsByPatterns(List<string> words)
+        {
+            // make a copy of the list
+            List<string> wordsCopy = new List<string>();
+            words.ForEach(word => wordsCopy.Add(word));
+
+            PatternAnalysis analysis;
+            StringPercentContainer pContainer;
+            string pattern = null;
+            double percent = 0;
+            int blanksInPattern = 0;
+
+            do
+            {
+                analysis = FailAnalyzer.GetPatternsByPercents(wordsCopy);
+                pContainer = GetPatternNotAt100Percent(analysis);
+                pattern = null;
+                percent = 0;
+                if (pContainer != null)
+                {
+                    pattern = pContainer.String;
+                    percent = pContainer.Percent;
+                }
+                blanksInPattern = CountBlanksInPatter(pattern);
+
+                if (percent > 0)
+                {
+                    wordsCopy = FailAnalyzer.MatchWordsToPattern(wordsCopy, pattern, true);
+                }
+                else
+                {
+                    break;
+                }
+            } while (blanksInPattern > 0);
+
+            return wordsCopy;
+        }
+
+        public static StringPercentContainer GetPatternNotAt100Percent(PatternAnalysis analysis)
+        {
+            if (analysis.FurtherPatternStatistics == null ||
+                analysis.FurtherPatternStatistics.Count == 0)
+            {
+                return null;
+            }
+            else
+            {
+                int count = 0;
+                do
+                {
+                    if (analysis.FurtherPatternStatistics[count].Percent != 100)
+                    {
+                        return analysis.FurtherPatternStatistics[count];
+                    }
+                    else
+                    {
+                        count++;
+                    }
+                } while (count < analysis.FurtherPatternStatistics.Count);
+
+                return null;
+            }
+        }
+
+        private static int CountBlanksInPatter(string pattern)
+        {
+            if (pattern == null)
+            {
+                return 0;
+            }
+
+            int count = 0;
+            for (int i = 0; i < pattern.Length; i++)
+            {
+                if (pattern.Substring(i, 1) == "_")
+                {
+                    count++;
+                }
+            }
+            return count;
         }
 
         public static SolverStatistics GetStatistics(int timesToRun, bool allowWordsEndingInS = true)
@@ -1263,9 +1387,9 @@ namespace WordleSolverAPI.Logic
             return letters;
         }
 
-        public static string GetMostCommonLetterNotInPosition(List<string> words, List<LetterPosition> notPositions)
+        public static string GetMostCommonLetterInPosition(List<string> words, int position)
         {
-            List<LetterCount> countsByHighest = GetLetterCountsInOrderNotInPositions(words, notPositions);
+            List<LetterCount> countsByHighest = GetLetterCountsInOrderInPosition(words, position);
             LetterCount highestCount = countsByHighest[0];
             return highestCount.Letter;
         }
@@ -1327,6 +1451,35 @@ namespace WordleSolverAPI.Logic
                                 count++;
                             }
                         }
+                    }
+                }
+
+                letterCounts.Add(new LetterCount()
+                {
+                    Letter = letter,
+                    Count = count
+                });
+
+            }
+
+            return letterCounts.OrderBy(w => w.Count).Reverse().ToList();
+        }
+
+        // count how many times each letter appears in a dictionary of 5 letter words - sort them by most to least
+        public static List<LetterCount> GetLetterCountsInOrderInPosition(List<string> words, int position)
+        {
+            List<LetterCount> letterCounts = new List<LetterCount>();
+
+            for (int i = 0; i < allLetters.Length; i++)
+            {
+                string letter = allLetters[i];
+                int count = 0;
+
+                foreach (var word in words)
+                {
+                    if (word.Substring(position, 1) == letter)
+                    {
+                        count++;
                     }
                 }
 
