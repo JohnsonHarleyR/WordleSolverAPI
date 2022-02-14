@@ -131,5 +131,23 @@ namespace WordleSolverAPI.Controllers
         //{
         //    return new JsonResult(WordSorter.GetPercentOfWordsWithPattern(pattern, checkFailing, includeSEnding));
         //}
+
+        [HttpGet]
+        public ActionResult GetFailinggWordsThatMatchPatternFromFailedList(string pattern)
+        {
+            return new JsonResult(FailAnalyzer.GetFailinggWordsThatMatchPatternFromFailedList(pattern));
+        }
+
+        [HttpGet]
+        public ActionResult GetPercentOfWordsWithPatternNowPassing(string pattern)
+        {
+            return new JsonResult(FailAnalyzer.GetPercentOfWordsWithPatternNowPassing(pattern));
+        }
+
+        [HttpGet]
+        public ActionResult GetWordsWithPatternNowPassing(string pattern)
+        {
+            return new JsonResult(FailAnalyzer.GetWordsWithPatternNowPassing(pattern));
+        }
     }
 }

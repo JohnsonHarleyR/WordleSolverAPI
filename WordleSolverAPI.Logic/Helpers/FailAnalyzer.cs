@@ -116,10 +116,59 @@ namespace WordleSolverAPI.Logic
             return statistics;
         }
 
-        //private static PercentsByListCategory GetPercentWithDoubleLetters(List<string> words)
-        //{
+        public static List<string> GetFailinggWordsThatMatchPatternFromFailedList(string pattern)
+        {
+            List<string> allFailedWords = GetFailedWords();
+            List<string> matchingWords = MatchWordsToPattern(allFailedWords, pattern, true);
+            List<string> finalFailList = new List<string>();
 
-        //}
+            // now attempt to solve matching words to see any that are still failing
+            foreach (var word in matchingWords)
+            {
+                WordleGuesses solution = WordSorter.GuessWordleSolution(word);
+                if (solution.DidWin == false)
+                {
+                    finalFailList.Add(word);
+                }
+            }
+            return finalFailList;
+        }
+
+        public static double GetPercentOfWordsWithPatternNowPassing(string pattern)
+        {
+            List<string> allFailedWords = GetFailedWords();
+            List<string> matchingWords = MatchWordsToPattern(allFailedWords, pattern, true);
+            List<string> finalPassList = new List<string>();
+
+            // now attempt to solve matching words to see any that are still failing
+            foreach (var word in matchingWords)
+            {
+                WordleGuesses solution = WordSorter.GuessWordleSolution(word);
+                if (solution.DidWin)
+                {
+                    finalPassList.Add(word);
+                }
+            }
+            return GetPercent(finalPassList.Count, matchingWords.Count);
+        }
+
+        public static List<string> GetWordsWithPatternNowPassing(string pattern)
+        {
+            List<string> allFailedWords = GetFailedWords();
+            List<string> matchingWords = MatchWordsToPattern(allFailedWords, pattern, true);
+            List<string> finalPassList = new List<string>();
+
+            // now attempt to solve matching words to see any that are still failing
+            foreach (var word in matchingWords)
+            {
+                WordleGuesses solution = WordSorter.GuessWordleSolution(word);
+                if (solution.DidWin)
+                {
+                    finalPassList.Add(word);
+                }
+            }
+            return finalPassList;
+        }
 
         public static PatternAnalysis GetPatternsByPercents(List<string> words, bool includeExamples = false)
         {
