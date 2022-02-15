@@ -152,7 +152,7 @@ namespace WordleSolverAPI.Logic
             return GetPercent(finalPassList.Count, matchingWords.Count);
         }
 
-        public static List<string> GetWordsWithPatternNowPassing(string pattern)
+        public static StringPercentContainer GetWordsWithPatternNowPassing(string pattern)
         {
             List<string> allFailedWords = GetFailedWords();
             List<string> matchingWords = MatchWordsToPattern(allFailedWords, pattern, true);
@@ -167,7 +167,15 @@ namespace WordleSolverAPI.Logic
                     finalPassList.Add(word);
                 }
             }
-            return finalPassList;
+
+            StringPercentContainer result = new StringPercentContainer()
+            {
+                String = "now passing",
+                Percent = GetPercent(finalPassList.Count, matchingWords.Count),
+                ExampleList = finalPassList
+            };
+
+            return result;
         }
 
         public static PatternAnalysis GetPatternsByPercents(List<string> words, bool includeExamples = false)
@@ -516,6 +524,31 @@ namespace WordleSolverAPI.Logic
                 }
             }
             return patternString;
+        }
+
+        public static StringPercentContainer GetWordsWithPatternNowFailing(string pattern)
+        {
+            List<string> newFails = new List<string>();
+            List<string> matchingWords = FailAnalyzer.MatchWordsToPattern(WordSorter.GetAllWords(), pattern, true);
+            List<string> failedWordList = GetFailedWords();
+
+            foreach (var word in matchingWords)
+            {
+                WordleGuesses wordResult = WordSorter.GuessWordleSolution(word);
+                if (!wordResult.DidWin && !failedWordList.Contains(word))
+                {
+                    newFails.Add(word);
+                }
+            }
+
+            StringPercentContainer result = new StringPercentContainer()
+            {
+                String = "now failing",
+                Percent = GetPercent(newFails.Count, matchingWords.Count),
+                ExampleList = newFails
+            };
+
+            return result;
         }
 
         /// <summary>

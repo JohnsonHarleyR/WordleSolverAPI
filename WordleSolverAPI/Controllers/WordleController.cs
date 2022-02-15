@@ -149,5 +149,37 @@ namespace WordleSolverAPI.Controllers
         {
             return new JsonResult(FailAnalyzer.GetWordsWithPatternNowPassing(pattern));
         }
+
+        [HttpGet]
+        public ActionResult GetWordsWithPatternNowFailing(string pattern)
+        {
+            return new JsonResult(FailAnalyzer.GetWordsWithPatternNowFailing(pattern));
+        }
+
+        [HttpGet]
+        public ActionResult GetPercentOfWordsWithPatternAndDoubles(string pattern, bool checkFailing = false, bool includeSEnding = true)
+        {
+            List<string> wordsMatchingPattern = WordSorter.GetWordsWithPattern(pattern, checkFailing, includeSEnding);
+            List<string> wordsWithDoubles = FailAnalyzer.GetWordsWithDoubleLetters(wordsMatchingPattern);
+            StringPercentContainer container = new StringPercentContainer()
+            {
+                String = pattern,
+                Percent = FailAnalyzer.GetPercent(wordsWithDoubles.Count, wordsMatchingPattern.Count),
+                ExampleList = wordsWithDoubles
+            };
+            return new JsonResult(container);
+        }
+
+        [HttpGet]
+        public ActionResult CountWordsWithPattern(string pattern, bool checkFailing = false)
+        {
+            return new JsonResult(WordSorter.CountWordsWithPattern(pattern, checkFailing));
+        }
+
+        [HttpGet]
+        public ActionResult GetPassFailRatesWithPattern(string pattern, bool checkFailing = false)
+        {
+            return new JsonResult(WordSorter.GetPassFailRatesForWordsWithPattern(pattern, checkFailing));
+        }
     }
 }
