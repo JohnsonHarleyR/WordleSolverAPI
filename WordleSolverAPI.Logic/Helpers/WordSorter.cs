@@ -153,7 +153,7 @@ namespace WordleSolverAPI.Logic
                         List<string> concernedWords = possibleWords;
                         bool isEd = false;
                         bool isEr = false;
-                        bool isY = false;
+                        //bool isY = false;
 
                         // if the word does not end in s, then do some further narrowing down
                         if (!endsWithS)
@@ -236,27 +236,27 @@ namespace WordleSolverAPI.Logic
                             }
                         }
 
-                        if (!isEd && !isEr && !endsWithS)
-                        {
-                            int yCount = concernedWords.Where(word =>
-                                    word.Substring(4, 1) == "y").ToList().Count;
+                        //if (!isEd && !isEr && !endsWithS)
+                        //{
+                        //    int yCount = concernedWords.Where(word =>
+                        //            word.Substring(4, 1) == "y").ToList().Count;
 
-                            if (yCount == concernedWords.Count)
-                            {
-                                isY = true;
-                            }
-                            else if (yCount > 0)
-                            {
-                                double chanceOfY = FailAnalyzer.GetPercent(yCount, concernedWords.Count);
+                        //    if (yCount == concernedWords.Count)
+                        //    {
+                        //        isY = true;
+                        //    }
+                        //    else if (yCount > 0)
+                        //    {
+                        //        double chanceOfY = FailAnalyzer.GetPercent(yCount, concernedWords.Count);
 
-                                if (chanceOfY > 50)
-                                {
-                                    concernedWords = concernedWords.Where(word =>
-                                word.Substring(4, 1) == "y").ToList();
-                                    isY = true;
-                                }
-                            }
-                        }
+                        //        if (chanceOfY > 50)
+                        //        {
+                        //            concernedWords = concernedWords.Where(word =>
+                        //        word.Substring(4, 1) == "y").ToList();
+                        //            isY = true;
+                        //        }
+                        //    }
+                        //}
 
                         // if it is er or ed, check for other stuff
                         if (isEd || isEr)
@@ -299,41 +299,41 @@ namespace WordleSolverAPI.Logic
                                 concernedWords = wordsThatApply;
                             }
                         }
-                        else if (isY)
-                        {
-                            // 73.33% of failing words ending in y have double letters
-                            int totalWords = concernedWords.Count;
-                            List<string> wordsWithDoubles = FailAnalyzer.GetWordsWithDoubleLetters(concernedWords);
-                            double yDoublePercent = FailAnalyzer.GetPercent(wordsWithDoubles.Count, totalWords);
-                            if (yDoublePercent != 0 && yDoublePercent < 100)
-                            {
-                                if (yDoublePercent >= 50)
-                                {
-                                    concernedWords = wordsWithDoubles;
-                                }
-                            }
-                        }
+                        //else if (isY)
+                        //{
+                        //    // 73.33% of failing words ending in y have double letters
+                        //    int totalWords = concernedWords.Count;
+                        //    List<string> wordsWithDoubles = FailAnalyzer.GetWordsWithDoubleLetters(concernedWords);
+                        //    double yDoublePercent = FailAnalyzer.GetPercent(wordsWithDoubles.Count, totalWords);
+                        //    if (yDoublePercent != 0 && yDoublePercent < 100)
+                        //    {
+                        //        if (yDoublePercent >= 50)
+                        //        {
+                        //            concernedWords = wordsWithDoubles;
+                        //        }
+                        //    }
+                        //}
 
                         // only 12% of failing words ending in s have double letters
+                        newGuessWord = GetGuessWordByLetterDistribution(concernedWords, lastGuess);
+                        //if (concernedWords.Count > 1 && FailAnalyzer.AllWordsAreTies(concernedWords, 1))
+                        //{
+                        //    int failedCount = concernedWords.Where(word => failingWords.Contains(word)).ToList().Count;
+                        //    double failedPercent = FailAnalyzer.GetPercent(failedCount, possibleWords.Count);
+                        //    if (failedPercent >= 50)
+                        //    {
+                        //        newGuessWord = GetGuessWordByCompleteLetterDistribution(concernedWords, failingWords);
+                        //    }
+                        //    else
+                        //    {
+                        //        newGuessWord = GetGuessWordByCompleteLetterDistribution(concernedWords, GetAllWords());
+                        //    }
 
-                        if (concernedWords.Count > 1 && FailAnalyzer.AllWordsAreTies(concernedWords, 1))
-                        {
-                            int failedCount = concernedWords.Where(word => failingWords.Contains(word)).ToList().Count;
-                            double failedPercent = FailAnalyzer.GetPercent(failedCount, possibleWords.Count);
-                            if (failedPercent >= 50)
-                            {
-                                newGuessWord = GetGuessWordByCompleteLetterDistribution(concernedWords, failingWords);
-                            }
-                            else
-                            {
-                                newGuessWord = GetGuessWordByCompleteLetterDistribution(concernedWords, GetAllWords());
-                            }
-
-                        }
-                        else
-                        {
-                            newGuessWord = GetGuessWordByLetterDistribution(concernedWords, lastGuess);
-                        }
+                        //}
+                        //else
+                        //{
+                        //    newGuessWord = GetGuessWordByLetterDistribution(concernedWords, lastGuess);
+                        //}
 
                         if (correctAnswer != "error" && newGuessWord == "error")
                         {

@@ -171,7 +171,8 @@ namespace WordleSolverAPI.Logic
             StringPercentContainer result = new StringPercentContainer()
             {
                 String = "now passing",
-                Percent = GetPercent(finalPassList.Count, matchingWords.Count),
+                Percent = (double)finalPassList.Count,
+                //Percent = GetPercent(finalPassList.Count, matchingWords.Count),
                 ExampleList = finalPassList
             };
 
@@ -544,7 +545,8 @@ namespace WordleSolverAPI.Logic
             StringPercentContainer result = new StringPercentContainer()
             {
                 String = "now failing",
-                Percent = GetPercent(newFails.Count, matchingWords.Count),
+                Percent = (double)newFails.Count,
+                //Percent = GetPercent(newFails.Count, matchingWords.Count),
                 ExampleList = newFails
             };
 
