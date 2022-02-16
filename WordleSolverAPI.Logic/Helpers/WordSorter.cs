@@ -1426,7 +1426,7 @@ namespace WordleSolverAPI.Logic
         public static List<string> GetAllUserGuessWords()
         {
             //string dictionaryPath = $".\\files\\word-list.txt";
-            string dictionaryPath = $".\\files\\user-guess-list.txt";
+            string dictionaryPath = $".\\files\\wordle-official-common.txt";
 
             string word;
             List<string> wordList = new List<string>();
