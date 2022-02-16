@@ -36,7 +36,7 @@ namespace WordleSolverAPI.Controllers
         [HttpGet]
         public ActionResult GetWordleGuesses(string correctAnswer)
         {
-            WordleGuesses result = WordSorter.GuessWordleSolution(correctAnswer);
+            WordleGuesses result = WordSorter.GuessWordleSolution(correctAnswer.Trim().ToLower());
 
             return new JsonResult(result);
         }
@@ -180,6 +180,12 @@ namespace WordleSolverAPI.Controllers
         public ActionResult GetPassFailRatesWithPattern(string pattern, bool checkFailing = false)
         {
             return new JsonResult(WordSorter.GetPassFailRatesForWordsWithPattern(pattern, checkFailing));
+        }
+
+        [HttpGet]
+        public ActionResult GetScrabbleWordsNotInWordleList()
+        {
+            return new JsonResult(WordSorter.GetWordsNotInSecondList());
         }
     }
 }

@@ -25,7 +25,8 @@
     {
         Suggested,
         Full,
-        Scrabble,
-        Wordle
+        Wordle,
+        WordleCommon,
+        Scrabble
     }
 }

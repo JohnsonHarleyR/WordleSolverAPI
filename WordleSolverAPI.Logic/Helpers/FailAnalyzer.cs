@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using WordleSolverAPI.Logic.Enums;
 using WordleSolverAPI.Logic.Models;
 
 namespace WordleSolverAPI.Logic
@@ -12,11 +13,27 @@ namespace WordleSolverAPI.Logic
         /// Takes a list of words that are failing by the original algorithm, in order to analyze ways to improve it.
         /// </summary>
         /// <returns></returns>
-        public static List<string> GetFailedWords()
+        public static List<string> GetFailedWords(WordListType listType = WordListType.Scrabble)
         {
             //string dictionaryPath = $".\\files\\word-list.txt";
-            string dictionaryPath = $".\\files\\failed-words.txt";
-            //string dictionaryPath = $".\\files\\failed-words2.txt";
+            string dictionaryPath;
+
+            switch (listType)
+            {
+                default:
+                case WordListType.Scrabble:
+                    dictionaryPath = $".\\files\\failed-words-scrabble.txt";
+                    break;
+                case WordListType.Wordle:
+                    dictionaryPath = $".\\files\\failed-words-wordle.txt";
+                    break;
+                case WordListType.Suggested:
+                    dictionaryPath = $".\\files\\failed-words.txt";
+                    break;
+                case WordListType.Full:
+                    dictionaryPath = $".\\files\\failed-words.txt";
+                    break;
+            }
 
             string word;
             List<string> wordList = new List<string>();
@@ -28,6 +45,7 @@ namespace WordleSolverAPI.Logic
 
                 while (word != null)
                 {
+                    word = word.Trim().ToLower();
                     wordList.Add(word);
                     word = sr.ReadLine();
                 }

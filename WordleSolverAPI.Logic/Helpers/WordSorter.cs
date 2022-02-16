@@ -81,18 +81,19 @@ namespace WordleSolverAPI.Logic
                 }
                 else
                 {
-                    // change the mode under certain circumstances
-                    if ((i == 3 && possibleWords.Count > 10) ||
-                        (i > 3 && possibleWords.Count > 5 - i))
-                    {
-                        solveMode = SolveMode.Turbo;
-                        //solveMode = SolveMode.Letters;
-                        //solveMode = SolveMode.Pattern;
-                    }
-                    else
-                    {
-                        solveMode = SolveMode.Normal;
-                    }
+                    solveMode = SolveMode.Normal;
+                    //// change the mode under certain circumstances
+                    //if ((i == 3 && possibleWords.Count > 10) ||
+                    //    (i > 3 && possibleWords.Count > 5 - i))
+                    //{
+                    //    solveMode = SolveMode.Turbo;
+                    //    //solveMode = SolveMode.Letters;
+                    //    //solveMode = SolveMode.Pattern;
+                    //}
+                    //else
+                    //{
+                    //    solveMode = SolveMode.Normal;
+                    //}
 
                     WordGuess lastGuess = endResult.Guesses[i - 1];
 
@@ -1386,13 +1387,19 @@ namespace WordleSolverAPI.Logic
             return frequencies.OrderBy(l => l.Count).Reverse().ToList();
         }
 
-        public static List<string> GetAllWords(WordListType listType = WordListType.Suggested)
+        public static List<string> GetAllWords(WordListType listType = WordListType.Scrabble)
         {
             //string dictionaryPath = $".\\files\\word-list.txt";
             string dictionaryPath;
             switch (listType)
             {
                 default:
+                case WordListType.Scrabble:
+                    dictionaryPath = $".\\files\\word-list-scrabble.txt";
+                    break;
+                case WordListType.Wordle:
+                    dictionaryPath = $".\\files\\wordle-official-all.txt";
+                    break;
                 case WordListType.Suggested:
                     dictionaryPath = $".\\files\\word-list-suggested.txt";
                     break;
@@ -1411,6 +1418,7 @@ namespace WordleSolverAPI.Logic
 
                 while (word != null)
                 {
+                    word = word.Trim().ToLower();
                     wordList.Add(word);
                     word = sr.ReadLine();
                 }
@@ -1643,7 +1651,7 @@ namespace WordleSolverAPI.Logic
         /// <returns></returns>
         public static List<string> GetFailingWords(int startIndex, int howMany)
         {
-            List<string> allWords = GetAllWords();
+            List<string> allWords = GetAllWords(WordListType.Scrabble);
             int endIndex = startIndex + howMany;
             if (endIndex >= allWords.Count)
             {
@@ -1661,6 +1669,22 @@ namespace WordleSolverAPI.Logic
                 }
             }
             return failedWord;
+        }
+
+        public static List<string> GetWordsNotInSecondList(WordListType list1Type = WordListType.Scrabble, WordListType list2Type = WordListType.Wordle)
+        {
+            List<string> list1 = GetAllWords(list1Type);
+            List<string> list2 = GetAllWords(list2Type);
+            List<string> notIncluded = new List<string>();
+
+            foreach (var word in list1)
+            {
+                if (!list2.Contains(word))
+                {
+                    notIncluded.Add(word);
+                }
+            }
+            return notIncluded;
         }
 
     }
