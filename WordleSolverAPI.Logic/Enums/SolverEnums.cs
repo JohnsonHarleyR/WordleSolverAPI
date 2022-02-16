@@ -23,8 +23,9 @@
 
     public enum WordListType
     {
-        Contest,
+        Suggested,
         Full,
+        Scrabble,
         Wordle
     }
 }

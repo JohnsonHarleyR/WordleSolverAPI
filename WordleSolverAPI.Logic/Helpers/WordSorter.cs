@@ -1386,18 +1386,18 @@ namespace WordleSolverAPI.Logic
             return frequencies.OrderBy(l => l.Count).Reverse().ToList();
         }
 
-        public static List<string> GetAllWords(WordListType listType = WordListType.Contest)
+        public static List<string> GetAllWords(WordListType listType = WordListType.Suggested)
         {
             //string dictionaryPath = $".\\files\\word-list.txt";
             string dictionaryPath;
             switch (listType)
             {
                 default:
-                case WordListType.Contest:
-                    dictionaryPath = $".\\files\\word-list-final.txt";
+                case WordListType.Suggested:
+                    dictionaryPath = $".\\files\\word-list-suggested.txt";
                     break;
                 case WordListType.Full:
-                    dictionaryPath = $".\\files\\word-list.txt";
+                    dictionaryPath = $".\\files\\word-list-full.txt";
                     break;
             }
 
