@@ -20,4 +20,11 @@
         Pattern,
         Letters
     }
+
+    public enum WordListType
+    {
+        Contest,
+        Full,
+        Wordle
+    }
 }

@@ -1386,10 +1386,20 @@ namespace WordleSolverAPI.Logic
             return frequencies.OrderBy(l => l.Count).Reverse().ToList();
         }
 
-        public static List<string> GetAllWords()
+        public static List<string> GetAllWords(WordListType listType = WordListType.Contest)
         {
             //string dictionaryPath = $".\\files\\word-list.txt";
-            string dictionaryPath = $".\\files\\word-list-final.txt";
+            string dictionaryPath;
+            switch (listType)
+            {
+                default:
+                case WordListType.Contest:
+                    dictionaryPath = $".\\files\\word-list-final.txt";
+                    break;
+                case WordListType.Full:
+                    dictionaryPath = $".\\files\\word-list.txt";
+                    break;
+            }
 
             string word;
             List<string> wordList = new List<string>();
@@ -1611,7 +1621,7 @@ namespace WordleSolverAPI.Logic
 
         public static bool DoesWordExist(string word)
         {
-            List<string> words = GetAllWords();
+            List<string> words = GetAllWords(WordListType.Full);
             bool doesExist = false;
 
             foreach (var w in words)
