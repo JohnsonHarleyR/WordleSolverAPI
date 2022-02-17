@@ -1,0 +1,54 @@
+Failing word stats
+(84.26% of failed words will have e in pos 4 or/and s in pos 5)
+(21.49% have both those letters)
+
+____s: 63.81%
+	___es: 33.68
+	_a__s: 30.58
+	_o__s: 22.9%
+	_i__s: 14.33%
+	__r_s: 14.33%
+	_e__s: 13.88%
+	_a_es: 13.28%
+	b___s: 12.7%
+	c___s: 11.52%
+	__l_s: 10.64%
+	f___s: 10.04%
+
+___e_: 41.94%
+	___es: 51.24%
+	_a_e_: 46.74%
+	___ed: 24.04%
+	___er: 23.37%
+	_o_e_: 20.67%
+	_a_es: 20.22%
+	_i_e_: 20%
+	_a_ed: 13.48%
+	c__e_: 12.81%
+	_a_er: 12.36%
+___es: 21.49%
+	_a_es: 39.47%
+	_i_es: 22.81%
+	_o_es: 21.05%
+____r: 10.18%
+	___er: 96.3%
+____y: 8.58%
+____e: 2.64%
+____h: 1.04%
+_a___: 33.36%
+	_a_e_: 58.76%
+	_a__s: 58.47%
+
+NOT ___e_ or ____s: 15.74%
+	____y: 53.89%
+	_o___: 19.16%
+	_i___: 18.58%
+	_a___: 17.37%
+	b____: 16.77%
+	c____: 15.57%
+
+
+**GetAllWordsWithoutPatterns - patternString
+Count words with that pattern
+
+Consider finding which positions are missing, then finding most common in that position?

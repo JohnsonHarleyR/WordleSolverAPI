@@ -28,6 +28,12 @@ namespace WordleSolverAPI.Controllers
         }
 
         [HttpGet]
+        public ActionResult GetStatisticsForCommonWordleWords(int startIndex, int howMany)
+        {
+            return new JsonResult(WordSorter.GetStatisticsForCommonWordleWords(startIndex, howMany));
+        }
+
+        [HttpGet]
         public ActionResult AnalyzeFailedWords()
         {
             return new JsonResult(FailAnalyzer.GetFailedWordAnalysis());
@@ -123,6 +129,12 @@ namespace WordleSolverAPI.Controllers
         public ActionResult GetWordsWithPatternAndAnalysis(string pattern, bool checkFailing = false, bool includeSEnding = true)
         {
             return new JsonResult(WordSorter.AnalyzePattern(pattern, checkFailing, includeSEnding));
+        }
+
+        [HttpGet]
+        public ActionResult GetWordsWithoutPatternsAndAnalysis(string patternString, bool checkFailing = false, bool includeSEnding = true)
+        {
+            return new JsonResult(WordSorter.AnalyzeNonPatterns(patternString, checkFailing, includeSEnding));
         }
 
 

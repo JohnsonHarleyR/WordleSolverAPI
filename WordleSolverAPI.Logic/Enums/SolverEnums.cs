@@ -18,7 +18,8 @@
         Normal,
         Turbo,
         Pattern,
-        Letters
+        Letters,
+        NewTurbo
     }
 
     public enum WordListType

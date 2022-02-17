@@ -26,6 +26,7 @@ namespace WordleSolverAPI.Logic
 
             // first get all possible words
             List<string> possibleWords = GetAllWords();
+            List<string> allWords = GetAllWords();
             // currently, 75% of failing words end with the letter s
             List<string> failingWords = FailAnalyzer.GetFailedWords();
 
@@ -81,21 +82,29 @@ namespace WordleSolverAPI.Logic
                 }
                 else
                 {
-                    solveMode = SolveMode.Normal;
+                    //solveMode = SolveMode.Normal;
                     //// change the mode under certain circumstances
-                    //if ((i == 3 && possibleWords.Count > 10) ||
+                    //if ((i == 3 && possibleWords.Count > 15) ||
                     //    (i > 3 && possibleWords.Count > 5 - i))
                     //{
-                    //    solveMode = SolveMode.Turbo;
+                    //    //solveMode = SolveMode.NewTurbo;
                     //    //solveMode = SolveMode.Letters;
-                    //    //solveMode = SolveMode.Pattern;
-                    //}
-                    //else
-                    //{
-                    //    solveMode = SolveMode.Normal;
+                    //    solveMode = SolveMode.Pattern;
                     //}
 
                     WordGuess lastGuess = endResult.Guesses[i - 1];
+
+                    // check first if the word is likely to be on the fail list or not before using special mode
+                    if (solveMode == SolveMode.Pattern)
+                    {
+                        int failCount = FailAnalyzer.GetPossibleFailedWords(possibleWords, failingWords).Count;
+                        double failLikelihood = FailAnalyzer.GetPercent(failCount, possibleWords.Count);
+
+                        if (failLikelihood < 50)
+                        {
+                            solveMode = SolveMode.Normal;
+                        }
+                    }
 
                     // guess differently depending on solving mode
                     if (solveMode == SolveMode.Normal)
@@ -108,10 +117,29 @@ namespace WordleSolverAPI.Logic
                     }
                     else if (solveMode == SolveMode.Pattern)
                     {
-                        List<string> concernedWords = possibleWords;
-                        concernedWords = GetMostLikelyWordsByPatterns(concernedWords);
 
-                        newGuessWord = GetGuessWordByLetterDistribution(concernedWords, lastGuess);
+
+                        List<string> concernedWords = possibleWords;
+                        bool allWordsAreTies = FailAnalyzer.AllWordsAreTies(concernedWords, 1);
+
+                        if (allWordsAreTies)
+                        {
+                            concernedWords = GetMostLikelyWordsByBlankPosition(concernedWords);
+                        }
+                        else
+                        {
+                            concernedWords = GetMostLikelyWordsByPatterns(concernedWords);
+                        }
+
+                        if (allWordsAreTies)
+                        {
+                            newGuessWord = GetGuessWordByCompleteLetterDistribution(concernedWords, allWords);
+                        }
+                        else
+                        {
+                            newGuessWord = GetGuessWordByLetterDistribution(concernedWords, lastGuess);
+                        }
+                        //newGuessWord = GetGuessWordByLetterDistribution(concernedWords, lastGuess);
                         if (correctAnswer != "error" && newGuessWord == "error")
                         {
                             hasError = true;
@@ -148,6 +176,21 @@ namespace WordleSolverAPI.Logic
                             hasError = true;
                         }
 
+                    }
+                    else if (solveMode == SolveMode.NewTurbo)
+                    {
+                        int iReminder = i;
+                        string answerReminder = correctAnswer;
+
+                        // count possible words with these common patterns in failed words
+                        int s5Count = FailAnalyzer.MatchWordsToPattern(possibleWords, "____s", true).Count;
+                        int e4Count = FailAnalyzer.MatchWordsToPattern(possibleWords, "___e_", true).Count;
+                        int e4s5Count = FailAnalyzer.MatchWordsToPattern(possibleWords, "___es", true).Count;
+                        int r5Count = FailAnalyzer.MatchWordsToPattern(possibleWords, "____r", true).Count;
+                        int y5Count = FailAnalyzer.MatchWordsToPattern(possibleWords, "____y", true).Count;
+
+                        // NOTE consider using GetInitialGuessWord or methods in there to decide
+                        newGuessWord = GetGuessWordByLetterDistribution(possibleWords, lastGuess);
                     }
                     else if (solveMode == SolveMode.Turbo) // This is where failing words will become accounted for
                     {
@@ -436,6 +479,11 @@ namespace WordleSolverAPI.Logic
             return results;
         }
 
+        public static SolverStatistics GetStatisticsForCommonWordleWords(int startIndex, int howMany)
+        {
+            return GetStatistics(howMany, true, true, startIndex);
+        }
+
         public static List<StringPercentContainer> GetLettersMatchPercents(string[] letters, List<string> allWords)
         {
             List<StringPercentContainer> matchPercents = new List<StringPercentContainer>();
@@ -532,6 +580,54 @@ namespace WordleSolverAPI.Logic
             return wordsCopy;
         }
 
+        public static List<string> GetMostLikelyWordsByBlankPosition(List<string> words)
+        {
+            PatternAnalysis analysis;
+            StringPercentContainer pContainer;
+            analysis = FailAnalyzer.GetPatternsByPercents(words);
+            pContainer = analysis.FurtherPatternStatistics[0];
+            string[] patternArray = FailAnalyzer.GetPattern(pContainer.String);
+
+            List<int> blankPositions = new List<int>();
+            for (int i = 0; i < patternArray.Length; i++)
+            {
+                if (patternArray[i] == null)
+                {
+                    blankPositions.Add(i);
+                }
+            }
+            List<PositionLetterFrequencies> frequencies = GetLetterFrequenciesInUnknownPositions(words, blankPositions, allLetters);
+
+            // loop through frequencies until able to make a list of words
+            List<string> finalList = new List<string>();
+            foreach (var f in frequencies)
+            {
+                int index = 0;
+                int position = f.Position;
+                List<string> listToAdd = new List<string>();
+                do
+                {
+                    string letter = f.LetterCounts[index].Letter;
+                    foreach (var word in words)
+                    {
+                        if (word.Substring(position, 1) == letter)
+                        {
+                            listToAdd.Add(word);
+                        }
+                    }
+                } while (listToAdd.Count == 0 && index < f.LetterCounts.Count);
+
+                // add those words to final list
+                foreach (var item in listToAdd)
+                {
+                    finalList.Add(item);
+                }
+            }
+
+            return finalList;
+
+        }
+
         public static StringPercentContainer GetPatternNotAt100Percent(PatternAnalysis analysis)
         {
             if (analysis.FurtherPatternStatistics == null ||
@@ -576,11 +672,20 @@ namespace WordleSolverAPI.Logic
             return count;
         }
 
-        public static SolverStatistics GetStatistics(int timesToRun, bool allowWordsEndingInS = true)
+        public static SolverStatistics GetStatistics(int timesToRun, bool allowWordsEndingInS = true, bool isForCommon = false, int startIndex = 0)
         {
             Random random = new Random();
             List<string> allFailingWords = FailAnalyzer.GetFailedWords();
-            List<string> allWords = GetAllWords();
+            List<string> allWords;
+
+            if (isForCommon)
+            {
+                allWords = GetAllWords(WordListType.WordleCommon);
+            }
+            else
+            {
+                allWords = GetAllWords();
+            }
 
             if (!allowWordsEndingInS)
             {
@@ -591,7 +696,7 @@ namespace WordleSolverAPI.Logic
             }
 
             // make sure they're not requesting to run it more times than possible - fix if so
-            if (timesToRun > allWords.Count)
+            if (timesToRun > (allWords.Count - startIndex + 1))
             {
                 timesToRun = allWords.Count;
             }
@@ -606,9 +711,18 @@ namespace WordleSolverAPI.Logic
             List<string> failedWordsNotOnFailList = new List<string>();
             List<string> newSuccessWords = new List<string>();
 
-            for (int i = 0; i < timesToRun; i++)
+            for (int i = startIndex; i < (startIndex + timesToRun); i++)
             {
-                string correctAnswer = WordSorter.ChooseRandomWord(allWords, random);
+                string correctAnswer;
+                if (isForCommon)
+                {
+                    correctAnswer = allWords[i];
+                }
+                else
+                {
+                    correctAnswer = WordSorter.ChooseRandomWord(allWords, random);
+                }
+
                 WordleGuesses result = WordSorter.GuessWordleSolution(correctAnswer);
 
                 if (result.DidWin == true)
@@ -791,6 +905,33 @@ namespace WordleSolverAPI.Logic
             analysis.StartingPattern = pattern;
             analysis.PercentOfWordsWithStartingPattern = FailAnalyzer.GetPercent(wordsWithPattern.Count, allWords.Count);
             analysis.WordsWithStartingPattern = wordsWithPattern;
+
+            return analysis;
+        }
+
+        public static PatternAnalysis AnalyzeNonPatterns(string patternsString, bool checkFailing, bool includeSEnding)
+        {
+            List<string> words;
+            if (checkFailing)
+            {
+                words = FailAnalyzer.GetFailedWords();
+            }
+            else
+            {
+                words = WordSorter.GetAllWords();
+            }
+
+            if (!includeSEnding)
+            {
+                words = words.Where(word => word.Substring(4, 1) != "s").ToList();
+            }
+
+            List<string> wordsWithoutPatterns = FailAnalyzer.GetAllWordsWithoutPatterns(patternsString, words);
+            PatternAnalysis analysis = FailAnalyzer.GetPatternsByPercents(wordsWithoutPatterns);
+            analysis.FurtherPatternStatistics = analysis.FurtherPatternStatistics.Where(c => c.String != "_____").ToList();
+            analysis.StartingPattern = patternsString;
+            analysis.PercentOfWordsWithStartingPattern = FailAnalyzer.GetPercent(wordsWithoutPatterns.Count, words.Count);
+            analysis.WordsWithStartingPattern = wordsWithoutPatterns;
 
             return analysis;
         }
@@ -1400,6 +1541,9 @@ namespace WordleSolverAPI.Logic
                 case WordListType.Wordle:
                     dictionaryPath = $".\\files\\wordle-official-all.txt";
                     break;
+                case WordListType.WordleCommon:
+                    dictionaryPath = $".\\files\\wordle-official-common.txt";
+                    break;
                 case WordListType.Suggested:
                     dictionaryPath = $".\\files\\word-list-suggested.txt";
                     break;
@@ -1671,7 +1815,7 @@ namespace WordleSolverAPI.Logic
             return failedWord;
         }
 
-        public static List<string> GetWordsNotInSecondList(WordListType list1Type = WordListType.Scrabble, WordListType list2Type = WordListType.Wordle)
+        public static List<string> GetWordsNotInSecondList(WordListType list1Type = WordListType.WordleCommon, WordListType list2Type = WordListType.Scrabble)
         {
             List<string> list1 = GetAllWords(list1Type);
             List<string> list2 = GetAllWords(list2Type);

@@ -496,7 +496,7 @@ namespace WordleSolverAPI.Logic
         {
             if (words.Count < 2)
             {
-                throw new Exception("There must be at least 2 words present.");
+                return false;
             }
 
             string patternString = GetPatternStringFromWords(words[0], words[words.Count - 1]);
@@ -586,17 +586,7 @@ namespace WordleSolverAPI.Logic
 
             foreach (var word in words)
             {
-                bool doesMatch = true;
-                for (int i = 0; i < patternArray.Length; i++)
-                {
-                    if (patternArray[i] != null &&
-                        word.Substring(i, 1) != patternArray[i])
-                    {
-                        doesMatch = false;
-                        break;
-                    }
-                }
-
+                bool doesMatch = DoesWordMatchPattern(patternArray, word);
                 if (doesMatch)
                 {
                     matching.Add(word);
@@ -612,6 +602,28 @@ namespace WordleSolverAPI.Logic
                 return matching;
             }
             return nonMatching;
+        }
+
+        public static bool DoesWordMatchPattern(string pattern, string word)
+        {
+            string[] patternArray = GetPattern(pattern);
+            return DoesWordMatchPattern(patternArray, word);
+        }
+
+        public static bool DoesWordMatchPattern(string[] patternArray, string word)
+        {
+            bool doesMatch = true;
+            for (int i = 0; i < patternArray.Length; i++)
+            {
+                if (patternArray[i] != null &&
+                    word.Substring(i, 1) != patternArray[i])
+                {
+                    doesMatch = false;
+                    break;
+                }
+            }
+
+            return doesMatch;
         }
 
 
@@ -680,7 +692,35 @@ namespace WordleSolverAPI.Logic
             return positionFrequencies;
         }
 
+        public static List<string> GetAllWordsWithoutPatterns(string patternsString, List<string> words)
+        {
 
+
+            // divide up patterns
+            string[] patterns = patternsString.Split(",");
+
+            // go through all words and add to final list if they don't match any patters
+            List<string> finalList = new List<string>();
+            foreach (var word in words)
+            {
+                bool matchesPattern = false;
+                for (int i = 0; i < patterns.Length; i++)
+                {
+                    string pattern = patterns[i];
+                    if (DoesWordMatchPattern(pattern, word))
+                    {
+                        matchesPattern = true;
+                        break;
+                    }
+                }
+                if (!matchesPattern)
+                {
+                    finalList.Add(word);
+                }
+            }
+
+            return finalList;
+        }
 
 
 
