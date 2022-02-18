@@ -12,23 +12,25 @@ namespace WordleSolverAPI.Logic
         public static string[] allLetters = new string[] { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k",
                                                             "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v",
                                                             "w", "x", "y", "z"};
-        public static WordleGuesses GuessWordleSolution(string correctAnswer)
+        public static WordleGuesses GuessWordleSolution(string correctAnswer, bool isForContest = false)
         {
             DateTime beginningTime = DateTime.Now;
             StartMode startMode = StartMode.Strict;
-            SolveMode solveMode = SolveMode.Normal;
 
             Random random = new Random();
             WordleGuesses endResult = new WordleGuesses();
             endResult.CorrectAnswer = correctAnswer;
             bool hasError = false;
-            bool endsWithS = false;
 
             // first get all possible words
             List<string> possibleWords = GetAllWords();
-            List<string> allWords = GetAllWords();
             // currently, 75% of failing words end with the letter s
-            List<string> failingWords = FailAnalyzer.GetFailedWords();
+
+            List<PatternItems> patternsForContest = null;
+            if (isForContest)
+            {
+                patternsForContest = FailAnalyzer.LoadContestPatternJson();
+            }
 
             List<LetterWrongPositions> letterWrongPositions = new List<LetterWrongPositions>();
             List<LetterPosition> correctPositions = new List<LetterPosition>();
@@ -52,25 +54,11 @@ namespace WordleSolverAPI.Logic
                 {
                     endResult.RemainingPossibleAt3 = possibleWords.Count;
                 }
-                else if (i == 1) // check if it ends with S! right after first guess!
-                {
-                    // NOTE: with current logic, the first guess should end with s.
-                    WordGuess lastGuess = endResult.Guesses[0];
-                    if (lastGuess.Result[lastGuess.Result.Length - 1].Status == LetterStatus.Correct)
-                    {
-                        endsWithS = true;
-                    }
-                    else
-                    {
-                        endsWithS = false;
-                    }
-                }
 
                 string newGuessWord;
                 if (i == 0)
                 {
 
-                    // the below one tends to be slightly more accurate while the last one is much faster
                     if (startMode == StartMode.Guess)
                     {
                         newGuessWord = ChooseRandomWord(GetListOfWordsWithLetters(mostCommonLetters, possibleWords), random);
@@ -85,323 +73,20 @@ namespace WordleSolverAPI.Logic
                 }
                 else
                 {
-                    //solveMode = SolveMode.Normal;
-                    //// change the mode under certain circumstances
-                    //if ((i == 3 && possibleWords.Count > 15) ||
-                    //    (i > 3 && possibleWords.Count > 5 - i))
-                    //{
-                    //    //solveMode = SolveMode.NewTurbo;
-                    //    //solveMode = SolveMode.Letters;
-                    //    solveMode = SolveMode.Pattern;
-                    //}
 
                     WordGuess lastGuess = endResult.Guesses[i - 1];
                     // modify wrong position possibilities - add correct letters
                     List<LetterPosition> newCorrectPositions = ModifyCorrectPositionsGetNew(correctPositions, lastGuess);
                     letterWrongPositions = AddToWrongPositionLetters(letterWrongPositions, lastGuess, newCorrectPositions);
 
-
-                    // check first if the word is likely to be on the fail list or not before using special mode
-                    if (solveMode == SolveMode.Pattern)
+                    newGuessWord = GetGuessWordByLetterDistribution(possibleWords, lastGuess, letterWrongPositions,
+                        isForContest, patternsForContest);
+                    if (correctAnswer != "error" && newGuessWord == "error")
                     {
-                        int failCount = FailAnalyzer.GetPossibleFailedWords(possibleWords, failingWords).Count;
-                        double failLikelihood = FailAnalyzer.GetPercent(failCount, possibleWords.Count);
-
-                        if (failLikelihood < 50)
-                        {
-                            solveMode = SolveMode.Normal;
-                        }
+                        hasError = true;
                     }
-
-                    // guess differently depending on solving mode
-                    if (solveMode == SolveMode.Normal)
-                    {
-                        newGuessWord = GetGuessWordByLetterDistribution(possibleWords, lastGuess, letterWrongPositions);
-                        if (correctAnswer != "error" && newGuessWord == "error")
-                        {
-                            hasError = true;
-                        }
-                    }
-                    else if (solveMode == SolveMode.Pattern)
-                    {
-
-
-                        List<string> concernedWords = possibleWords;
-                        bool allWordsAreTies = FailAnalyzer.AllWordsAreTies(concernedWords, 1);
-
-                        if (allWordsAreTies)
-                        {
-                            concernedWords = GetMostLikelyWordsByBlankPosition(concernedWords);
-                        }
-                        else
-                        {
-                            concernedWords = GetMostLikelyWordsByPatterns(concernedWords);
-                        }
-
-                        if (allWordsAreTies)
-                        {
-                            newGuessWord = GetGuessWordByCompleteLetterDistribution(concernedWords, allWords, letterWrongPositions);
-                        }
-                        else
-                        {
-                            newGuessWord = GetGuessWordByLetterDistribution(concernedWords, lastGuess, letterWrongPositions);
-                        }
-                        //newGuessWord = GetGuessWordByLetterDistribution(concernedWords, lastGuess);
-                        if (correctAnswer != "error" && newGuessWord == "error")
-                        {
-                            hasError = true;
-                        }
-
-                    }
-                    else if (solveMode == SolveMode.Letters)
-                    {
-                        string matchString = "";
-                        for (int n = 0; n < 5; n++)
-                        {
-                            string newLetter = GetMostCommonLetterInPosition(possibleWords, n);
-                            matchString += newLetter;
-                        }
-
-                        // now get a list of all the words with a match percent
-                        //List<StringPercentContainer> matchPercents = GetWordMatchPercentsWithPosition(matchString, possibleWords);
-                        List<StringPercentContainer> commonLetterMatchPercents = GetLettersMatchPercents(mostCommonLetters, possibleWords);
-                        //StringPercentContainer wMatchP = matchPercents[0];
-                        StringPercentContainer lMatchP = commonLetterMatchPercents[0];
-                        //string newG = "";
-                        //if (wMatchP.Percent > lMatchP.Percent)
-                        //{
-                        //    newG = wMatchP.String;
-                        //}
-                        //else
-                        //{
-                        //    newG = lMatchP.String;
-                        //}
-
-                        newGuessWord = lMatchP.String;
-                        if (correctAnswer != "error" && newGuessWord == "error")
-                        {
-                            hasError = true;
-                        }
-
-                    }
-                    else if (solveMode == SolveMode.NewTurbo)
-                    {
-                        int iReminder = i;
-                        string answerReminder = correctAnswer;
-
-                        // count possible words with these common patterns in failed words
-                        int s5Count = FailAnalyzer.MatchWordsToPattern(possibleWords, "____s", true).Count;
-                        int e4Count = FailAnalyzer.MatchWordsToPattern(possibleWords, "___e_", true).Count;
-                        int e4s5Count = FailAnalyzer.MatchWordsToPattern(possibleWords, "___es", true).Count;
-                        int r5Count = FailAnalyzer.MatchWordsToPattern(possibleWords, "____r", true).Count;
-                        int y5Count = FailAnalyzer.MatchWordsToPattern(possibleWords, "____y", true).Count;
-
-                        // NOTE consider using GetInitialGuessWord or methods in there to decide
-                        newGuessWord = GetGuessWordByLetterDistribution(possibleWords, lastGuess, letterWrongPositions);
-                    }
-                    else if (solveMode == SolveMode.Turbo) // This is where failing words will become accounted for
-                    {
-                        List<string> concernedWords = possibleWords;
-                        bool isEd = false;
-                        bool isEr = false;
-                        //bool isY = false;
-
-                        // if the word does not end in s, then do some further narrowing down
-                        if (!endsWithS)
-                        {
-                            bool canHaveE = FailAnalyzer.CanHaveEIn3(possibleWords);
-                            if (canHaveE)
-                            {
-                                int eIn3Count = concernedWords.Where(word =>
-                                    word.Substring(3, 1) == "e").ToList().Count;
-                                double chanceOfEIn3 = FailAnalyzer.GetPercent(eIn3Count, concernedWords.Count);
-
-                                if (chanceOfEIn3 > 50)
-                                {
-                                    if (chanceOfEIn3 < 100)
-                                    {
-                                        concernedWords = concernedWords.Where(word =>
-                                        word.Substring(3, 1) == "e").ToList();
-                                    }
-
-                                    //43.35% of failing words without s at the end are ending in ed
-                                    // 18.62% are ending with er
-                                    // that's 61.97% chance it ends in one of these two
-                                    int edCount = concernedWords.Where(word =>
-                                    word.Substring(3, 2) == "ed").ToList().Count;
-
-                                    if (edCount > 0 && edCount < concernedWords.Count)
-                                    {
-                                        double chanceOfEd = FailAnalyzer.GetPercent(edCount, concernedWords.Count);
-
-                                        if (chanceOfEd == 100)
-                                        {
-                                            isEd = true;
-                                        }
-                                        else if (chanceOfEd > 50)
-                                        {
-                                            concernedWords = concernedWords.Where(word =>
-                                        word.Substring(3, 2) == "ed").ToList();
-                                        }
-                                        else
-                                        {
-                                            concernedWords = concernedWords.Where(word =>
-                                        word.Substring(3, 2) != "ed").ToList();
-                                        }
-                                    }
-
-                                    // check er
-                                    if (edCount == 0)
-                                    {
-                                        int erCount = concernedWords.Where(word =>
-                                     word.Substring(3, 2) == "er").ToList().Count;
-
-                                        if (erCount == concernedWords.Count)
-                                        {
-                                            isEr = true;
-                                        }
-
-                                        if (erCount > 0 && erCount < concernedWords.Count)
-                                        {
-                                            double chanceOfEr = FailAnalyzer.GetPercent(erCount, concernedWords.Count);
-                                            if (chanceOfEr > 50)
-                                            {
-                                                concernedWords = concernedWords.Where(word =>
-                                            word.Substring(3, 2) == "er").ToList();
-                                            }
-                                            else
-                                            {
-                                                concernedWords = concernedWords.Where(word =>
-                                            word.Substring(3, 2) != "er").ToList();
-                                            }
-                                        }
-                                    }
-
-
-                                }
-                                else if (chanceOfEIn3 > 0 && chanceOfEIn3 <= 50)
-                                {
-                                    concernedWords = concernedWords.Where(word =>
-                                    word.Substring(3, 1) != "e").ToList();
-                                }
-                            }
-                        }
-
-                        //if (!isEd && !isEr && !endsWithS)
-                        //{
-                        //    int yCount = concernedWords.Where(word =>
-                        //            word.Substring(4, 1) == "y").ToList().Count;
-
-                        //    if (yCount == concernedWords.Count)
-                        //    {
-                        //        isY = true;
-                        //    }
-                        //    else if (yCount > 0)
-                        //    {
-                        //        double chanceOfY = FailAnalyzer.GetPercent(yCount, concernedWords.Count);
-
-                        //        if (chanceOfY > 50)
-                        //        {
-                        //            concernedWords = concernedWords.Where(word =>
-                        //        word.Substring(4, 1) == "y").ToList();
-                        //            isY = true;
-                        //        }
-                        //    }
-                        //}
-
-                        // if it is er or ed, check for other stuff
-                        if (isEd || isEr)
-                        {
-                            // of everthing that applies to these, almost half have the letter a as a second letter - followed by i and 0
-                            // these will apply to 92.63% of ed words and 94.28% of er words
-                            string[] checkOrder;
-                            if (isEd)
-                            {
-                                checkOrder = new string[] { "a", "o", "i" };
-                            }
-                            else
-                            {
-                                checkOrder = new string[] { "a", "i", "o" };
-                            }
-
-                            string checkString = null;
-                            List<string> wordsThatApply = null;
-                            for (int n = 0; n < checkOrder.Length; n++)
-                            {
-                                checkString = checkOrder[n];
-                                wordsThatApply = concernedWords.Where(word =>
-                                word.Substring(1, 1) == checkString).ToList();
-                                if (wordsThatApply.Count > 0 &&
-                                    wordsThatApply.Count < concernedWords.Count)
-                                {
-                                    break;
-                                }
-                                // if nothig comes up, set back to null
-                                if (n == checkOrder.Length - 1)
-                                {
-                                    checkString = null;
-                                    wordsThatApply = null;
-                                }
-                            }
-
-                            // if words that apply isn't null, test out that list of words
-                            if (wordsThatApply != null)
-                            {
-                                concernedWords = wordsThatApply;
-                            }
-                        }
-                        //else if (isY)
-                        //{
-                        //    // 73.33% of failing words ending in y have double letters
-                        //    int totalWords = concernedWords.Count;
-                        //    List<string> wordsWithDoubles = FailAnalyzer.GetWordsWithDoubleLetters(concernedWords);
-                        //    double yDoublePercent = FailAnalyzer.GetPercent(wordsWithDoubles.Count, totalWords);
-                        //    if (yDoublePercent != 0 && yDoublePercent < 100)
-                        //    {
-                        //        if (yDoublePercent >= 50)
-                        //        {
-                        //            concernedWords = wordsWithDoubles;
-                        //        }
-                        //    }
-                        //}
-
-                        // only 12% of failing words ending in s have double letters
-                        newGuessWord = GetGuessWordByLetterDistribution(concernedWords, lastGuess, letterWrongPositions);
-                        //if (concernedWords.Count > 1 && FailAnalyzer.AllWordsAreTies(concernedWords, 1))
-                        //{
-                        //    int failedCount = concernedWords.Where(word => failingWords.Contains(word)).ToList().Count;
-                        //    double failedPercent = FailAnalyzer.GetPercent(failedCount, possibleWords.Count);
-                        //    if (failedPercent >= 50)
-                        //    {
-                        //        newGuessWord = GetGuessWordByCompleteLetterDistribution(concernedWords, failingWords);
-                        //    }
-                        //    else
-                        //    {
-                        //        newGuessWord = GetGuessWordByCompleteLetterDistribution(concernedWords, GetAllWords());
-                        //    }
-
-                        //}
-                        //else
-                        //{
-                        //    newGuessWord = GetGuessWordByLetterDistribution(concernedWords, lastGuess);
-                        //}
-
-                        if (correctAnswer != "error" && newGuessWord == "error")
-                        {
-                            hasError = true;
-                        }
-                    }
-                    else
-                    {
-                        throw new Exception(
-                            "That solving mode is not accounted for " +
-                            "with any logic in order to guess a new word.");
-                    }
-
-                    //List<LetterPosition> lastCorrectLetters = GetCorrectLetters(endResult.Guesses[i - 1].Result);
-                    //string mostCommonLetter = GetMostCommonLetterNotInPosition(possibleWords, lastCorrectLetters);
-                    //newGuessWord = ChooseRandomWord(GetListOfWordsWithLetter(mostCommonLetter, possibleWords), random);
                 }
+
 
                 // make guess, get results
                 WordGuess newGuess = GetGuessResults(newGuessWord, correctAnswer);
@@ -419,6 +104,7 @@ namespace WordleSolverAPI.Logic
                 possibleWords = EliminateBasedOnGuess(possibleWords, newGuess);
 
                 // now it will loop until it gets a correct answer
+
             }
             DateTime endTime = DateTime.Now;
             endResult.TimeToSolve = endTime - beginningTime;
@@ -1400,7 +1086,8 @@ namespace WordleSolverAPI.Logic
         }
 
         public static string GetGuessWordByLetterDistribution(List<string> words,
-            WordGuess guess, List<LetterWrongPositions> wrongPosLetters)
+            WordGuess guess, List<LetterWrongPositions> wrongPosLetters,
+            bool isForContest = false, List<PatternItems> patternsForContest = null)
         {
             if (words.Count == 0)
             {
@@ -1409,7 +1096,48 @@ namespace WordleSolverAPI.Logic
 
             List<WordProbability> probabilities = GetWordScoresByLetterDistribution(words, guess,
                 wrongPosLetters);
+            if (isForContest && patternsForContest != null)
+            {
+                probabilities = ReviseProbabilitiesByContestPattern(probabilities, patternsForContest);
+            }
             return probabilities[0].Word;
+        }
+
+        public static List<WordProbability> ReviseProbabilitiesByContestPattern(List<WordProbability> probabilities,
+            List<PatternItems> patternsForContest)
+        {
+            if (probabilities.Count < 2)
+            {
+                return probabilities;
+            }
+
+            List<string> probWords = new List<string>();
+            probabilities.ForEach(p => probWords.Add(p.Word));
+
+            if (FailAnalyzer.AllWordsAreTies(probWords, 1))
+            {
+                // get the pattern
+                string pattern = FailAnalyzer.GetPatternStringFromWords(probWords[0], probWords[1]);
+                List<string> commonWords = FailAnalyzer.GetCommonPatternWordsForContest(pattern, patternsForContest);
+
+                if (commonWords == null)
+                {
+                    return probabilities;
+                }
+
+                List<WordProbability> newProbs = new List<WordProbability>();
+                probabilities.ForEach(p => { if (commonWords.Contains(p.Word)) { newProbs.Add(p); } });
+
+                if (newProbs.Count > 0)
+                {
+                    return newProbs;
+                }
+                return probabilities;
+            }
+            else
+            {
+                return probabilities;
+            }
         }
 
         public static string GetGuessWordByCompleteLetterDistribution(List<string> words, List<string> allWords,

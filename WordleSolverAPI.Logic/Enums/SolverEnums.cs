@@ -19,7 +19,8 @@
         Turbo,
         Pattern,
         Letters,
-        NewTurbo
+        NewTurbo,
+        Contest
     }
 
     public enum WordListType

@@ -1,0 +1,10127 @@
+[
+  {
+    "pattern": "_abby",
+    "items": [
+      "cabby",
+      "tabby"
+    ]
+  },
+  {
+    "pattern": "_able",
+    "items": [
+      "cable",
+      "fable",
+      "table"
+    ]
+  },
+  {
+    "pattern": "_acky",
+    "items": [
+      "tacky",
+      "wacky"
+    ]
+  },
+  {
+    "pattern": "_addy",
+    "items": [
+      "caddy",
+      "daddy",
+      "paddy"
+    ]
+  },
+  {
+    "pattern": "_adly",
+    "items": [
+      "badly",
+      "madly",
+      "sadly"
+    ]
+  },
+  {
+    "pattern": "_afer",
+    "items": [
+      "safer",
+      "wafer"
+    ]
+  },
+  {
+    "pattern": "_ager",
+    "items": [
+      "eager",
+      "lager",
+      "wager"
+    ]
+  },
+  {
+    "pattern": "_aily",
+    "items": [
+      "daily",
+      "gaily"
+    ]
+  },
+  {
+    "pattern": "_aint",
+    "items": [
+      "faint",
+      "paint",
+      "saint",
+      "taint"
+    ]
+  },
+  {
+    "pattern": "_airy",
+    "items": [
+      "dairy",
+      "fairy",
+      "hairy"
+    ]
+  },
+  {
+    "pattern": "_aive",
+    "items": [
+      "naive",
+      "waive"
+    ]
+  },
+  {
+    "pattern": "_aken",
+    "items": [
+      "oaken",
+      "taken"
+    ]
+  },
+  {
+    "pattern": "_aker",
+    "items": [
+      "baker",
+      "maker",
+      "taker"
+    ]
+  },
+  {
+    "pattern": "_aler",
+    "items": [
+      "baler",
+      "paler"
+    ]
+  },
+  {
+    "pattern": "_ally",
+    "items": [
+      "dally",
+      "rally",
+      "sally",
+      "tally"
+    ]
+  },
+  {
+    "pattern": "_alon",
+    "items": [
+      "salon",
+      "talon"
+    ]
+  },
+  {
+    "pattern": "_alve",
+    "items": [
+      "halve",
+      "salve",
+      "valve"
+    ]
+  },
+  {
+    "pattern": "_amer",
+    "items": [
+      "gamer",
+      "tamer"
+    ]
+  },
+  {
+    "pattern": "_amma",
+    "items": [
+      "gamma",
+      "mamma"
+    ]
+  },
+  {
+    "pattern": "_anal",
+    "items": [
+      "banal",
+      "canal"
+    ]
+  },
+  {
+    "pattern": "_ance",
+    "items": [
+      "dance",
+      "lance"
+    ]
+  },
+  {
+    "pattern": "_andy",
+    "items": [
+      "candy",
+      "dandy",
+      "handy",
+      "randy",
+      "sandy"
+    ]
+  },
+  {
+    "pattern": "_ange",
+    "items": [
+      "mange",
+      "range"
+    ]
+  },
+  {
+    "pattern": "_ango",
+    "items": [
+      "mango",
+      "tango"
+    ]
+  },
+  {
+    "pattern": "_angy",
+    "items": [
+      "mangy",
+      "tangy"
+    ]
+  },
+  {
+    "pattern": "_anic",
+    "items": [
+      "manic",
+      "panic"
+    ]
+  },
+  {
+    "pattern": "_anny",
+    "items": [
+      "canny",
+      "fanny",
+      "nanny"
+    ]
+  },
+  {
+    "pattern": "_aper",
+    "items": [
+      "caper",
+      "paper",
+      "taper"
+    ]
+  },
+  {
+    "pattern": "_apid",
+    "items": [
+      "rapid",
+      "vapid"
+    ]
+  },
+  {
+    "pattern": "_appy",
+    "items": [
+      "happy",
+      "sappy"
+    ]
+  },
+  {
+    "pattern": "_ardy",
+    "items": [
+      "hardy",
+      "tardy"
+    ]
+  },
+  {
+    "pattern": "_arer",
+    "items": [
+      "parer",
+      "rarer"
+    ]
+  },
+  {
+    "pattern": "_arge",
+    "items": [
+      "barge",
+      "large"
+    ]
+  },
+  {
+    "pattern": "_arry",
+    "items": [
+      "carry",
+      "harry",
+      "marry",
+      "parry"
+    ]
+  },
+  {
+    "pattern": "_arsh",
+    "items": [
+      "harsh",
+      "marsh"
+    ]
+  },
+  {
+    "pattern": "_arty",
+    "items": [
+      "party",
+      "warty"
+    ]
+  },
+  {
+    "pattern": "_asal",
+    "items": [
+      "basal",
+      "nasal"
+    ]
+  },
+  {
+    "pattern": "_assy",
+    "items": [
+      "gassy",
+      "sassy"
+    ]
+  },
+  {
+    "pattern": "_aste",
+    "items": [
+      "baste",
+      "caste",
+      "haste",
+      "paste",
+      "taste",
+      "waste"
+    ]
+  },
+  {
+    "pattern": "_asty",
+    "items": [
+      "hasty",
+      "nasty",
+      "pasty",
+      "tasty"
+    ]
+  },
+  {
+    "pattern": "_atal",
+    "items": [
+      "fatal",
+      "natal"
+    ]
+  },
+  {
+    "pattern": "_atch",
+    "items": [
+      "batch",
+      "catch",
+      "hatch",
+      "latch",
+      "match",
+      "patch",
+      "watch"
+    ]
+  },
+  {
+    "pattern": "_ater",
+    "items": [
+      "cater",
+      "eater",
+      "hater",
+      "later",
+      "water"
+    ]
+  },
+  {
+    "pattern": "_athe",
+    "items": [
+      "bathe",
+      "lathe"
+    ]
+  },
+  {
+    "pattern": "_atio",
+    "items": [
+      "patio",
+      "ratio"
+    ]
+  },
+  {
+    "pattern": "_atty",
+    "items": [
+      "batty",
+      "catty",
+      "fatty",
+      "patty",
+      "ratty",
+      "tatty"
+    ]
+  },
+  {
+    "pattern": "_ault",
+    "items": [
+      "fault",
+      "vault"
+    ]
+  },
+  {
+    "pattern": "_auna",
+    "items": [
+      "fauna",
+      "sauna"
+    ]
+  },
+  {
+    "pattern": "_aunt",
+    "items": [
+      "daunt",
+      "gaunt",
+      "haunt",
+      "jaunt",
+      "taunt",
+      "vaunt"
+    ]
+  },
+  {
+    "pattern": "_ause",
+    "items": [
+      "cause",
+      "pause"
+    ]
+  },
+  {
+    "pattern": "_aute",
+    "items": [
+      "haute",
+      "saute"
+    ]
+  },
+  {
+    "pattern": "_avel",
+    "items": [
+      "gavel",
+      "navel"
+    ]
+  },
+  {
+    "pattern": "_aven",
+    "items": [
+      "haven",
+      "raven"
+    ]
+  },
+  {
+    "pattern": "_avor",
+    "items": [
+      "favor",
+      "savor"
+    ]
+  },
+  {
+    "pattern": "_ayer",
+    "items": [
+      "gayer",
+      "layer",
+      "payer"
+    ]
+  },
+  {
+    "pattern": "_corn",
+    "items": [
+      "acorn",
+      "scorn"
+    ]
+  },
+  {
+    "pattern": "_dder",
+    "items": [
+      "odder",
+      "udder"
+    ]
+  },
+  {
+    "pattern": "_each",
+    "items": [
+      "beach",
+      "leach",
+      "peach",
+      "reach",
+      "teach"
+    ]
+  },
+  {
+    "pattern": "_eady",
+    "items": [
+      "beady",
+      "heady",
+      "ready"
+    ]
+  },
+  {
+    "pattern": "_eant",
+    "items": [
+      "leant",
+      "meant"
+    ]
+  },
+  {
+    "pattern": "_eard",
+    "items": [
+      "beard",
+      "heard"
+    ]
+  },
+  {
+    "pattern": "_earn",
+    "items": [
+      "learn",
+      "yearn"
+    ]
+  },
+  {
+    "pattern": "_eary",
+    "items": [
+      "teary",
+      "weary"
+    ]
+  },
+  {
+    "pattern": "_ease",
+    "items": [
+      "cease",
+      "lease",
+      "tease"
+    ]
+  },
+  {
+    "pattern": "_east",
+    "items": [
+      "beast",
+      "feast",
+      "least",
+      "yeast"
+    ]
+  },
+  {
+    "pattern": "_eath",
+    "items": [
+      "death",
+      "heath"
+    ]
+  },
+  {
+    "pattern": "_eave",
+    "items": [
+      "heave",
+      "leave",
+      "weave"
+    ]
+  },
+  {
+    "pattern": "_ebar",
+    "items": [
+      "debar",
+      "rebar"
+    ]
+  },
+  {
+    "pattern": "_ebut",
+    "items": [
+      "debut",
+      "rebut"
+    ]
+  },
+  {
+    "pattern": "_ecal",
+    "items": [
+      "decal",
+      "fecal"
+    ]
+  },
+  {
+    "pattern": "_edal",
+    "items": [
+      "medal",
+      "pedal"
+    ]
+  },
+  {
+    "pattern": "_edge",
+    "items": [
+      "hedge",
+      "ledge",
+      "wedge"
+    ]
+  },
+  {
+    "pattern": "_eech",
+    "items": [
+      "beech",
+      "leech"
+    ]
+  },
+  {
+    "pattern": "_eedy",
+    "items": [
+      "needy",
+      "reedy",
+      "seedy",
+      "weedy"
+    ]
+  },
+  {
+    "pattern": "_efer",
+    "items": [
+      "defer",
+      "refer"
+    ]
+  },
+  {
+    "pattern": "_efit",
+    "items": [
+      "befit",
+      "refit"
+    ]
+  },
+  {
+    "pattern": "_efty",
+    "items": [
+      "hefty",
+      "lefty"
+    ]
+  },
+  {
+    "pattern": "_egal",
+    "items": [
+      "legal",
+      "regal"
+    ]
+  },
+  {
+    "pattern": "_egan",
+    "items": [
+      "began",
+      "vegan"
+    ]
+  },
+  {
+    "pattern": "_eigh",
+    "items": [
+      "neigh",
+      "weigh"
+    ]
+  },
+  {
+    "pattern": "_eign",
+    "items": [
+      "deign",
+      "feign",
+      "reign"
+    ]
+  },
+  {
+    "pattern": "_elay",
+    "items": [
+      "delay",
+      "relay"
+    ]
+  },
+  {
+    "pattern": "_elch",
+    "items": [
+      "belch",
+      "welch"
+    ]
+  },
+  {
+    "pattern": "_ello",
+    "items": [
+      "cello",
+      "hello"
+    ]
+  },
+  {
+    "pattern": "_elly",
+    "items": [
+      "belly",
+      "jelly"
+    ]
+  },
+  {
+    "pattern": "_elon",
+    "items": [
+      "felon",
+      "melon"
+    ]
+  },
+  {
+    "pattern": "_emon",
+    "items": [
+      "demon",
+      "lemon"
+    ]
+  },
+  {
+    "pattern": "_emur",
+    "items": [
+      "demur",
+      "femur",
+      "lemur"
+    ]
+  },
+  {
+    "pattern": "_enal",
+    "items": [
+      "penal",
+      "renal"
+    ]
+  },
+  {
+    "pattern": "_ence",
+    "items": [
+      "fence",
+      "hence",
+      "pence"
+    ]
+  },
+  {
+    "pattern": "_ench",
+    "items": [
+      "bench",
+      "wench"
+    ]
+  },
+  {
+    "pattern": "_ense",
+    "items": [
+      "dense",
+      "sense",
+      "tense"
+    ]
+  },
+  {
+    "pattern": "_erge",
+    "items": [
+      "merge",
+      "verge"
+    ]
+  },
+  {
+    "pattern": "_erky",
+    "items": [
+      "jerky",
+      "perky"
+    ]
+  },
+  {
+    "pattern": "_erry",
+    "items": [
+      "berry",
+      "ferry",
+      "merry"
+    ]
+  },
+  {
+    "pattern": "_erse",
+    "items": [
+      "terse",
+      "verse"
+    ]
+  },
+  {
+    "pattern": "_erve",
+    "items": [
+      "nerve",
+      "serve",
+      "verve"
+    ]
+  },
+  {
+    "pattern": "_eset",
+    "items": [
+      "beset",
+      "reset"
+    ]
+  },
+  {
+    "pattern": "_esty",
+    "items": [
+      "testy",
+      "zesty"
+    ]
+  },
+  {
+    "pattern": "_etal",
+    "items": [
+      "fetal",
+      "metal",
+      "petal"
+    ]
+  },
+  {
+    "pattern": "_etch",
+    "items": [
+      "fetch",
+      "retch"
+    ]
+  },
+  {
+    "pattern": "_eter",
+    "items": [
+      "deter",
+      "meter"
+    ]
+  },
+  {
+    "pattern": "_etro",
+    "items": [
+      "metro",
+      "retro"
+    ]
+  },
+  {
+    "pattern": "_etty",
+    "items": [
+      "jetty",
+      "petty"
+    ]
+  },
+  {
+    "pattern": "_evel",
+    "items": [
+      "bevel",
+      "level",
+      "revel"
+    ]
+  },
+  {
+    "pattern": "_ever",
+    "items": [
+      "fever",
+      "lever",
+      "never",
+      "sever"
+    ]
+  },
+  {
+    "pattern": "_ewer",
+    "items": [
+      "fewer",
+      "newer",
+      "sewer"
+    ]
+  },
+  {
+    "pattern": "_hack",
+    "items": [
+      "shack",
+      "whack"
+    ]
+  },
+  {
+    "pattern": "_hale",
+    "items": [
+      "shale",
+      "whale"
+    ]
+  },
+  {
+    "pattern": "_hank",
+    "items": [
+      "shank",
+      "thank"
+    ]
+  },
+  {
+    "pattern": "_hard",
+    "items": [
+      "chard",
+      "shard"
+    ]
+  },
+  {
+    "pattern": "_hase",
+    "items": [
+      "chase",
+      "phase"
+    ]
+  },
+  {
+    "pattern": "_heat",
+    "items": [
+      "cheat",
+      "wheat"
+    ]
+  },
+  {
+    "pattern": "_heer",
+    "items": [
+      "cheer",
+      "sheer"
+    ]
+  },
+  {
+    "pattern": "_here",
+    "items": [
+      "there",
+      "where"
+    ]
+  },
+  {
+    "pattern": "_hick",
+    "items": [
+      "chick",
+      "thick"
+    ]
+  },
+  {
+    "pattern": "_hief",
+    "items": [
+      "chief",
+      "thief"
+    ]
+  },
+  {
+    "pattern": "_hine",
+    "items": [
+      "shine",
+      "whine"
+    ]
+  },
+  {
+    "pattern": "_hiny",
+    "items": [
+      "shiny",
+      "whiny"
+    ]
+  },
+  {
+    "pattern": "_hock",
+    "items": [
+      "chock",
+      "shock"
+    ]
+  },
+  {
+    "pattern": "_hone",
+    "items": [
+      "phone",
+      "shone"
+    ]
+  },
+  {
+    "pattern": "_hore",
+    "items": [
+      "chore",
+      "shore"
+    ]
+  },
+  {
+    "pattern": "_horn",
+    "items": [
+      "shorn",
+      "thorn"
+    ]
+  },
+  {
+    "pattern": "_hose",
+    "items": [
+      "chose",
+      "those",
+      "whose"
+    ]
+  },
+  {
+    "pattern": "_hrew",
+    "items": [
+      "shrew",
+      "threw"
+    ]
+  },
+  {
+    "pattern": "_huck",
+    "items": [
+      "chuck",
+      "shuck"
+    ]
+  },
+  {
+    "pattern": "_hump",
+    "items": [
+      "chump",
+      "thump"
+    ]
+  },
+  {
+    "pattern": "_hyme",
+    "items": [
+      "rhyme",
+      "thyme"
+    ]
+  },
+  {
+    "pattern": "_iddy",
+    "items": [
+      "biddy",
+      "giddy"
+    ]
+  },
+  {
+    "pattern": "_ider",
+    "items": [
+      "aider",
+      "cider",
+      "rider",
+      "wider"
+    ]
+  },
+  {
+    "pattern": "_idge",
+    "items": [
+      "midge",
+      "ridge"
+    ]
+  },
+  {
+    "pattern": "_iece",
+    "items": [
+      "niece",
+      "piece"
+    ]
+  },
+  {
+    "pattern": "_iege",
+    "items": [
+      "liege",
+      "siege"
+    ]
+  },
+  {
+    "pattern": "_ield",
+    "items": [
+      "field",
+      "wield",
+      "yield"
+    ]
+  },
+  {
+    "pattern": "_ight",
+    "items": [
+      "eight",
+      "fight",
+      "light",
+      "might",
+      "night",
+      "right",
+      "sight",
+      "tight",
+      "wight"
+    ]
+  },
+  {
+    "pattern": "_igor",
+    "items": [
+      "rigor",
+      "vigor"
+    ]
+  },
+  {
+    "pattern": "_ilky",
+    "items": [
+      "milky",
+      "silky"
+    ]
+  },
+  {
+    "pattern": "_illy",
+    "items": [
+      "billy",
+      "dilly",
+      "filly",
+      "hilly",
+      "silly",
+      "willy"
+    ]
+  },
+  {
+    "pattern": "_ince",
+    "items": [
+      "mince",
+      "since",
+      "wince"
+    ]
+  },
+  {
+    "pattern": "_inch",
+    "items": [
+      "cinch",
+      "finch",
+      "pinch",
+      "winch"
+    ]
+  },
+  {
+    "pattern": "_iner",
+    "items": [
+      "diner",
+      "finer",
+      "liner",
+      "miner"
+    ]
+  },
+  {
+    "pattern": "_inge",
+    "items": [
+      "binge",
+      "hinge",
+      "singe"
+    ]
+  },
+  {
+    "pattern": "_ingo",
+    "items": [
+      "bingo",
+      "dingo",
+      "lingo"
+    ]
+  },
+  {
+    "pattern": "_inky",
+    "items": [
+      "kinky",
+      "pinky"
+    ]
+  },
+  {
+    "pattern": "_iper",
+    "items": [
+      "piper",
+      "riper",
+      "viper"
+    ]
+  },
+  {
+    "pattern": "_ipsy",
+    "items": [
+      "gipsy",
+      "tipsy"
+    ]
+  },
+  {
+    "pattern": "_irth",
+    "items": [
+      "birth",
+      "girth",
+      "mirth"
+    ]
+  },
+  {
+    "pattern": "_iser",
+    "items": [
+      "miser",
+      "riser",
+      "wiser"
+    ]
+  },
+  {
+    "pattern": "_issy",
+    "items": [
+      "missy",
+      "sissy"
+    ]
+  },
+  {
+    "pattern": "_itch",
+    "items": [
+      "ditch",
+      "hitch",
+      "pitch",
+      "witch"
+    ]
+  },
+  {
+    "pattern": "_ithe",
+    "items": [
+      "lithe",
+      "tithe"
+    ]
+  },
+  {
+    "pattern": "_itty",
+    "items": [
+      "bitty",
+      "ditty",
+      "kitty",
+      "witty"
+    ]
+  },
+  {
+    "pattern": "_iver",
+    "items": [
+      "diver",
+      "giver",
+      "liver",
+      "river"
+    ]
+  },
+  {
+    "pattern": "_ivid",
+    "items": [
+      "livid",
+      "vivid"
+    ]
+  },
+  {
+    "pattern": "_izzy",
+    "items": [
+      "dizzy",
+      "fizzy"
+    ]
+  },
+  {
+    "pattern": "_lack",
+    "items": [
+      "black",
+      "clack",
+      "flack",
+      "slack"
+    ]
+  },
+  {
+    "pattern": "_lade",
+    "items": [
+      "blade",
+      "glade"
+    ]
+  },
+  {
+    "pattern": "_lain",
+    "items": [
+      "plain",
+      "slain"
+    ]
+  },
+  {
+    "pattern": "_lame",
+    "items": [
+      "blame",
+      "flame"
+    ]
+  },
+  {
+    "pattern": "_land",
+    "items": [
+      "bland",
+      "gland"
+    ]
+  },
+  {
+    "pattern": "_lang",
+    "items": [
+      "clang",
+      "slang"
+    ]
+  },
+  {
+    "pattern": "_lank",
+    "items": [
+      "blank",
+      "clank",
+      "flank",
+      "plank"
+    ]
+  },
+  {
+    "pattern": "_lant",
+    "items": [
+      "plant",
+      "slant"
+    ]
+  },
+  {
+    "pattern": "_lare",
+    "items": [
+      "blare",
+      "flare",
+      "glare"
+    ]
+  },
+  {
+    "pattern": "_lash",
+    "items": [
+      "clash",
+      "flash",
+      "slash"
+    ]
+  },
+  {
+    "pattern": "_lass",
+    "items": [
+      "class",
+      "glass"
+    ]
+  },
+  {
+    "pattern": "_late",
+    "items": [
+      "elate",
+      "plate",
+      "slate"
+    ]
+  },
+  {
+    "pattern": "_laze",
+    "items": [
+      "blaze",
+      "glaze"
+    ]
+  },
+  {
+    "pattern": "_lder",
+    "items": [
+      "elder",
+      "older"
+    ]
+  },
+  {
+    "pattern": "_lean",
+    "items": [
+      "clean",
+      "glean"
+    ]
+  },
+  {
+    "pattern": "_leat",
+    "items": [
+      "bleat",
+      "cleat",
+      "pleat"
+    ]
+  },
+  {
+    "pattern": "_leep",
+    "items": [
+      "bleep",
+      "sleep"
+    ]
+  },
+  {
+    "pattern": "_leet",
+    "items": [
+      "fleet",
+      "sleet"
+    ]
+  },
+  {
+    "pattern": "_lick",
+    "items": [
+      "click",
+      "flick",
+      "slick"
+    ]
+  },
+  {
+    "pattern": "_lide",
+    "items": [
+      "elide",
+      "glide",
+      "slide"
+    ]
+  },
+  {
+    "pattern": "_lier",
+    "items": [
+      "flier",
+      "plier"
+    ]
+  },
+  {
+    "pattern": "_ling",
+    "items": [
+      "cling",
+      "fling",
+      "sling"
+    ]
+  },
+  {
+    "pattern": "_link",
+    "items": [
+      "blink",
+      "clink",
+      "slink"
+    ]
+  },
+  {
+    "pattern": "_lint",
+    "items": [
+      "flint",
+      "glint"
+    ]
+  },
+  {
+    "pattern": "_live",
+    "items": [
+      "alive",
+      "olive"
+    ]
+  },
+  {
+    "pattern": "_loat",
+    "items": [
+      "bloat",
+      "float",
+      "gloat"
+    ]
+  },
+  {
+    "pattern": "_lock",
+    "items": [
+      "block",
+      "clock",
+      "flock"
+    ]
+  },
+  {
+    "pattern": "_lone",
+    "items": [
+      "alone",
+      "clone"
+    ]
+  },
+  {
+    "pattern": "_lood",
+    "items": [
+      "blood",
+      "flood"
+    ]
+  },
+  {
+    "pattern": "_loom",
+    "items": [
+      "bloom",
+      "gloom"
+    ]
+  },
+  {
+    "pattern": "_lope",
+    "items": [
+      "elope",
+      "slope"
+    ]
+  },
+  {
+    "pattern": "_loss",
+    "items": [
+      "floss",
+      "gloss"
+    ]
+  },
+  {
+    "pattern": "_loth",
+    "items": [
+      "cloth",
+      "sloth"
+    ]
+  },
+  {
+    "pattern": "_loud",
+    "items": [
+      "aloud",
+      "cloud"
+    ]
+  },
+  {
+    "pattern": "_lout",
+    "items": [
+      "clout",
+      "flout"
+    ]
+  },
+  {
+    "pattern": "_love",
+    "items": [
+      "clove",
+      "glove"
+    ]
+  },
+  {
+    "pattern": "_lown",
+    "items": [
+      "blown",
+      "clown",
+      "flown"
+    ]
+  },
+  {
+    "pattern": "_luck",
+    "items": [
+      "cluck",
+      "pluck"
+    ]
+  },
+  {
+    "pattern": "_luff",
+    "items": [
+      "bluff",
+      "fluff"
+    ]
+  },
+  {
+    "pattern": "_lume",
+    "items": [
+      "flume",
+      "plume"
+    ]
+  },
+  {
+    "pattern": "_lump",
+    "items": [
+      "clump",
+      "plump",
+      "slump"
+    ]
+  },
+  {
+    "pattern": "_lung",
+    "items": [
+      "clung",
+      "flung",
+      "slung"
+    ]
+  },
+  {
+    "pattern": "_lunk",
+    "items": [
+      "flunk",
+      "plunk",
+      "slunk"
+    ]
+  },
+  {
+    "pattern": "_lush",
+    "items": [
+      "blush",
+      "flush",
+      "plush",
+      "slush"
+    ]
+  },
+  {
+    "pattern": "_mber",
+    "items": [
+      "amber",
+      "ember"
+    ]
+  },
+  {
+    "pattern": "_mply",
+    "items": [
+      "amply",
+      "imply"
+    ]
+  },
+  {
+    "pattern": "_nack",
+    "items": [
+      "knack",
+      "snack"
+    ]
+  },
+  {
+    "pattern": "_nion",
+    "items": [
+      "onion",
+      "union"
+    ]
+  },
+  {
+    "pattern": "_nset",
+    "items": [
+      "onset",
+      "unset"
+    ]
+  },
+  {
+    "pattern": "_nter",
+    "items": [
+      "enter",
+      "inter"
+    ]
+  },
+  {
+    "pattern": "_oach",
+    "items": [
+      "coach",
+      "roach"
+    ]
+  },
+  {
+    "pattern": "_oamy",
+    "items": [
+      "foamy",
+      "loamy"
+    ]
+  },
+  {
+    "pattern": "_oard",
+    "items": [
+      "board",
+      "hoard"
+    ]
+  },
+  {
+    "pattern": "_oast",
+    "items": [
+      "boast",
+      "coast",
+      "roast",
+      "toast"
+    ]
+  },
+  {
+    "pattern": "_obby",
+    "items": [
+      "bobby",
+      "hobby",
+      "lobby"
+    ]
+  },
+  {
+    "pattern": "_ocal",
+    "items": [
+      "focal",
+      "local",
+      "vocal"
+    ]
+  },
+  {
+    "pattern": "_ocus",
+    "items": [
+      "focus",
+      "locus"
+    ]
+  },
+  {
+    "pattern": "_odge",
+    "items": [
+      "dodge",
+      "lodge"
+    ]
+  },
+  {
+    "pattern": "_oggy",
+    "items": [
+      "foggy",
+      "soggy"
+    ]
+  },
+  {
+    "pattern": "_ogue",
+    "items": [
+      "rogue",
+      "vogue"
+    ]
+  },
+  {
+    "pattern": "_oing",
+    "items": [
+      "doing",
+      "going"
+    ]
+  },
+  {
+    "pattern": "_oint",
+    "items": [
+      "joint",
+      "point"
+    ]
+  },
+  {
+    "pattern": "_oise",
+    "items": [
+      "noise",
+      "poise"
+    ]
+  },
+  {
+    "pattern": "_oist",
+    "items": [
+      "foist",
+      "hoist",
+      "joist",
+      "moist"
+    ]
+  },
+  {
+    "pattern": "_oken",
+    "items": [
+      "token",
+      "woken"
+    ]
+  },
+  {
+    "pattern": "_oker",
+    "items": [
+      "joker",
+      "poker"
+    ]
+  },
+  {
+    "pattern": "_olar",
+    "items": [
+      "molar",
+      "polar",
+      "solar"
+    ]
+  },
+  {
+    "pattern": "_olly",
+    "items": [
+      "dolly",
+      "folly",
+      "golly",
+      "holly",
+      "jolly"
+    ]
+  },
+  {
+    "pattern": "_onal",
+    "items": [
+      "tonal",
+      "zonal"
+    ]
+  },
+  {
+    "pattern": "_oney",
+    "items": [
+      "boney",
+      "honey",
+      "money"
+    ]
+  },
+  {
+    "pattern": "_onic",
+    "items": [
+      "conic",
+      "ionic",
+      "sonic",
+      "tonic"
+    ]
+  },
+  {
+    "pattern": "_onor",
+    "items": [
+      "donor",
+      "honor"
+    ]
+  },
+  {
+    "pattern": "_oody",
+    "items": [
+      "goody",
+      "moody",
+      "woody"
+    ]
+  },
+  {
+    "pattern": "_oose",
+    "items": [
+      "goose",
+      "loose",
+      "moose",
+      "noose"
+    ]
+  },
+  {
+    "pattern": "_oost",
+    "items": [
+      "boost",
+      "roost"
+    ]
+  },
+  {
+    "pattern": "_ooth",
+    "items": [
+      "booth",
+      "sooth",
+      "tooth"
+    ]
+  },
+  {
+    "pattern": "_ooty",
+    "items": [
+      "booty",
+      "sooty"
+    ]
+  },
+  {
+    "pattern": "_oozy",
+    "items": [
+      "boozy",
+      "woozy"
+    ]
+  },
+  {
+    "pattern": "_oral",
+    "items": [
+      "coral",
+      "moral"
+    ]
+  },
+  {
+    "pattern": "_orch",
+    "items": [
+      "porch",
+      "torch"
+    ]
+  },
+  {
+    "pattern": "_orge",
+    "items": [
+      "forge",
+      "gorge"
+    ]
+  },
+  {
+    "pattern": "_orny",
+    "items": [
+      "corny",
+      "horny"
+    ]
+  },
+  {
+    "pattern": "_orry",
+    "items": [
+      "lorry",
+      "sorry",
+      "worry"
+    ]
+  },
+  {
+    "pattern": "_orse",
+    "items": [
+      "horse",
+      "worse"
+    ]
+  },
+  {
+    "pattern": "_orth",
+    "items": [
+      "forth",
+      "north",
+      "worth"
+    ]
+  },
+  {
+    "pattern": "_oser",
+    "items": [
+      "loser",
+      "poser"
+    ]
+  },
+  {
+    "pattern": "_ossy",
+    "items": [
+      "bossy",
+      "mossy"
+    ]
+  },
+  {
+    "pattern": "_otch",
+    "items": [
+      "botch",
+      "notch"
+    ]
+  },
+  {
+    "pattern": "_otel",
+    "items": [
+      "hotel",
+      "motel"
+    ]
+  },
+  {
+    "pattern": "_otor",
+    "items": [
+      "motor",
+      "rotor"
+    ]
+  },
+  {
+    "pattern": "_ouch",
+    "items": [
+      "couch",
+      "pouch",
+      "touch",
+      "vouch"
+    ]
+  },
+  {
+    "pattern": "_ouge",
+    "items": [
+      "gouge",
+      "rouge"
+    ]
+  },
+  {
+    "pattern": "_ough",
+    "items": [
+      "bough",
+      "cough",
+      "dough",
+      "rough",
+      "tough"
+    ]
+  },
+  {
+    "pattern": "_ould",
+    "items": [
+      "could",
+      "would"
+    ]
+  },
+  {
+    "pattern": "_ound",
+    "items": [
+      "bound",
+      "found",
+      "hound",
+      "mound",
+      "pound",
+      "round",
+      "sound",
+      "wound"
+    ]
+  },
+  {
+    "pattern": "_ount",
+    "items": [
+      "count",
+      "mount"
+    ]
+  },
+  {
+    "pattern": "_ouse",
+    "items": [
+      "house",
+      "louse",
+      "mouse",
+      "rouse"
+    ]
+  },
+  {
+    "pattern": "_outh",
+    "items": [
+      "mouth",
+      "south",
+      "youth"
+    ]
+  },
+  {
+    "pattern": "_ovel",
+    "items": [
+      "hovel",
+      "novel"
+    ]
+  },
+  {
+    "pattern": "_oven",
+    "items": [
+      "coven",
+      "woven"
+    ]
+  },
+  {
+    "pattern": "_over",
+    "items": [
+      "cover",
+      "hover",
+      "lover",
+      "mover",
+      "rover"
+    ]
+  },
+  {
+    "pattern": "_owdy",
+    "items": [
+      "dowdy",
+      "howdy",
+      "rowdy"
+    ]
+  },
+  {
+    "pattern": "_owel",
+    "items": [
+      "bowel",
+      "dowel",
+      "towel",
+      "vowel"
+    ]
+  },
+  {
+    "pattern": "_ower",
+    "items": [
+      "cower",
+      "lower",
+      "mower",
+      "power",
+      "rower",
+      "sower",
+      "tower"
+    ]
+  },
+  {
+    "pattern": "_oyal",
+    "items": [
+      "loyal",
+      "royal"
+    ]
+  },
+  {
+    "pattern": "_pine",
+    "items": [
+      "opine",
+      "spine"
+    ]
+  },
+  {
+    "pattern": "_race",
+    "items": [
+      "brace",
+      "grace",
+      "trace"
+    ]
+  },
+  {
+    "pattern": "_rack",
+    "items": [
+      "crack",
+      "track",
+      "wrack"
+    ]
+  },
+  {
+    "pattern": "_rade",
+    "items": [
+      "grade",
+      "trade"
+    ]
+  },
+  {
+    "pattern": "_raft",
+    "items": [
+      "craft",
+      "draft",
+      "graft"
+    ]
+  },
+  {
+    "pattern": "_rail",
+    "items": [
+      "frail",
+      "grail",
+      "trail"
+    ]
+  },
+  {
+    "pattern": "_rain",
+    "items": [
+      "brain",
+      "drain",
+      "grain",
+      "train"
+    ]
+  },
+  {
+    "pattern": "_rake",
+    "items": [
+      "brake",
+      "drake"
+    ]
+  },
+  {
+    "pattern": "_ramp",
+    "items": [
+      "cramp",
+      "tramp"
+    ]
+  },
+  {
+    "pattern": "_rand",
+    "items": [
+      "brand",
+      "grand"
+    ]
+  },
+  {
+    "pattern": "_rank",
+    "items": [
+      "crank",
+      "drank",
+      "frank",
+      "prank"
+    ]
+  },
+  {
+    "pattern": "_rape",
+    "items": [
+      "drape",
+      "grape"
+    ]
+  },
+  {
+    "pattern": "_rash",
+    "items": [
+      "brash",
+      "crash",
+      "trash"
+    ]
+  },
+  {
+    "pattern": "_rass",
+    "items": [
+      "brass",
+      "crass",
+      "grass"
+    ]
+  },
+  {
+    "pattern": "_rate",
+    "items": [
+      "crate",
+      "grate",
+      "irate"
+    ]
+  },
+  {
+    "pattern": "_rave",
+    "items": [
+      "brave",
+      "crave",
+      "grave"
+    ]
+  },
+  {
+    "pattern": "_rawl",
+    "items": [
+      "brawl",
+      "crawl",
+      "drawl",
+      "trawl"
+    ]
+  },
+  {
+    "pattern": "_rawn",
+    "items": [
+      "brawn",
+      "drawn",
+      "prawn"
+    ]
+  },
+  {
+    "pattern": "_raze",
+    "items": [
+      "craze",
+      "graze"
+    ]
+  },
+  {
+    "pattern": "_read",
+    "items": [
+      "bread",
+      "dread",
+      "tread"
+    ]
+  },
+  {
+    "pattern": "_reak",
+    "items": [
+      "break",
+      "creak",
+      "freak",
+      "wreak"
+    ]
+  },
+  {
+    "pattern": "_ream",
+    "items": [
+      "cream",
+      "dream"
+    ]
+  },
+  {
+    "pattern": "_reat",
+    "items": [
+      "great",
+      "treat"
+    ]
+  },
+  {
+    "pattern": "_reed",
+    "items": [
+      "breed",
+      "creed",
+      "freed",
+      "greed"
+    ]
+  },
+  {
+    "pattern": "_reen",
+    "items": [
+      "green",
+      "preen"
+    ]
+  },
+  {
+    "pattern": "_ress",
+    "items": [
+      "cress",
+      "dress",
+      "press"
+    ]
+  },
+  {
+    "pattern": "_rest",
+    "items": [
+      "crest",
+      "wrest"
+    ]
+  },
+  {
+    "pattern": "_riar",
+    "items": [
+      "briar",
+      "friar"
+    ]
+  },
+  {
+    "pattern": "_ribe",
+    "items": [
+      "bribe",
+      "tribe"
+    ]
+  },
+  {
+    "pattern": "_rice",
+    "items": [
+      "price",
+      "trice"
+    ]
+  },
+  {
+    "pattern": "_rick",
+    "items": [
+      "brick",
+      "crick",
+      "prick",
+      "trick"
+    ]
+  },
+  {
+    "pattern": "_ride",
+    "items": [
+      "bride",
+      "pride"
+    ]
+  },
+  {
+    "pattern": "_ried",
+    "items": [
+      "cried",
+      "dried",
+      "fried",
+      "pried",
+      "tried"
+    ]
+  },
+  {
+    "pattern": "_rief",
+    "items": [
+      "brief",
+      "grief"
+    ]
+  },
+  {
+    "pattern": "_rier",
+    "items": [
+      "crier",
+      "drier"
+    ]
+  },
+  {
+    "pattern": "_rill",
+    "items": [
+      "drill",
+      "frill",
+      "grill",
+      "krill"
+    ]
+  },
+  {
+    "pattern": "_rime",
+    "items": [
+      "crime",
+      "grime",
+      "prime"
+    ]
+  },
+  {
+    "pattern": "_rine",
+    "items": [
+      "brine",
+      "urine"
+    ]
+  },
+  {
+    "pattern": "_ring",
+    "items": [
+      "bring",
+      "wring"
+    ]
+  },
+  {
+    "pattern": "_rink",
+    "items": [
+      "brink",
+      "drink"
+    ]
+  },
+  {
+    "pattern": "_ripe",
+    "items": [
+      "gripe",
+      "tripe"
+    ]
+  },
+  {
+    "pattern": "_risk",
+    "items": [
+      "brisk",
+      "frisk"
+    ]
+  },
+  {
+    "pattern": "_rite",
+    "items": [
+      "trite",
+      "write"
+    ]
+  },
+  {
+    "pattern": "_rock",
+    "items": [
+      "crock",
+      "frock"
+    ]
+  },
+  {
+    "pattern": "_roll",
+    "items": [
+      "droll",
+      "troll"
+    ]
+  },
+  {
+    "pattern": "_rone",
+    "items": [
+      "crone",
+      "drone",
+      "prone"
+    ]
+  },
+  {
+    "pattern": "_rong",
+    "items": [
+      "prong",
+      "wrong"
+    ]
+  },
+  {
+    "pattern": "_rony",
+    "items": [
+      "crony",
+      "irony"
+    ]
+  },
+  {
+    "pattern": "_rook",
+    "items": [
+      "brook",
+      "crook"
+    ]
+  },
+  {
+    "pattern": "_room",
+    "items": [
+      "broom",
+      "groom"
+    ]
+  },
+  {
+    "pattern": "_roop",
+    "items": [
+      "droop",
+      "troop"
+    ]
+  },
+  {
+    "pattern": "_rope",
+    "items": [
+      "grope",
+      "trope"
+    ]
+  },
+  {
+    "pattern": "_rose",
+    "items": [
+      "arose",
+      "prose"
+    ]
+  },
+  {
+    "pattern": "_ross",
+    "items": [
+      "cross",
+      "dross",
+      "gross"
+    ]
+  },
+  {
+    "pattern": "_roth",
+    "items": [
+      "broth",
+      "froth"
+    ]
+  },
+  {
+    "pattern": "_roup",
+    "items": [
+      "croup",
+      "group"
+    ]
+  },
+  {
+    "pattern": "_rout",
+    "items": [
+      "grout",
+      "trout"
+    ]
+  },
+  {
+    "pattern": "_rove",
+    "items": [
+      "drove",
+      "grove",
+      "prove",
+      "trove"
+    ]
+  },
+  {
+    "pattern": "_rowl",
+    "items": [
+      "growl",
+      "prowl"
+    ]
+  },
+  {
+    "pattern": "_rown",
+    "items": [
+      "brown",
+      "crown",
+      "drown",
+      "frown",
+      "grown"
+    ]
+  },
+  {
+    "pattern": "_rude",
+    "items": [
+      "crude",
+      "prude"
+    ]
+  },
+  {
+    "pattern": "_ruel",
+    "items": [
+      "cruel",
+      "gruel"
+    ]
+  },
+  {
+    "pattern": "_rump",
+    "items": [
+      "crump",
+      "trump"
+    ]
+  },
+  {
+    "pattern": "_runk",
+    "items": [
+      "drunk",
+      "trunk"
+    ]
+  },
+  {
+    "pattern": "_runt",
+    "items": [
+      "brunt",
+      "grunt"
+    ]
+  },
+  {
+    "pattern": "_rush",
+    "items": [
+      "brush",
+      "crush"
+    ]
+  },
+  {
+    "pattern": "_rust",
+    "items": [
+      "crust",
+      "trust"
+    ]
+  },
+  {
+    "pattern": "_ryly",
+    "items": [
+      "dryly",
+      "wryly"
+    ]
+  },
+  {
+    "pattern": "_ssay",
+    "items": [
+      "assay",
+      "essay"
+    ]
+  },
+  {
+    "pattern": "_ther",
+    "items": [
+      "ether",
+      "other"
+    ]
+  },
+  {
+    "pattern": "_tone",
+    "items": [
+      "atone",
+      "stone"
+    ]
+  },
+  {
+    "pattern": "_tter",
+    "items": [
+      "otter",
+      "utter"
+    ]
+  },
+  {
+    "pattern": "_ubic",
+    "items": [
+      "cubic",
+      "pubic"
+    ]
+  },
+  {
+    "pattern": "_ucky",
+    "items": [
+      "lucky",
+      "mucky"
+    ]
+  },
+  {
+    "pattern": "_uddy",
+    "items": [
+      "buddy",
+      "muddy",
+      "ruddy"
+    ]
+  },
+  {
+    "pattern": "_udge",
+    "items": [
+      "budge",
+      "fudge",
+      "judge",
+      "nudge"
+    ]
+  },
+  {
+    "pattern": "_uest",
+    "items": [
+      "guest",
+      "quest"
+    ]
+  },
+  {
+    "pattern": "_uild",
+    "items": [
+      "build",
+      "guild"
+    ]
+  },
+  {
+    "pattern": "_uilt",
+    "items": [
+      "built",
+      "guilt",
+      "quilt"
+    ]
+  },
+  {
+    "pattern": "_uite",
+    "items": [
+      "quite",
+      "suite"
+    ]
+  },
+  {
+    "pattern": "_ulch",
+    "items": [
+      "gulch",
+      "mulch"
+    ]
+  },
+  {
+    "pattern": "_ulky",
+    "items": [
+      "bulky",
+      "sulky"
+    ]
+  },
+  {
+    "pattern": "_ully",
+    "items": [
+      "bully",
+      "dully",
+      "fully",
+      "gully",
+      "sully"
+    ]
+  },
+  {
+    "pattern": "_umbo",
+    "items": [
+      "gumbo",
+      "jumbo"
+    ]
+  },
+  {
+    "pattern": "_ummy",
+    "items": [
+      "dummy",
+      "gummy",
+      "mummy"
+    ]
+  },
+  {
+    "pattern": "_umor",
+    "items": [
+      "humor",
+      "rumor",
+      "tumor"
+    ]
+  },
+  {
+    "pattern": "_umpy",
+    "items": [
+      "dumpy",
+      "jumpy",
+      "lumpy"
+    ]
+  },
+  {
+    "pattern": "_unce",
+    "items": [
+      "dunce",
+      "ounce"
+    ]
+  },
+  {
+    "pattern": "_unch",
+    "items": [
+      "bunch",
+      "hunch",
+      "lunch",
+      "munch",
+      "punch"
+    ]
+  },
+  {
+    "pattern": "_unky",
+    "items": [
+      "funky",
+      "hunky"
+    ]
+  },
+  {
+    "pattern": "_unny",
+    "items": [
+      "bunny",
+      "funny",
+      "sunny"
+    ]
+  },
+  {
+    "pattern": "_uppy",
+    "items": [
+      "guppy",
+      "puppy"
+    ]
+  },
+  {
+    "pattern": "_ural",
+    "items": [
+      "mural",
+      "rural"
+    ]
+  },
+  {
+    "pattern": "_urer",
+    "items": [
+      "purer",
+      "surer"
+    ]
+  },
+  {
+    "pattern": "_urge",
+    "items": [
+      "purge",
+      "surge"
+    ]
+  },
+  {
+    "pattern": "_urly",
+    "items": [
+      "burly",
+      "curly",
+      "surly"
+    ]
+  },
+  {
+    "pattern": "_uror",
+    "items": [
+      "furor",
+      "juror"
+    ]
+  },
+  {
+    "pattern": "_urry",
+    "items": [
+      "curry",
+      "furry",
+      "hurry"
+    ]
+  },
+  {
+    "pattern": "_urse",
+    "items": [
+      "curse",
+      "nurse",
+      "purse"
+    ]
+  },
+  {
+    "pattern": "_ushy",
+    "items": [
+      "bushy",
+      "mushy",
+      "pushy"
+    ]
+  },
+  {
+    "pattern": "_usky",
+    "items": [
+      "dusky",
+      "husky",
+      "musky"
+    ]
+  },
+  {
+    "pattern": "_ussy",
+    "items": [
+      "fussy",
+      "hussy"
+    ]
+  },
+  {
+    "pattern": "_usty",
+    "items": [
+      "dusty",
+      "gusty",
+      "lusty",
+      "musty",
+      "rusty"
+    ]
+  },
+  {
+    "pattern": "_utch",
+    "items": [
+      "butch",
+      "dutch",
+      "hutch"
+    ]
+  },
+  {
+    "pattern": "_utty",
+    "items": [
+      "nutty",
+      "putty"
+    ]
+  },
+  {
+    "pattern": "_vert",
+    "items": [
+      "avert",
+      "overt"
+    ]
+  },
+  {
+    "pattern": "_void",
+    "items": [
+      "avoid",
+      "ovoid"
+    ]
+  },
+  {
+    "pattern": "_wash",
+    "items": [
+      "awash",
+      "swash"
+    ]
+  },
+  {
+    "pattern": "_weet",
+    "items": [
+      "sweet",
+      "tweet"
+    ]
+  },
+  {
+    "pattern": "_well",
+    "items": [
+      "dwell",
+      "swell"
+    ]
+  },
+  {
+    "pattern": "_wine",
+    "items": [
+      "swine",
+      "twine"
+    ]
+  },
+  {
+    "pattern": "_wing",
+    "items": [
+      "owing",
+      "swing"
+    ]
+  },
+  {
+    "pattern": "_wirl",
+    "items": [
+      "swirl",
+      "twirl"
+    ]
+  },
+  {
+    "pattern": "_ying",
+    "items": [
+      "dying",
+      "eying",
+      "lying",
+      "tying",
+      "vying"
+    ]
+  },
+  {
+    "pattern": "_ymph",
+    "items": [
+      "lymph",
+      "nymph"
+    ]
+  },
+  {
+    "pattern": "a_ate",
+    "items": [
+      "abate",
+      "agate"
+    ]
+  },
+  {
+    "pattern": "a_ert",
+    "items": [
+      "alert",
+      "avert"
+    ]
+  },
+  {
+    "pattern": "a_ide",
+    "items": [
+      "abide",
+      "aside"
+    ]
+  },
+  {
+    "pattern": "a_ing",
+    "items": [
+      "aging",
+      "aping"
+    ]
+  },
+  {
+    "pattern": "a_low",
+    "items": [
+      "aglow",
+      "allow"
+    ]
+  },
+  {
+    "pattern": "a_ode",
+    "items": [
+      "abode",
+      "anode"
+    ]
+  },
+  {
+    "pattern": "a_one",
+    "items": [
+      "alone",
+      "atone"
+    ]
+  },
+  {
+    "pattern": "a_ong",
+    "items": [
+      "along",
+      "among"
+    ]
+  },
+  {
+    "pattern": "a_orn",
+    "items": [
+      "acorn",
+      "adorn"
+    ]
+  },
+  {
+    "pattern": "a_ple",
+    "items": [
+      "ample",
+      "apple"
+    ]
+  },
+  {
+    "pattern": "a_ply",
+    "items": [
+      "amply",
+      "apply"
+    ]
+  },
+  {
+    "pattern": "a_ter",
+    "items": [
+      "after",
+      "alter"
+    ]
+  },
+  {
+    "pattern": "a_tic",
+    "items": [
+      "antic",
+      "attic"
+    ]
+  },
+  {
+    "pattern": "a_use",
+    "items": [
+      "abuse",
+      "amuse"
+    ]
+  },
+  {
+    "pattern": "ab_de",
+    "items": [
+      "abide",
+      "abode"
+    ]
+  },
+  {
+    "pattern": "ab_se",
+    "items": [
+      "abase",
+      "abuse"
+    ]
+  },
+  {
+    "pattern": "aba_e",
+    "items": [
+      "abase",
+      "abate"
+    ]
+  },
+  {
+    "pattern": "abo_e",
+    "items": [
+      "abode",
+      "above"
+    ]
+  },
+  {
+    "pattern": "abo_t",
+    "items": [
+      "abort",
+      "about"
+    ]
+  },
+  {
+    "pattern": "ad_pt",
+    "items": [
+      "adapt",
+      "adept",
+      "adopt"
+    ]
+  },
+  {
+    "pattern": "admi_",
+    "items": [
+      "admin",
+      "admit"
+    ]
+  },
+  {
+    "pattern": "ado_e",
+    "items": [
+      "adobe",
+      "adore"
+    ]
+  },
+  {
+    "pattern": "ador_",
+    "items": [
+      "adore",
+      "adorn"
+    ]
+  },
+  {
+    "pattern": "aga_e",
+    "items": [
+      "agape",
+      "agate"
+    ]
+  },
+  {
+    "pattern": "ali_e",
+    "items": [
+      "alike",
+      "alive"
+    ]
+  },
+  {
+    "pattern": "ali_n",
+    "items": [
+      "alien",
+      "align"
+    ]
+  },
+  {
+    "pattern": "all_y",
+    "items": [
+      "allay",
+      "alley",
+      "alloy"
+    ]
+  },
+  {
+    "pattern": "allo_",
+    "items": [
+      "allot",
+      "allow",
+      "alloy"
+    ]
+  },
+  {
+    "pattern": "alon_",
+    "items": [
+      "alone",
+      "along"
+    ]
+  },
+  {
+    "pattern": "alt_r",
+    "items": [
+      "altar",
+      "alter"
+    ]
+  },
+  {
+    "pattern": "am_le",
+    "items": [
+      "amble",
+      "ample"
+    ]
+  },
+  {
+    "pattern": "am_ss",
+    "items": [
+      "amass",
+      "amiss"
+    ]
+  },
+  {
+    "pattern": "ampl_",
+    "items": [
+      "ample",
+      "amply"
+    ]
+  },
+  {
+    "pattern": "an_le",
+    "items": [
+      "angle",
+      "ankle"
+    ]
+  },
+  {
+    "pattern": "ange_",
+    "items": [
+      "angel",
+      "anger"
+    ]
+  },
+  {
+    "pattern": "ap_ly",
+    "items": [
+      "apply",
+      "aptly"
+    ]
+  },
+  {
+    "pattern": "appl_",
+    "items": [
+      "apple",
+      "apply"
+    ]
+  },
+  {
+    "pattern": "ar_or",
+    "items": [
+      "arbor",
+      "ardor",
+      "armor"
+    ]
+  },
+  {
+    "pattern": "ar_se",
+    "items": [
+      "arise",
+      "arose"
+    ]
+  },
+  {
+    "pattern": "audi_",
+    "items": [
+      "audio",
+      "audit"
+    ]
+  },
+  {
+    "pattern": "aw_ke",
+    "items": [
+      "awake",
+      "awoke"
+    ]
+  },
+  {
+    "pattern": "awa_e",
+    "items": [
+      "awake",
+      "aware"
+    ]
+  },
+  {
+    "pattern": "awar_",
+    "items": [
+      "award",
+      "aware"
+    ]
+  },
+  {
+    "pattern": "axio_",
+    "items": [
+      "axiom",
+      "axion"
+    ]
+  },
+  {
+    "pattern": "b_and",
+    "items": [
+      "bland",
+      "brand"
+    ]
+  },
+  {
+    "pattern": "b_ard",
+    "items": [
+      "beard",
+      "board"
+    ]
+  },
+  {
+    "pattern": "b_ast",
+    "items": [
+      "beast",
+      "blast",
+      "boast"
+    ]
+  },
+  {
+    "pattern": "b_ddy",
+    "items": [
+      "biddy",
+      "buddy"
+    ]
+  },
+  {
+    "pattern": "b_dge",
+    "items": [
+      "badge",
+      "budge"
+    ]
+  },
+  {
+    "pattern": "b_eak",
+    "items": [
+      "bleak",
+      "break"
+    ]
+  },
+  {
+    "pattern": "b_eed",
+    "items": [
+      "bleed",
+      "breed"
+    ]
+  },
+  {
+    "pattern": "b_ggy",
+    "items": [
+      "baggy",
+      "buggy"
+    ]
+  },
+  {
+    "pattern": "b_ing",
+    "items": [
+      "being",
+      "bring"
+    ]
+  },
+  {
+    "pattern": "b_ink",
+    "items": [
+      "blink",
+      "brink"
+    ]
+  },
+  {
+    "pattern": "b_lge",
+    "items": [
+      "bilge",
+      "bulge"
+    ]
+  },
+  {
+    "pattern": "b_lly",
+    "items": [
+      "belly",
+      "billy",
+      "bully"
+    ]
+  },
+  {
+    "pattern": "b_nch",
+    "items": [
+      "bench",
+      "bunch"
+    ]
+  },
+  {
+    "pattern": "b_ngo",
+    "items": [
+      "bingo",
+      "bongo"
+    ]
+  },
+  {
+    "pattern": "b_oke",
+    "items": [
+      "bloke",
+      "broke"
+    ]
+  },
+  {
+    "pattern": "b_ood",
+    "items": [
+      "blood",
+      "brood"
+    ]
+  },
+  {
+    "pattern": "b_oom",
+    "items": [
+      "bloom",
+      "broom"
+    ]
+  },
+  {
+    "pattern": "b_oth",
+    "items": [
+      "booth",
+      "broth"
+    ]
+  },
+  {
+    "pattern": "b_own",
+    "items": [
+      "blown",
+      "brown"
+    ]
+  },
+  {
+    "pattern": "b_rth",
+    "items": [
+      "berth",
+      "birth"
+    ]
+  },
+  {
+    "pattern": "b_tch",
+    "items": [
+      "batch",
+      "botch",
+      "butch"
+    ]
+  },
+  {
+    "pattern": "b_tty",
+    "items": [
+      "batty",
+      "bitty"
+    ]
+  },
+  {
+    "pattern": "b_unt",
+    "items": [
+      "blunt",
+      "brunt"
+    ]
+  },
+  {
+    "pattern": "b_ush",
+    "items": [
+      "blush",
+      "brush"
+    ]
+  },
+  {
+    "pattern": "ba_al",
+    "items": [
+      "banal",
+      "basal"
+    ]
+  },
+  {
+    "pattern": "ba_er",
+    "items": [
+      "baker",
+      "baler"
+    ]
+  },
+  {
+    "pattern": "ba_ge",
+    "items": [
+      "badge",
+      "barge"
+    ]
+  },
+  {
+    "pattern": "ba_on",
+    "items": [
+      "bacon",
+      "baron",
+      "baton"
+    ]
+  },
+  {
+    "pattern": "bas_l",
+    "items": [
+      "basal",
+      "basil"
+    ]
+  },
+  {
+    "pattern": "basi_",
+    "items": [
+      "basic",
+      "basil",
+      "basin",
+      "basis"
+    ]
+  },
+  {
+    "pattern": "be_ch",
+    "items": [
+      "beach",
+      "beech",
+      "belch",
+      "bench"
+    ]
+  },
+  {
+    "pattern": "be_el",
+    "items": [
+      "betel",
+      "bevel",
+      "bezel"
+    ]
+  },
+  {
+    "pattern": "be_et",
+    "items": [
+      "beget",
+      "beret",
+      "beset"
+    ]
+  },
+  {
+    "pattern": "beg_n",
+    "items": [
+      "began",
+      "begin",
+      "begun"
+    ]
+  },
+  {
+    "pattern": "beg_t",
+    "items": [
+      "begat",
+      "beget"
+    ]
+  },
+  {
+    "pattern": "bega_",
+    "items": [
+      "began",
+      "begat"
+    ]
+  },
+  {
+    "pattern": "bel_e",
+    "items": [
+      "belie",
+      "belle"
+    ]
+  },
+  {
+    "pattern": "bell_",
+    "items": [
+      "belle",
+      "belly"
+    ]
+  },
+  {
+    "pattern": "bi_ge",
+    "items": [
+      "bilge",
+      "binge"
+    ]
+  },
+  {
+    "pattern": "bing_",
+    "items": [
+      "binge",
+      "bingo"
+    ]
+  },
+  {
+    "pattern": "bir_h",
+    "items": [
+      "birch",
+      "birth"
+    ]
+  },
+  {
+    "pattern": "bl_at",
+    "items": [
+      "bleat",
+      "bloat"
+    ]
+  },
+  {
+    "pattern": "bl_ck",
+    "items": [
+      "black",
+      "block"
+    ]
+  },
+  {
+    "pattern": "bl_nd",
+    "items": [
+      "bland",
+      "blend",
+      "blind",
+      "blond"
+    ]
+  },
+  {
+    "pattern": "bl_nk",
+    "items": [
+      "blank",
+      "blink"
+    ]
+  },
+  {
+    "pattern": "bl_ss",
+    "items": [
+      "bless",
+      "bliss"
+    ]
+  },
+  {
+    "pattern": "bla_e",
+    "items": [
+      "blade",
+      "blame",
+      "blare",
+      "blaze"
+    ]
+  },
+  {
+    "pattern": "bla_k",
+    "items": [
+      "black",
+      "blank"
+    ]
+  },
+  {
+    "pattern": "blan_",
+    "items": [
+      "bland",
+      "blank"
+    ]
+  },
+  {
+    "pattern": "ble_d",
+    "items": [
+      "bleed",
+      "blend"
+    ]
+  },
+  {
+    "pattern": "blea_",
+    "items": [
+      "bleak",
+      "bleat"
+    ]
+  },
+  {
+    "pattern": "blee_",
+    "items": [
+      "bleed",
+      "bleep"
+    ]
+  },
+  {
+    "pattern": "blin_",
+    "items": [
+      "blind",
+      "blink"
+    ]
+  },
+  {
+    "pattern": "blo_d",
+    "items": [
+      "blond",
+      "blood"
+    ]
+  },
+  {
+    "pattern": "bloo_",
+    "items": [
+      "blood",
+      "bloom"
+    ]
+  },
+  {
+    "pattern": "blu_t",
+    "items": [
+      "blunt",
+      "blurt"
+    ]
+  },
+  {
+    "pattern": "blur_",
+    "items": [
+      "blurb",
+      "blurt"
+    ]
+  },
+  {
+    "pattern": "bo_by",
+    "items": [
+      "bobby",
+      "booby"
+    ]
+  },
+  {
+    "pattern": "bo_st",
+    "items": [
+      "boast",
+      "boost"
+    ]
+  },
+  {
+    "pattern": "boo_y",
+    "items": [
+      "booby",
+      "booty",
+      "boozy"
+    ]
+  },
+  {
+    "pattern": "boot_",
+    "items": [
+      "booth",
+      "booty"
+    ]
+  },
+  {
+    "pattern": "booz_",
+    "items": [
+      "booze",
+      "boozy"
+    ]
+  },
+  {
+    "pattern": "br_ad",
+    "items": [
+      "bread",
+      "broad"
+    ]
+  },
+  {
+    "pattern": "br_ke",
+    "items": [
+      "brake",
+      "broke"
+    ]
+  },
+  {
+    "pattern": "br_sh",
+    "items": [
+      "brash",
+      "brush"
+    ]
+  },
+  {
+    "pattern": "br_wn",
+    "items": [
+      "brawn",
+      "brown"
+    ]
+  },
+  {
+    "pattern": "bra_d",
+    "items": [
+      "braid",
+      "brand"
+    ]
+  },
+  {
+    "pattern": "bra_e",
+    "items": [
+      "brace",
+      "brake",
+      "brave"
+    ]
+  },
+  {
+    "pattern": "bra_n",
+    "items": [
+      "brain",
+      "brawn"
+    ]
+  },
+  {
+    "pattern": "brai_",
+    "items": [
+      "braid",
+      "brain"
+    ]
+  },
+  {
+    "pattern": "bras_",
+    "items": [
+      "brash",
+      "brass"
+    ]
+  },
+  {
+    "pattern": "brav_",
+    "items": [
+      "brave",
+      "bravo"
+    ]
+  },
+  {
+    "pattern": "braw_",
+    "items": [
+      "brawl",
+      "brawn"
+    ]
+  },
+  {
+    "pattern": "bre_d",
+    "items": [
+      "bread",
+      "breed"
+    ]
+  },
+  {
+    "pattern": "brea_",
+    "items": [
+      "bread",
+      "break"
+    ]
+  },
+  {
+    "pattern": "bri_e",
+    "items": [
+      "bribe",
+      "bride",
+      "brine"
+    ]
+  },
+  {
+    "pattern": "bri_k",
+    "items": [
+      "brick",
+      "brink",
+      "brisk"
+    ]
+  },
+  {
+    "pattern": "brin_",
+    "items": [
+      "brine",
+      "bring",
+      "brink",
+      "briny"
+    ]
+  },
+  {
+    "pattern": "bro_d",
+    "items": [
+      "broad",
+      "brood"
+    ]
+  },
+  {
+    "pattern": "broo_",
+    "items": [
+      "brood",
+      "brook",
+      "broom"
+    ]
+  },
+  {
+    "pattern": "bu_ch",
+    "items": [
+      "bunch",
+      "butch"
+    ]
+  },
+  {
+    "pattern": "bu_ge",
+    "items": [
+      "budge",
+      "bulge"
+    ]
+  },
+  {
+    "pattern": "bu_ly",
+    "items": [
+      "bully",
+      "burly"
+    ]
+  },
+  {
+    "pattern": "buil_",
+    "items": [
+      "build",
+      "built"
+    ]
+  },
+  {
+    "pattern": "bul_y",
+    "items": [
+      "bulky",
+      "bully"
+    ]
+  },
+  {
+    "pattern": "bur_t",
+    "items": [
+      "burnt",
+      "burst"
+    ]
+  },
+  {
+    "pattern": "c_ack",
+    "items": [
+      "clack",
+      "crack"
+    ]
+  },
+  {
+    "pattern": "c_amp",
+    "items": [
+      "champ",
+      "clamp",
+      "cramp"
+    ]
+  },
+  {
+    "pattern": "c_ank",
+    "items": [
+      "clank",
+      "crank"
+    ]
+  },
+  {
+    "pattern": "c_ase",
+    "items": [
+      "cease",
+      "chase"
+    ]
+  },
+  {
+    "pattern": "c_ash",
+    "items": [
+      "clash",
+      "crash"
+    ]
+  },
+  {
+    "pattern": "c_ass",
+    "items": [
+      "class",
+      "crass"
+    ]
+  },
+  {
+    "pattern": "c_eat",
+    "items": [
+      "cheat",
+      "cleat"
+    ]
+  },
+  {
+    "pattern": "c_eek",
+    "items": [
+      "cheek",
+      "creek"
+    ]
+  },
+  {
+    "pattern": "c_ess",
+    "items": [
+      "chess",
+      "cress"
+    ]
+  },
+  {
+    "pattern": "c_est",
+    "items": [
+      "chest",
+      "crest"
+    ]
+  },
+  {
+    "pattern": "c_ick",
+    "items": [
+      "chick",
+      "click",
+      "crick"
+    ]
+  },
+  {
+    "pattern": "c_ime",
+    "items": [
+      "chime",
+      "crime"
+    ]
+  },
+  {
+    "pattern": "c_nch",
+    "items": [
+      "cinch",
+      "conch"
+    ]
+  },
+  {
+    "pattern": "c_nic",
+    "items": [
+      "conic",
+      "cynic"
+    ]
+  },
+  {
+    "pattern": "c_oak",
+    "items": [
+      "cloak",
+      "croak"
+    ]
+  },
+  {
+    "pattern": "c_ock",
+    "items": [
+      "chock",
+      "clock",
+      "crock"
+    ]
+  },
+  {
+    "pattern": "c_one",
+    "items": [
+      "clone",
+      "crone"
+    ]
+  },
+  {
+    "pattern": "c_ose",
+    "items": [
+      "chose",
+      "close"
+    ]
+  },
+  {
+    "pattern": "c_own",
+    "items": [
+      "clown",
+      "crown"
+    ]
+  },
+  {
+    "pattern": "c_rry",
+    "items": [
+      "carry",
+      "curry"
+    ]
+  },
+  {
+    "pattern": "c_rve",
+    "items": [
+      "carve",
+      "curve"
+    ]
+  },
+  {
+    "pattern": "c_uck",
+    "items": [
+      "chuck",
+      "cluck"
+    ]
+  },
+  {
+    "pattern": "c_ump",
+    "items": [
+      "chump",
+      "clump",
+      "crump"
+    ]
+  },
+  {
+    "pattern": "c_vil",
+    "items": [
+      "cavil",
+      "civil"
+    ]
+  },
+  {
+    "pattern": "ca_al",
+    "items": [
+      "cabal",
+      "canal"
+    ]
+  },
+  {
+    "pattern": "ca_dy",
+    "items": [
+      "caddy",
+      "candy"
+    ]
+  },
+  {
+    "pattern": "ca_er",
+    "items": [
+      "caper",
+      "cater"
+    ]
+  },
+  {
+    "pattern": "came_",
+    "items": [
+      "camel",
+      "cameo"
+    ]
+  },
+  {
+    "pattern": "can_y",
+    "items": [
+      "candy",
+      "canny"
+    ]
+  },
+  {
+    "pattern": "cano_",
+    "items": [
+      "canoe",
+      "canon"
+    ]
+  },
+  {
+    "pattern": "ch_ck",
+    "items": [
+      "check",
+      "chick",
+      "chock",
+      "chuck"
+    ]
+  },
+  {
+    "pattern": "ch_ir",
+    "items": [
+      "chair",
+      "choir"
+    ]
+  },
+  {
+    "pattern": "ch_mp",
+    "items": [
+      "champ",
+      "chump"
+    ]
+  },
+  {
+    "pattern": "ch_rd",
+    "items": [
+      "chard",
+      "chord"
+    ]
+  },
+  {
+    "pattern": "ch_se",
+    "items": [
+      "chase",
+      "chose"
+    ]
+  },
+  {
+    "pattern": "cha_e",
+    "items": [
+      "chafe",
+      "chase"
+    ]
+  },
+  {
+    "pattern": "cha_m",
+    "items": [
+      "charm",
+      "chasm"
+    ]
+  },
+  {
+    "pattern": "cha_t",
+    "items": [
+      "chant",
+      "chart"
+    ]
+  },
+  {
+    "pattern": "chaf_",
+    "items": [
+      "chafe",
+      "chaff"
+    ]
+  },
+  {
+    "pattern": "chai_",
+    "items": [
+      "chain",
+      "chair"
+    ]
+  },
+  {
+    "pattern": "char_",
+    "items": [
+      "chard",
+      "charm",
+      "chart"
+    ]
+  },
+  {
+    "pattern": "chas_",
+    "items": [
+      "chase",
+      "chasm"
+    ]
+  },
+  {
+    "pattern": "che_k",
+    "items": [
+      "check",
+      "cheek"
+    ]
+  },
+  {
+    "pattern": "che_t",
+    "items": [
+      "cheat",
+      "chest"
+    ]
+  },
+  {
+    "pattern": "chea_",
+    "items": [
+      "cheap",
+      "cheat"
+    ]
+  },
+  {
+    "pattern": "chee_",
+    "items": [
+      "cheek",
+      "cheer"
+    ]
+  },
+  {
+    "pattern": "ches_",
+    "items": [
+      "chess",
+      "chest"
+    ]
+  },
+  {
+    "pattern": "chi_e",
+    "items": [
+      "chide",
+      "chime"
+    ]
+  },
+  {
+    "pattern": "chil_",
+    "items": [
+      "child",
+      "chili",
+      "chill"
+    ]
+  },
+  {
+    "pattern": "cho_e",
+    "items": [
+      "choke",
+      "chore",
+      "chose"
+    ]
+  },
+  {
+    "pattern": "chor_",
+    "items": [
+      "chord",
+      "chore"
+    ]
+  },
+  {
+    "pattern": "chu_k",
+    "items": [
+      "chuck",
+      "chunk"
+    ]
+  },
+  {
+    "pattern": "civi_",
+    "items": [
+      "civic",
+      "civil"
+    ]
+  },
+  {
+    "pattern": "cl_ck",
+    "items": [
+      "clack",
+      "click",
+      "clock",
+      "cluck"
+    ]
+  },
+  {
+    "pattern": "cl_mp",
+    "items": [
+      "clamp",
+      "clump"
+    ]
+  },
+  {
+    "pattern": "cl_ng",
+    "items": [
+      "clang",
+      "cling",
+      "clung"
+    ]
+  },
+  {
+    "pattern": "cl_nk",
+    "items": [
+      "clank",
+      "clink"
+    ]
+  },
+  {
+    "pattern": "cla_k",
+    "items": [
+      "clack",
+      "clank"
+    ]
+  },
+  {
+    "pattern": "cla_p",
+    "items": [
+      "clamp",
+      "clasp"
+    ]
+  },
+  {
+    "pattern": "clan_",
+    "items": [
+      "clang",
+      "clank"
+    ]
+  },
+  {
+    "pattern": "clas_",
+    "items": [
+      "clash",
+      "clasp",
+      "class"
+    ]
+  },
+  {
+    "pattern": "cle_t",
+    "items": [
+      "cleat",
+      "cleft"
+    ]
+  },
+  {
+    "pattern": "clea_",
+    "items": [
+      "clean",
+      "clear",
+      "cleat"
+    ]
+  },
+  {
+    "pattern": "cli_k",
+    "items": [
+      "click",
+      "clink"
+    ]
+  },
+  {
+    "pattern": "clin_",
+    "items": [
+      "cling",
+      "clink"
+    ]
+  },
+  {
+    "pattern": "clo_e",
+    "items": [
+      "clone",
+      "close",
+      "clove"
+    ]
+  },
+  {
+    "pattern": "clo_k",
+    "items": [
+      "cloak",
+      "clock"
+    ]
+  },
+  {
+    "pattern": "clou_",
+    "items": [
+      "cloud",
+      "clout"
+    ]
+  },
+  {
+    "pattern": "co_ch",
+    "items": [
+      "coach",
+      "conch",
+      "couch"
+    ]
+  },
+  {
+    "pattern": "co_er",
+    "items": [
+      "corer",
+      "cover",
+      "cower"
+    ]
+  },
+  {
+    "pattern": "co_et",
+    "items": [
+      "comet",
+      "covet"
+    ]
+  },
+  {
+    "pattern": "co_ic",
+    "items": [
+      "comic",
+      "conic"
+    ]
+  },
+  {
+    "pattern": "colo_",
+    "items": [
+      "colon",
+      "color"
+    ]
+  },
+  {
+    "pattern": "cou_h",
+    "items": [
+      "couch",
+      "cough"
+    ]
+  },
+  {
+    "pattern": "cou_t",
+    "items": [
+      "count",
+      "court"
+    ]
+  },
+  {
+    "pattern": "cove_",
+    "items": [
+      "coven",
+      "cover",
+      "covet",
+      "covey"
+    ]
+  },
+  {
+    "pattern": "cr_ak",
+    "items": [
+      "creak",
+      "croak"
+    ]
+  },
+  {
+    "pattern": "cr_ck",
+    "items": [
+      "crack",
+      "crick",
+      "crock"
+    ]
+  },
+  {
+    "pattern": "cr_ed",
+    "items": [
+      "creed",
+      "cried"
+    ]
+  },
+  {
+    "pattern": "cr_me",
+    "items": [
+      "creme",
+      "crime"
+    ]
+  },
+  {
+    "pattern": "cr_mp",
+    "items": [
+      "cramp",
+      "crimp",
+      "crump"
+    ]
+  },
+  {
+    "pattern": "cr_ne",
+    "items": [
+      "crane",
+      "crone"
+    ]
+  },
+  {
+    "pattern": "cr_pt",
+    "items": [
+      "crept",
+      "crypt"
+    ]
+  },
+  {
+    "pattern": "cr_sh",
+    "items": [
+      "crash",
+      "crush"
+    ]
+  },
+  {
+    "pattern": "cr_ss",
+    "items": [
+      "crass",
+      "cress",
+      "cross"
+    ]
+  },
+  {
+    "pattern": "cr_st",
+    "items": [
+      "crest",
+      "crust"
+    ]
+  },
+  {
+    "pattern": "cra_e",
+    "items": [
+      "crane",
+      "crate",
+      "crave",
+      "craze"
+    ]
+  },
+  {
+    "pattern": "cra_k",
+    "items": [
+      "crack",
+      "crank"
+    ]
+  },
+  {
+    "pattern": "cran_",
+    "items": [
+      "crane",
+      "crank"
+    ]
+  },
+  {
+    "pattern": "cras_",
+    "items": [
+      "crash",
+      "crass"
+    ]
+  },
+  {
+    "pattern": "craz_",
+    "items": [
+      "craze",
+      "crazy"
+    ]
+  },
+  {
+    "pattern": "cre_e",
+    "items": [
+      "creme",
+      "crepe"
+    ]
+  },
+  {
+    "pattern": "cre_k",
+    "items": [
+      "creak",
+      "creek"
+    ]
+  },
+  {
+    "pattern": "cre_t",
+    "items": [
+      "crept",
+      "crest"
+    ]
+  },
+  {
+    "pattern": "crea_",
+    "items": [
+      "creak",
+      "cream"
+    ]
+  },
+  {
+    "pattern": "cree_",
+    "items": [
+      "creed",
+      "creek",
+      "creep"
+    ]
+  },
+  {
+    "pattern": "crep_",
+    "items": [
+      "crepe",
+      "crept"
+    ]
+  },
+  {
+    "pattern": "cres_",
+    "items": [
+      "cress",
+      "crest"
+    ]
+  },
+  {
+    "pattern": "cri_p",
+    "items": [
+      "crimp",
+      "crisp"
+    ]
+  },
+  {
+    "pattern": "crie_",
+    "items": [
+      "cried",
+      "crier"
+    ]
+  },
+  {
+    "pattern": "crim_",
+    "items": [
+      "crime",
+      "crimp"
+    ]
+  },
+  {
+    "pattern": "cro_k",
+    "items": [
+      "croak",
+      "crock",
+      "crook"
+    ]
+  },
+  {
+    "pattern": "cron_",
+    "items": [
+      "crone",
+      "crony"
+    ]
+  },
+  {
+    "pattern": "crow_",
+    "items": [
+      "crowd",
+      "crown"
+    ]
+  },
+  {
+    "pattern": "crum_",
+    "items": [
+      "crumb",
+      "crump"
+    ]
+  },
+  {
+    "pattern": "crus_",
+    "items": [
+      "crush",
+      "crust"
+    ]
+  },
+  {
+    "pattern": "cur_e",
+    "items": [
+      "curse",
+      "curve"
+    ]
+  },
+  {
+    "pattern": "cur_y",
+    "items": [
+      "curly",
+      "curry",
+      "curvy"
+    ]
+  },
+  {
+    "pattern": "curv_",
+    "items": [
+      "curve",
+      "curvy"
+    ]
+  },
+  {
+    "pattern": "d_ing",
+    "items": [
+      "doing",
+      "dying"
+    ]
+  },
+  {
+    "pattern": "d_lly",
+    "items": [
+      "dally",
+      "dilly",
+      "dolly",
+      "dully"
+    ]
+  },
+  {
+    "pattern": "d_nce",
+    "items": [
+      "dance",
+      "dunce"
+    ]
+  },
+  {
+    "pattern": "d_tch",
+    "items": [
+      "ditch",
+      "dutch"
+    ]
+  },
+  {
+    "pattern": "da_dy",
+    "items": [
+      "daddy",
+      "dandy"
+    ]
+  },
+  {
+    "pattern": "da_ly",
+    "items": [
+      "daily",
+      "dally"
+    ]
+  },
+  {
+    "pattern": "dai_y",
+    "items": [
+      "daily",
+      "dairy",
+      "daisy"
+    ]
+  },
+  {
+    "pattern": "de_ay",
+    "items": [
+      "decay",
+      "delay"
+    ]
+  },
+  {
+    "pattern": "de_er",
+    "items": [
+      "defer",
+      "deter"
+    ]
+  },
+  {
+    "pattern": "de_th",
+    "items": [
+      "death",
+      "depth"
+    ]
+  },
+  {
+    "pattern": "deb_t",
+    "items": [
+      "debit",
+      "debut"
+    ]
+  },
+  {
+    "pattern": "debu_",
+    "items": [
+      "debug",
+      "debut"
+    ]
+  },
+  {
+    "pattern": "dec_y",
+    "items": [
+      "decay",
+      "decoy",
+      "decry"
+    ]
+  },
+  {
+    "pattern": "deca_",
+    "items": [
+      "decal",
+      "decay"
+    ]
+  },
+  {
+    "pattern": "deco_",
+    "items": [
+      "decor",
+      "decoy"
+    ]
+  },
+  {
+    "pattern": "di_er",
+    "items": [
+      "diner",
+      "diver"
+    ]
+  },
+  {
+    "pattern": "di_ly",
+    "items": [
+      "dilly",
+      "dimly"
+    ]
+  },
+  {
+    "pattern": "di_ty",
+    "items": [
+      "dirty",
+      "ditty"
+    ]
+  },
+  {
+    "pattern": "ding_",
+    "items": [
+      "dingo",
+      "dingy"
+    ]
+  },
+  {
+    "pattern": "ditt_",
+    "items": [
+      "ditto",
+      "ditty"
+    ]
+  },
+  {
+    "pattern": "dodg_",
+    "items": [
+      "dodge",
+      "dodgy"
+    ]
+  },
+  {
+    "pattern": "dow_y",
+    "items": [
+      "dowdy",
+      "downy",
+      "dowry"
+    ]
+  },
+  {
+    "pattern": "dr_er",
+    "items": [
+      "drier",
+      "dryer"
+    ]
+  },
+  {
+    "pattern": "dr_ft",
+    "items": [
+      "draft",
+      "drift"
+    ]
+  },
+  {
+    "pattern": "dr_ll",
+    "items": [
+      "drill",
+      "droll"
+    ]
+  },
+  {
+    "pattern": "dr_nk",
+    "items": [
+      "drank",
+      "drink",
+      "drunk"
+    ]
+  },
+  {
+    "pattern": "dr_ss",
+    "items": [
+      "dress",
+      "dross"
+    ]
+  },
+  {
+    "pattern": "dr_ve",
+    "items": [
+      "drive",
+      "drove"
+    ]
+  },
+  {
+    "pattern": "dr_wn",
+    "items": [
+      "drawn",
+      "drown"
+    ]
+  },
+  {
+    "pattern": "dra_e",
+    "items": [
+      "drake",
+      "drape"
+    ]
+  },
+  {
+    "pattern": "dra_n",
+    "items": [
+      "drain",
+      "drawn"
+    ]
+  },
+  {
+    "pattern": "draw_",
+    "items": [
+      "drawl",
+      "drawn"
+    ]
+  },
+  {
+    "pattern": "drea_",
+    "items": [
+      "dread",
+      "dream"
+    ]
+  },
+  {
+    "pattern": "drie_",
+    "items": [
+      "dried",
+      "drier"
+    ]
+  },
+  {
+    "pattern": "dro_e",
+    "items": [
+      "drone",
+      "drove"
+    ]
+  },
+  {
+    "pattern": "dro_l",
+    "items": [
+      "droll",
+      "drool"
+    ]
+  },
+  {
+    "pattern": "droo_",
+    "items": [
+      "drool",
+      "droop"
+    ]
+  },
+  {
+    "pattern": "dum_y",
+    "items": [
+      "dummy",
+      "dumpy"
+    ]
+  },
+  {
+    "pattern": "dus_y",
+    "items": [
+      "dusky",
+      "dusty"
+    ]
+  },
+  {
+    "pattern": "dwel_",
+    "items": [
+      "dwell",
+      "dwelt"
+    ]
+  },
+  {
+    "pattern": "e_act",
+    "items": [
+      "enact",
+      "exact"
+    ]
+  },
+  {
+    "pattern": "e_ect",
+    "items": [
+      "eject",
+      "elect",
+      "erect"
+    ]
+  },
+  {
+    "pattern": "e_ict",
+    "items": [
+      "edict",
+      "evict"
+    ]
+  },
+  {
+    "pattern": "e_ing",
+    "items": [
+      "eking",
+      "eying"
+    ]
+  },
+  {
+    "pattern": "e_ter",
+    "items": [
+      "eater",
+      "enter",
+      "ester"
+    ]
+  },
+  {
+    "pattern": "e_ude",
+    "items": [
+      "elude",
+      "etude"
+    ]
+  },
+  {
+    "pattern": "ea_er",
+    "items": [
+      "eager",
+      "eater"
+    ]
+  },
+  {
+    "pattern": "eate_",
+    "items": [
+      "eaten",
+      "eater"
+    ]
+  },
+  {
+    "pattern": "el_de",
+    "items": [
+      "elide",
+      "elude"
+    ]
+  },
+  {
+    "pattern": "el_te",
+    "items": [
+      "elate",
+      "elite"
+    ]
+  },
+  {
+    "pattern": "eli_e",
+    "items": [
+      "elide",
+      "elite"
+    ]
+  },
+  {
+    "pattern": "embe_",
+    "items": [
+      "embed",
+      "ember"
+    ]
+  },
+  {
+    "pattern": "en_oy",
+    "items": [
+      "enjoy",
+      "envoy"
+    ]
+  },
+  {
+    "pattern": "enem_",
+    "items": [
+      "enema",
+      "enemy"
+    ]
+  },
+  {
+    "pattern": "ex_el",
+    "items": [
+      "excel",
+      "expel"
+    ]
+  },
+  {
+    "pattern": "ex_lt",
+    "items": [
+      "exalt",
+      "exult"
+    ]
+  },
+  {
+    "pattern": "exa_t",
+    "items": [
+      "exact",
+      "exalt"
+    ]
+  },
+  {
+    "pattern": "f_ail",
+    "items": [
+      "flail",
+      "frail"
+    ]
+  },
+  {
+    "pattern": "f_ame",
+    "items": [
+      "flame",
+      "frame"
+    ]
+  },
+  {
+    "pattern": "f_ank",
+    "items": [
+      "flank",
+      "frank"
+    ]
+  },
+  {
+    "pattern": "f_cal",
+    "items": [
+      "fecal",
+      "focal"
+    ]
+  },
+  {
+    "pattern": "f_cus",
+    "items": [
+      "ficus",
+      "focus"
+    ]
+  },
+  {
+    "pattern": "f_esh",
+    "items": [
+      "flesh",
+      "fresh"
+    ]
+  },
+  {
+    "pattern": "f_int",
+    "items": [
+      "faint",
+      "flint"
+    ]
+  },
+  {
+    "pattern": "f_lly",
+    "items": [
+      "filly",
+      "folly",
+      "fully"
+    ]
+  },
+  {
+    "pattern": "f_nny",
+    "items": [
+      "fanny",
+      "funny"
+    ]
+  },
+  {
+    "pattern": "f_ock",
+    "items": [
+      "flock",
+      "frock"
+    ]
+  },
+  {
+    "pattern": "f_own",
+    "items": [
+      "flown",
+      "frown"
+    ]
+  },
+  {
+    "pattern": "f_rce",
+    "items": [
+      "farce",
+      "force"
+    ]
+  },
+  {
+    "pattern": "f_rry",
+    "items": [
+      "ferry",
+      "furry"
+    ]
+  },
+  {
+    "pattern": "f_tal",
+    "items": [
+      "fatal",
+      "fetal"
+    ]
+  },
+  {
+    "pattern": "f_yer",
+    "items": [
+      "flyer",
+      "foyer"
+    ]
+  },
+  {
+    "pattern": "f_zzy",
+    "items": [
+      "fizzy",
+      "fuzzy"
+    ]
+  },
+  {
+    "pattern": "fan_y",
+    "items": [
+      "fancy",
+      "fanny"
+    ]
+  },
+  {
+    "pattern": "fe_al",
+    "items": [
+      "fecal",
+      "feral",
+      "fetal"
+    ]
+  },
+  {
+    "pattern": "fe_er",
+    "items": [
+      "fever",
+      "fewer"
+    ]
+  },
+  {
+    "pattern": "fi_er",
+    "items": [
+      "fiber",
+      "filer",
+      "finer",
+      "fixer"
+    ]
+  },
+  {
+    "pattern": "fi_th",
+    "items": [
+      "fifth",
+      "filth"
+    ]
+  },
+  {
+    "pattern": "fie_d",
+    "items": [
+      "field",
+      "fiend"
+    ]
+  },
+  {
+    "pattern": "fift_",
+    "items": [
+      "fifth",
+      "fifty"
+    ]
+  },
+  {
+    "pattern": "fil_y",
+    "items": [
+      "filly",
+      "filmy"
+    ]
+  },
+  {
+    "pattern": "file_",
+    "items": [
+      "filer",
+      "filet"
+    ]
+  },
+  {
+    "pattern": "fl_ck",
+    "items": [
+      "flack",
+      "fleck",
+      "flick",
+      "flock"
+    ]
+  },
+  {
+    "pattern": "fl_er",
+    "items": [
+      "flier",
+      "flyer"
+    ]
+  },
+  {
+    "pattern": "fl_ke",
+    "items": [
+      "flake",
+      "fluke"
+    ]
+  },
+  {
+    "pattern": "fl_me",
+    "items": [
+      "flame",
+      "flume"
+    ]
+  },
+  {
+    "pattern": "fl_ng",
+    "items": [
+      "fling",
+      "flung"
+    ]
+  },
+  {
+    "pattern": "fl_nk",
+    "items": [
+      "flank",
+      "flunk"
+    ]
+  },
+  {
+    "pattern": "fl_sh",
+    "items": [
+      "flash",
+      "flesh",
+      "flush"
+    ]
+  },
+  {
+    "pattern": "fla_e",
+    "items": [
+      "flake",
+      "flame",
+      "flare"
+    ]
+  },
+  {
+    "pattern": "fla_k",
+    "items": [
+      "flack",
+      "flank",
+      "flask"
+    ]
+  },
+  {
+    "pattern": "flai_",
+    "items": [
+      "flail",
+      "flair"
+    ]
+  },
+  {
+    "pattern": "flak_",
+    "items": [
+      "flake",
+      "flaky"
+    ]
+  },
+  {
+    "pattern": "flas_",
+    "items": [
+      "flash",
+      "flask"
+    ]
+  },
+  {
+    "pattern": "fli_t",
+    "items": [
+      "flint",
+      "flirt"
+    ]
+  },
+  {
+    "pattern": "flin_",
+    "items": [
+      "fling",
+      "flint"
+    ]
+  },
+  {
+    "pattern": "flo_r",
+    "items": [
+      "floor",
+      "flour"
+    ]
+  },
+  {
+    "pattern": "flo_t",
+    "items": [
+      "float",
+      "flout"
+    ]
+  },
+  {
+    "pattern": "floo_",
+    "items": [
+      "flood",
+      "floor"
+    ]
+  },
+  {
+    "pattern": "flou_",
+    "items": [
+      "flour",
+      "flout"
+    ]
+  },
+  {
+    "pattern": "flu_e",
+    "items": [
+      "fluke",
+      "flume",
+      "flute"
+    ]
+  },
+  {
+    "pattern": "flun_",
+    "items": [
+      "flung",
+      "flunk"
+    ]
+  },
+  {
+    "pattern": "for_e",
+    "items": [
+      "force",
+      "forge",
+      "forte"
+    ]
+  },
+  {
+    "pattern": "for_y",
+    "items": [
+      "foray",
+      "forty"
+    ]
+  },
+  {
+    "pattern": "forg_",
+    "items": [
+      "forge",
+      "forgo"
+    ]
+  },
+  {
+    "pattern": "fort_",
+    "items": [
+      "forte",
+      "forth",
+      "forty"
+    ]
+  },
+  {
+    "pattern": "fr_ed",
+    "items": [
+      "freed",
+      "fried"
+    ]
+  },
+  {
+    "pattern": "free_",
+    "items": [
+      "freed",
+      "freer"
+    ]
+  },
+  {
+    "pattern": "fro_t",
+    "items": [
+      "front",
+      "frost"
+    ]
+  },
+  {
+    "pattern": "fron_",
+    "items": [
+      "frond",
+      "front"
+    ]
+  },
+  {
+    "pattern": "fun_y",
+    "items": [
+      "funky",
+      "funny"
+    ]
+  },
+  {
+    "pattern": "g_ade",
+    "items": [
+      "glade",
+      "grade"
+    ]
+  },
+  {
+    "pattern": "g_and",
+    "items": [
+      "gland",
+      "grand"
+    ]
+  },
+  {
+    "pattern": "g_ant",
+    "items": [
+      "giant",
+      "grant"
+    ]
+  },
+  {
+    "pattern": "g_ass",
+    "items": [
+      "glass",
+      "grass"
+    ]
+  },
+  {
+    "pattern": "g_aze",
+    "items": [
+      "glaze",
+      "graze"
+    ]
+  },
+  {
+    "pattern": "g_ide",
+    "items": [
+      "glide",
+      "guide"
+    ]
+  },
+  {
+    "pattern": "g_lly",
+    "items": [
+      "golly",
+      "gully"
+    ]
+  },
+  {
+    "pattern": "g_oom",
+    "items": [
+      "gloom",
+      "groom"
+    ]
+  },
+  {
+    "pattern": "g_oss",
+    "items": [
+      "gloss",
+      "gross"
+    ]
+  },
+  {
+    "pattern": "g_ove",
+    "items": [
+      "glove",
+      "grove"
+    ]
+  },
+  {
+    "pattern": "g_psy",
+    "items": [
+      "gipsy",
+      "gypsy"
+    ]
+  },
+  {
+    "pattern": "g_uge",
+    "items": [
+      "gauge",
+      "gouge"
+    ]
+  },
+  {
+    "pattern": "g_unt",
+    "items": [
+      "gaunt",
+      "grunt"
+    ]
+  },
+  {
+    "pattern": "ga_er",
+    "items": [
+      "gamer",
+      "gayer",
+      "gazer"
+    ]
+  },
+  {
+    "pattern": "ga_ly",
+    "items": [
+      "gaily",
+      "gayly"
+    ]
+  },
+  {
+    "pattern": "gau_e",
+    "items": [
+      "gauge",
+      "gauze"
+    ]
+  },
+  {
+    "pattern": "gen_e",
+    "items": [
+      "genie",
+      "genre"
+    ]
+  },
+  {
+    "pattern": "give_",
+    "items": [
+      "given",
+      "giver"
+    ]
+  },
+  {
+    "pattern": "gl_de",
+    "items": [
+      "glade",
+      "glide"
+    ]
+  },
+  {
+    "pattern": "gl_ss",
+    "items": [
+      "glass",
+      "gloss"
+    ]
+  },
+  {
+    "pattern": "gla_e",
+    "items": [
+      "glade",
+      "glare",
+      "glaze"
+    ]
+  },
+  {
+    "pattern": "glea_",
+    "items": [
+      "gleam",
+      "glean"
+    ]
+  },
+  {
+    "pattern": "glo_e",
+    "items": [
+      "globe",
+      "glove"
+    ]
+  },
+  {
+    "pattern": "go_ge",
+    "items": [
+      "gorge",
+      "gouge"
+    ]
+  },
+  {
+    "pattern": "go_ly",
+    "items": [
+      "godly",
+      "golly"
+    ]
+  },
+  {
+    "pattern": "goo_y",
+    "items": [
+      "goody",
+      "gooey",
+      "goofy"
+    ]
+  },
+  {
+    "pattern": "gr_in",
+    "items": [
+      "grain",
+      "groin"
+    ]
+  },
+  {
+    "pattern": "gr_nd",
+    "items": [
+      "grand",
+      "grind"
+    ]
+  },
+  {
+    "pattern": "gr_nt",
+    "items": [
+      "grant",
+      "grunt"
+    ]
+  },
+  {
+    "pattern": "gr_pe",
+    "items": [
+      "grape",
+      "gripe",
+      "grope"
+    ]
+  },
+  {
+    "pattern": "gr_ss",
+    "items": [
+      "grass",
+      "gross"
+    ]
+  },
+  {
+    "pattern": "gr_ve",
+    "items": [
+      "grave",
+      "grove"
+    ]
+  },
+  {
+    "pattern": "gra_e",
+    "items": [
+      "grace",
+      "grade",
+      "grape",
+      "grate",
+      "grave",
+      "graze"
+    ]
+  },
+  {
+    "pattern": "gra_t",
+    "items": [
+      "graft",
+      "grant"
+    ]
+  },
+  {
+    "pattern": "grai_",
+    "items": [
+      "grail",
+      "grain"
+    ]
+  },
+  {
+    "pattern": "gran_",
+    "items": [
+      "grand",
+      "grant"
+    ]
+  },
+  {
+    "pattern": "grap_",
+    "items": [
+      "grape",
+      "graph"
+    ]
+  },
+  {
+    "pattern": "gras_",
+    "items": [
+      "grasp",
+      "grass"
+    ]
+  },
+  {
+    "pattern": "grav_",
+    "items": [
+      "grave",
+      "gravy"
+    ]
+  },
+  {
+    "pattern": "gre_t",
+    "items": [
+      "great",
+      "greet"
+    ]
+  },
+  {
+    "pattern": "gree_",
+    "items": [
+      "greed",
+      "green",
+      "greet"
+    ]
+  },
+  {
+    "pattern": "gri_e",
+    "items": [
+      "grime",
+      "gripe"
+    ]
+  },
+  {
+    "pattern": "grim_",
+    "items": [
+      "grime",
+      "grimy"
+    ]
+  },
+  {
+    "pattern": "gro_e",
+    "items": [
+      "grope",
+      "grove"
+    ]
+  },
+  {
+    "pattern": "gro_n",
+    "items": [
+      "groan",
+      "groin",
+      "grown"
+    ]
+  },
+  {
+    "pattern": "grou_",
+    "items": [
+      "group",
+      "grout"
+    ]
+  },
+  {
+    "pattern": "grow_",
+    "items": [
+      "growl",
+      "grown"
+    ]
+  },
+  {
+    "pattern": "gues_",
+    "items": [
+      "guess",
+      "guest"
+    ]
+  },
+  {
+    "pattern": "gui_e",
+    "items": [
+      "guide",
+      "guile",
+      "guise"
+    ]
+  },
+  {
+    "pattern": "guil_",
+    "items": [
+      "guild",
+      "guile",
+      "guilt"
+    ]
+  },
+  {
+    "pattern": "gust_",
+    "items": [
+      "gusto",
+      "gusty"
+    ]
+  },
+  {
+    "pattern": "h_ard",
+    "items": [
+      "heard",
+      "hoard"
+    ]
+  },
+  {
+    "pattern": "h_ist",
+    "items": [
+      "heist",
+      "hoist"
+    ]
+  },
+  {
+    "pattern": "h_lly",
+    "items": [
+      "hilly",
+      "holly"
+    ]
+  },
+  {
+    "pattern": "h_ppy",
+    "items": [
+      "happy",
+      "hippy"
+    ]
+  },
+  {
+    "pattern": "h_rry",
+    "items": [
+      "harry",
+      "hurry"
+    ]
+  },
+  {
+    "pattern": "h_tch",
+    "items": [
+      "hatch",
+      "hitch",
+      "hutch"
+    ]
+  },
+  {
+    "pattern": "ha_dy",
+    "items": [
+      "handy",
+      "hardy"
+    ]
+  },
+  {
+    "pattern": "ha_py",
+    "items": [
+      "happy",
+      "harpy"
+    ]
+  },
+  {
+    "pattern": "ha_ry",
+    "items": [
+      "hairy",
+      "harry"
+    ]
+  },
+  {
+    "pattern": "ha_te",
+    "items": [
+      "haste",
+      "haute"
+    ]
+  },
+  {
+    "pattern": "har_y",
+    "items": [
+      "hardy",
+      "harpy",
+      "harry"
+    ]
+  },
+  {
+    "pattern": "hast_",
+    "items": [
+      "haste",
+      "hasty"
+    ]
+  },
+  {
+    "pattern": "hea_y",
+    "items": [
+      "heady",
+      "heavy"
+    ]
+  },
+  {
+    "pattern": "hear_",
+    "items": [
+      "heard",
+      "heart"
+    ]
+  },
+  {
+    "pattern": "heav_",
+    "items": [
+      "heave",
+      "heavy"
+    ]
+  },
+  {
+    "pattern": "hipp_",
+    "items": [
+      "hippo",
+      "hippy"
+    ]
+  },
+  {
+    "pattern": "ho_el",
+    "items": [
+      "hotel",
+      "hovel"
+    ]
+  },
+  {
+    "pattern": "ho_er",
+    "items": [
+      "homer",
+      "hover"
+    ]
+  },
+  {
+    "pattern": "ho_ly",
+    "items": [
+      "holly",
+      "hotly"
+    ]
+  },
+  {
+    "pattern": "ho_se",
+    "items": [
+      "horse",
+      "house"
+    ]
+  },
+  {
+    "pattern": "hor_e",
+    "items": [
+      "horde",
+      "horse"
+    ]
+  },
+  {
+    "pattern": "hove_",
+    "items": [
+      "hovel",
+      "hover"
+    ]
+  },
+  {
+    "pattern": "hu_ch",
+    "items": [
+      "hunch",
+      "hutch"
+    ]
+  },
+  {
+    "pattern": "hu_ky",
+    "items": [
+      "hunky",
+      "husky"
+    ]
+  },
+  {
+    "pattern": "hus_y",
+    "items": [
+      "husky",
+      "hussy"
+    ]
+  },
+  {
+    "pattern": "i_let",
+    "items": [
+      "inlet",
+      "islet"
+    ]
+  },
+  {
+    "pattern": "idio_",
+    "items": [
+      "idiom",
+      "idiot"
+    ]
+  },
+  {
+    "pattern": "in_er",
+    "items": [
+      "infer",
+      "inner",
+      "inter"
+    ]
+  },
+  {
+    "pattern": "ine_t",
+    "items": [
+      "inept",
+      "inert"
+    ]
+  },
+  {
+    "pattern": "j_lly",
+    "items": [
+      "jelly",
+      "jolly"
+    ]
+  },
+  {
+    "pattern": "jo_st",
+    "items": [
+      "joist",
+      "joust"
+    ]
+  },
+  {
+    "pattern": "joi_t",
+    "items": [
+      "joint",
+      "joist"
+    ]
+  },
+  {
+    "pattern": "juic_",
+    "items": [
+      "juice",
+      "juicy"
+    ]
+  },
+  {
+    "pattern": "junt_",
+    "items": [
+      "junta",
+      "junto"
+    ]
+  },
+  {
+    "pattern": "kn_ck",
+    "items": [
+      "knack",
+      "knock"
+    ]
+  },
+  {
+    "pattern": "kne_d",
+    "items": [
+      "knead",
+      "kneed"
+    ]
+  },
+  {
+    "pattern": "knee_",
+    "items": [
+      "kneed",
+      "kneel"
+    ]
+  },
+  {
+    "pattern": "l_bel",
+    "items": [
+      "label",
+      "libel"
+    ]
+  },
+  {
+    "pattern": "l_dge",
+    "items": [
+      "ledge",
+      "lodge"
+    ]
+  },
+  {
+    "pattern": "l_fty",
+    "items": [
+      "lefty",
+      "lofty"
+    ]
+  },
+  {
+    "pattern": "l_nch",
+    "items": [
+      "lunch",
+      "lynch"
+    ]
+  },
+  {
+    "pattern": "l_the",
+    "items": [
+      "lathe",
+      "lithe"
+    ]
+  },
+  {
+    "pattern": "l_ver",
+    "items": [
+      "lever",
+      "liver",
+      "lover"
+    ]
+  },
+  {
+    "pattern": "la_el",
+    "items": [
+      "label",
+      "lapel"
+    ]
+  },
+  {
+    "pattern": "la_er",
+    "items": [
+      "lager",
+      "later",
+      "layer"
+    ]
+  },
+  {
+    "pattern": "le_ch",
+    "items": [
+      "leach",
+      "leech"
+    ]
+  },
+  {
+    "pattern": "le_er",
+    "items": [
+      "leper",
+      "lever"
+    ]
+  },
+  {
+    "pattern": "lea_e",
+    "items": [
+      "lease",
+      "leave"
+    ]
+  },
+  {
+    "pattern": "lea_h",
+    "items": [
+      "leach",
+      "leash"
+    ]
+  },
+  {
+    "pattern": "lea_t",
+    "items": [
+      "leant",
+      "leapt",
+      "least"
+    ]
+  },
+  {
+    "pattern": "lea_y",
+    "items": [
+      "leafy",
+      "leaky"
+    ]
+  },
+  {
+    "pattern": "leas_",
+    "items": [
+      "lease",
+      "leash",
+      "least"
+    ]
+  },
+  {
+    "pattern": "leve_",
+    "items": [
+      "level",
+      "lever"
+    ]
+  },
+  {
+    "pattern": "li_en",
+    "items": [
+      "liken",
+      "linen"
+    ]
+  },
+  {
+    "pattern": "li_er",
+    "items": [
+      "liner",
+      "liver"
+    ]
+  },
+  {
+    "pattern": "li_id",
+    "items": [
+      "lipid",
+      "livid"
+    ]
+  },
+  {
+    "pattern": "line_",
+    "items": [
+      "linen",
+      "liner"
+    ]
+  },
+  {
+    "pattern": "lo_al",
+    "items": [
+      "local",
+      "loyal"
+    ]
+  },
+  {
+    "pattern": "lo_er",
+    "items": [
+      "loser",
+      "lover",
+      "lower"
+    ]
+  },
+  {
+    "pattern": "lo_se",
+    "items": [
+      "loose",
+      "louse"
+    ]
+  },
+  {
+    "pattern": "logi_",
+    "items": [
+      "logic",
+      "login"
+    ]
+  },
+  {
+    "pattern": "lous_",
+    "items": [
+      "louse",
+      "lousy"
+    ]
+  },
+  {
+    "pattern": "lu_ch",
+    "items": [
+      "lunch",
+      "lurch"
+    ]
+  },
+  {
+    "pattern": "lu_id",
+    "items": [
+      "lucid",
+      "lurid"
+    ]
+  },
+  {
+    "pattern": "m_cro",
+    "items": [
+      "macro",
+      "micro"
+    ]
+  },
+  {
+    "pattern": "m_dal",
+    "items": [
+      "medal",
+      "modal"
+    ]
+  },
+  {
+    "pattern": "m_mmy",
+    "items": [
+      "mammy",
+      "mummy"
+    ]
+  },
+  {
+    "pattern": "m_nor",
+    "items": [
+      "manor",
+      "minor"
+    ]
+  },
+  {
+    "pattern": "m_ral",
+    "items": [
+      "moral",
+      "mural"
+    ]
+  },
+  {
+    "pattern": "m_rry",
+    "items": [
+      "marry",
+      "merry"
+    ]
+  },
+  {
+    "pattern": "m_ssy",
+    "items": [
+      "missy",
+      "mossy"
+    ]
+  },
+  {
+    "pattern": "ma_ch",
+    "items": [
+      "march",
+      "match"
+    ]
+  },
+  {
+    "pattern": "ma_ia",
+    "items": [
+      "mafia",
+      "mania"
+    ]
+  },
+  {
+    "pattern": "ma_ic",
+    "items": [
+      "magic",
+      "manic"
+    ]
+  },
+  {
+    "pattern": "ma_ly",
+    "items": [
+      "madly",
+      "manly"
+    ]
+  },
+  {
+    "pattern": "ma_ma",
+    "items": [
+      "magma",
+      "mamma"
+    ]
+  },
+  {
+    "pattern": "ma_or",
+    "items": [
+      "major",
+      "manor",
+      "mayor"
+    ]
+  },
+  {
+    "pattern": "mac_o",
+    "items": [
+      "macho",
+      "macro"
+    ]
+  },
+  {
+    "pattern": "mamm_",
+    "items": [
+      "mamma",
+      "mammy"
+    ]
+  },
+  {
+    "pattern": "man_a",
+    "items": [
+      "manga",
+      "mania"
+    ]
+  },
+  {
+    "pattern": "man_y",
+    "items": [
+      "mangy",
+      "manly"
+    ]
+  },
+  {
+    "pattern": "mang_",
+    "items": [
+      "manga",
+      "mange",
+      "mango",
+      "mangy"
+    ]
+  },
+  {
+    "pattern": "mani_",
+    "items": [
+      "mania",
+      "manic"
+    ]
+  },
+  {
+    "pattern": "mar_h",
+    "items": [
+      "march",
+      "marsh"
+    ]
+  },
+  {
+    "pattern": "me_al",
+    "items": [
+      "medal",
+      "metal"
+    ]
+  },
+  {
+    "pattern": "mea_y",
+    "items": [
+      "mealy",
+      "meaty"
+    ]
+  },
+  {
+    "pattern": "medi_",
+    "items": [
+      "media",
+      "medic"
+    ]
+  },
+  {
+    "pattern": "mer_y",
+    "items": [
+      "mercy",
+      "merry"
+    ]
+  },
+  {
+    "pattern": "mi_er",
+    "items": [
+      "miner",
+      "miser"
+    ]
+  },
+  {
+    "pattern": "min_r",
+    "items": [
+      "miner",
+      "minor"
+    ]
+  },
+  {
+    "pattern": "mo_al",
+    "items": [
+      "modal",
+      "moral"
+    ]
+  },
+  {
+    "pattern": "mo_dy",
+    "items": [
+      "moldy",
+      "moody"
+    ]
+  },
+  {
+    "pattern": "mo_el",
+    "items": [
+      "model",
+      "motel"
+    ]
+  },
+  {
+    "pattern": "mo_er",
+    "items": [
+      "mover",
+      "mower"
+    ]
+  },
+  {
+    "pattern": "mo_se",
+    "items": [
+      "moose",
+      "mouse"
+    ]
+  },
+  {
+    "pattern": "mo_th",
+    "items": [
+      "month",
+      "mouth"
+    ]
+  },
+  {
+    "pattern": "mod_l",
+    "items": [
+      "modal",
+      "model"
+    ]
+  },
+  {
+    "pattern": "mode_",
+    "items": [
+      "model",
+      "modem"
+    ]
+  },
+  {
+    "pattern": "mou_t",
+    "items": [
+      "moult",
+      "mount"
+    ]
+  },
+  {
+    "pattern": "moun_",
+    "items": [
+      "mound",
+      "mount"
+    ]
+  },
+  {
+    "pattern": "mu_ch",
+    "items": [
+      "mulch",
+      "munch"
+    ]
+  },
+  {
+    "pattern": "mu_ky",
+    "items": [
+      "mucky",
+      "murky",
+      "musky"
+    ]
+  },
+  {
+    "pattern": "mus_y",
+    "items": [
+      "mushy",
+      "musky",
+      "musty"
+    ]
+  },
+  {
+    "pattern": "n_nny",
+    "items": [
+      "nanny",
+      "ninny"
+    ]
+  },
+  {
+    "pattern": "n_vel",
+    "items": [
+      "navel",
+      "novel"
+    ]
+  },
+  {
+    "pattern": "na_al",
+    "items": [
+      "nasal",
+      "natal",
+      "naval"
+    ]
+  },
+  {
+    "pattern": "nav_l",
+    "items": [
+      "naval",
+      "navel"
+    ]
+  },
+  {
+    "pattern": "ne_er",
+    "items": [
+      "never",
+      "newer"
+    ]
+  },
+  {
+    "pattern": "no_se",
+    "items": [
+      "noise",
+      "noose"
+    ]
+  },
+  {
+    "pattern": "nobl_",
+    "items": [
+      "noble",
+      "nobly"
+    ]
+  },
+  {
+    "pattern": "nois_",
+    "items": [
+      "noise",
+      "noisy"
+    ]
+  },
+  {
+    "pattern": "o_der",
+    "items": [
+      "odder",
+      "older",
+      "order"
+    ]
+  },
+  {
+    "pattern": "o_ine",
+    "items": [
+      "opine",
+      "ovine"
+    ]
+  },
+  {
+    "pattern": "o_ter",
+    "items": [
+      "otter",
+      "outer"
+    ]
+  },
+  {
+    "pattern": "olde_",
+    "items": [
+      "olden",
+      "older"
+    ]
+  },
+  {
+    "pattern": "ot_er",
+    "items": [
+      "other",
+      "otter"
+    ]
+  },
+  {
+    "pattern": "out_o",
+    "items": [
+      "outdo",
+      "outgo"
+    ]
+  },
+  {
+    "pattern": "p_ace",
+    "items": [
+      "peace",
+      "place"
+    ]
+  },
+  {
+    "pattern": "p_ank",
+    "items": [
+      "plank",
+      "prank"
+    ]
+  },
+  {
+    "pattern": "p_ied",
+    "items": [
+      "plied",
+      "pried"
+    ]
+  },
+  {
+    "pattern": "p_int",
+    "items": [
+      "paint",
+      "point",
+      "print"
+    ]
+  },
+  {
+    "pattern": "p_nch",
+    "items": [
+      "pinch",
+      "punch"
+    ]
+  },
+  {
+    "pattern": "p_one",
+    "items": [
+      "phone",
+      "prone"
+    ]
+  },
+  {
+    "pattern": "p_pal",
+    "items": [
+      "papal",
+      "pupal"
+    ]
+  },
+  {
+    "pattern": "p_per",
+    "items": [
+      "paper",
+      "piper"
+    ]
+  },
+  {
+    "pattern": "p_ppy",
+    "items": [
+      "poppy",
+      "puppy"
+    ]
+  },
+  {
+    "pattern": "p_rch",
+    "items": [
+      "perch",
+      "porch"
+    ]
+  },
+  {
+    "pattern": "p_rer",
+    "items": [
+      "parer",
+      "purer"
+    ]
+  },
+  {
+    "pattern": "p_rse",
+    "items": [
+      "parse",
+      "purse"
+    ]
+  },
+  {
+    "pattern": "p_tch",
+    "items": [
+      "patch",
+      "pitch"
+    ]
+  },
+  {
+    "pattern": "p_tty",
+    "items": [
+      "patty",
+      "petty",
+      "putty"
+    ]
+  },
+  {
+    "pattern": "pa_er",
+    "items": [
+      "paler",
+      "paper",
+      "parer",
+      "payer"
+    ]
+  },
+  {
+    "pattern": "pa_se",
+    "items": [
+      "parse",
+      "pause"
+    ]
+  },
+  {
+    "pattern": "pa_sy",
+    "items": [
+      "palsy",
+      "pansy",
+      "patsy"
+    ]
+  },
+  {
+    "pattern": "pa_ty",
+    "items": [
+      "party",
+      "pasty",
+      "patty"
+    ]
+  },
+  {
+    "pattern": "par_y",
+    "items": [
+      "parry",
+      "party"
+    ]
+  },
+  {
+    "pattern": "past_",
+    "items": [
+      "pasta",
+      "paste",
+      "pasty"
+    ]
+  },
+  {
+    "pattern": "pat_y",
+    "items": [
+      "patsy",
+      "patty"
+    ]
+  },
+  {
+    "pattern": "paye_",
+    "items": [
+      "payee",
+      "payer"
+    ]
+  },
+  {
+    "pattern": "pe_al",
+    "items": [
+      "pedal",
+      "penal",
+      "petal"
+    ]
+  },
+  {
+    "pattern": "pe_ce",
+    "items": [
+      "peace",
+      "pence"
+    ]
+  },
+  {
+    "pattern": "pe_ch",
+    "items": [
+      "peach",
+      "perch"
+    ]
+  },
+  {
+    "pattern": "pe_ky",
+    "items": [
+      "perky",
+      "pesky"
+    ]
+  },
+  {
+    "pattern": "peac_",
+    "items": [
+      "peace",
+      "peach"
+    ]
+  },
+  {
+    "pattern": "phon_",
+    "items": [
+      "phone",
+      "phony"
+    ]
+  },
+  {
+    "pattern": "pi_ch",
+    "items": [
+      "pinch",
+      "pitch"
+    ]
+  },
+  {
+    "pattern": "pi_ky",
+    "items": [
+      "picky",
+      "pinky"
+    ]
+  },
+  {
+    "pattern": "pi_ot",
+    "items": [
+      "pilot",
+      "pivot"
+    ]
+  },
+  {
+    "pattern": "pin_y",
+    "items": [
+      "piney",
+      "pinky"
+    ]
+  },
+  {
+    "pattern": "pl_nk",
+    "items": [
+      "plank",
+      "plunk"
+    ]
+  },
+  {
+    "pattern": "pla_e",
+    "items": [
+      "place",
+      "plane",
+      "plate"
+    ]
+  },
+  {
+    "pattern": "pla_t",
+    "items": [
+      "plait",
+      "plant"
+    ]
+  },
+  {
+    "pattern": "plai_",
+    "items": [
+      "plaid",
+      "plain",
+      "plait"
+    ]
+  },
+  {
+    "pattern": "plan_",
+    "items": [
+      "plane",
+      "plank",
+      "plant"
+    ]
+  },
+  {
+    "pattern": "plea_",
+    "items": [
+      "plead",
+      "pleat"
+    ]
+  },
+  {
+    "pattern": "plie_",
+    "items": [
+      "plied",
+      "plier"
+    ]
+  },
+  {
+    "pattern": "plu_k",
+    "items": [
+      "pluck",
+      "plunk"
+    ]
+  },
+  {
+    "pattern": "plum_",
+    "items": [
+      "plumb",
+      "plume",
+      "plump"
+    ]
+  },
+  {
+    "pattern": "po_ch",
+    "items": [
+      "pooch",
+      "porch",
+      "pouch"
+    ]
+  },
+  {
+    "pattern": "po_er",
+    "items": [
+      "poker",
+      "poser",
+      "power"
+    ]
+  },
+  {
+    "pattern": "po_se",
+    "items": [
+      "poise",
+      "posse"
+    ]
+  },
+  {
+    "pattern": "pr_de",
+    "items": [
+      "pride",
+      "prude"
+    ]
+  },
+  {
+    "pattern": "pr_ne",
+    "items": [
+      "prone",
+      "prune"
+    ]
+  },
+  {
+    "pattern": "pri_e",
+    "items": [
+      "price",
+      "pride",
+      "prime",
+      "prize"
+    ]
+  },
+  {
+    "pattern": "pric_",
+    "items": [
+      "price",
+      "prick"
+    ]
+  },
+  {
+    "pattern": "prim_",
+    "items": [
+      "prime",
+      "primo"
+    ]
+  },
+  {
+    "pattern": "pro_e",
+    "items": [
+      "probe",
+      "prone",
+      "prose",
+      "prove"
+    ]
+  },
+  {
+    "pattern": "pron_",
+    "items": [
+      "prone",
+      "prong"
+    ]
+  },
+  {
+    "pattern": "pru_e",
+    "items": [
+      "prude",
+      "prune"
+    ]
+  },
+  {
+    "pattern": "pu_py",
+    "items": [
+      "pulpy",
+      "puppy"
+    ]
+  },
+  {
+    "pattern": "pu_se",
+    "items": [
+      "pulse",
+      "purse"
+    ]
+  },
+  {
+    "pattern": "pup_l",
+    "items": [
+      "pupal",
+      "pupil"
+    ]
+  },
+  {
+    "pattern": "pur_e",
+    "items": [
+      "puree",
+      "purge",
+      "purse"
+    ]
+  },
+  {
+    "pattern": "pure_",
+    "items": [
+      "puree",
+      "purer"
+    ]
+  },
+  {
+    "pattern": "qu_ck",
+    "items": [
+      "quack",
+      "quick"
+    ]
+  },
+  {
+    "pattern": "qu_ll",
+    "items": [
+      "quell",
+      "quill"
+    ]
+  },
+  {
+    "pattern": "qu_rk",
+    "items": [
+      "quark",
+      "quirk"
+    ]
+  },
+  {
+    "pattern": "qu_te",
+    "items": [
+      "quite",
+      "quote"
+    ]
+  },
+  {
+    "pattern": "qua_k",
+    "items": [
+      "quack",
+      "quark"
+    ]
+  },
+  {
+    "pattern": "quar_",
+    "items": [
+      "quark",
+      "quart"
+    ]
+  },
+  {
+    "pattern": "quas_",
+    "items": [
+      "quash",
+      "quasi"
+    ]
+  },
+  {
+    "pattern": "quee_",
+    "items": [
+      "queen",
+      "queer"
+    ]
+  },
+  {
+    "pattern": "qui_k",
+    "items": [
+      "quick",
+      "quirk"
+    ]
+  },
+  {
+    "pattern": "qui_t",
+    "items": [
+      "quiet",
+      "quilt"
+    ]
+  },
+  {
+    "pattern": "quil_",
+    "items": [
+      "quill",
+      "quilt"
+    ]
+  },
+  {
+    "pattern": "quot_",
+    "items": [
+      "quota",
+      "quote",
+      "quoth"
+    ]
+  },
+  {
+    "pattern": "r_ach",
+    "items": [
+      "reach",
+      "roach"
+    ]
+  },
+  {
+    "pattern": "r_der",
+    "items": [
+      "rider",
+      "ruder"
+    ]
+  },
+  {
+    "pattern": "r_use",
+    "items": [
+      "reuse",
+      "rouse"
+    ]
+  },
+  {
+    "pattern": "r_ver",
+    "items": [
+      "river",
+      "rover"
+    ]
+  },
+  {
+    "pattern": "ra_er",
+    "items": [
+      "racer",
+      "rarer"
+    ]
+  },
+  {
+    "pattern": "ra_id",
+    "items": [
+      "rabid",
+      "rapid"
+    ]
+  },
+  {
+    "pattern": "ra_io",
+    "items": [
+      "radio",
+      "ratio"
+    ]
+  },
+  {
+    "pattern": "radi_",
+    "items": [
+      "radii",
+      "radio"
+    ]
+  },
+  {
+    "pattern": "re_al",
+    "items": [
+      "regal",
+      "renal"
+    ]
+  },
+  {
+    "pattern": "re_ay",
+    "items": [
+      "relay",
+      "repay"
+    ]
+  },
+  {
+    "pattern": "re_ch",
+    "items": [
+      "reach",
+      "retch"
+    ]
+  },
+  {
+    "pattern": "re_dy",
+    "items": [
+      "ready",
+      "reedy"
+    ]
+  },
+  {
+    "pattern": "re_el",
+    "items": [
+      "rebel",
+      "repel",
+      "revel"
+    ]
+  },
+  {
+    "pattern": "re_it",
+    "items": [
+      "refit",
+      "remit"
+    ]
+  },
+  {
+    "pattern": "re_ut",
+    "items": [
+      "rebut",
+      "recut"
+    ]
+  },
+  {
+    "pattern": "rea_m",
+    "items": [
+      "realm",
+      "rearm"
+    ]
+  },
+  {
+    "pattern": "reac_",
+    "items": [
+      "reach",
+      "react"
+    ]
+  },
+  {
+    "pattern": "rebu_",
+    "items": [
+      "rebus",
+      "rebut"
+    ]
+  },
+  {
+    "pattern": "recu_",
+    "items": [
+      "recur",
+      "recut"
+    ]
+  },
+  {
+    "pattern": "rela_",
+    "items": [
+      "relax",
+      "relay"
+    ]
+  },
+  {
+    "pattern": "rep_y",
+    "items": [
+      "repay",
+      "reply"
+    ]
+  },
+  {
+    "pattern": "retr_",
+    "items": [
+      "retro",
+      "retry"
+    ]
+  },
+  {
+    "pattern": "ri_en",
+    "items": [
+      "ripen",
+      "risen"
+    ]
+  },
+  {
+    "pattern": "ri_er",
+    "items": [
+      "rider",
+      "riper",
+      "riser",
+      "river"
+    ]
+  },
+  {
+    "pattern": "ripe_",
+    "items": [
+      "ripen",
+      "riper"
+    ]
+  },
+  {
+    "pattern": "rise_",
+    "items": [
+      "risen",
+      "riser"
+    ]
+  },
+  {
+    "pattern": "rive_",
+    "items": [
+      "river",
+      "rivet"
+    ]
+  },
+  {
+    "pattern": "ro_er",
+    "items": [
+      "roger",
+      "rover",
+      "rower"
+    ]
+  },
+  {
+    "pattern": "ro_st",
+    "items": [
+      "roast",
+      "roost"
+    ]
+  },
+  {
+    "pattern": "rou_e",
+    "items": [
+      "rouge",
+      "rouse",
+      "route"
+    ]
+  },
+  {
+    "pattern": "roug_",
+    "items": [
+      "rouge",
+      "rough"
+    ]
+  },
+  {
+    "pattern": "ru_er",
+    "items": [
+      "ruder",
+      "ruler"
+    ]
+  },
+  {
+    "pattern": "s_ack",
+    "items": [
+      "shack",
+      "slack",
+      "smack",
+      "snack",
+      "stack"
+    ]
+  },
+  {
+    "pattern": "s_ade",
+    "items": [
+      "shade",
+      "spade"
+    ]
+  },
+  {
+    "pattern": "s_ain",
+    "items": [
+      "slain",
+      "stain"
+    ]
+  },
+  {
+    "pattern": "s_ake",
+    "items": [
+      "shake",
+      "snake",
+      "stake"
+    ]
+  },
+  {
+    "pattern": "s_aky",
+    "items": [
+      "shaky",
+      "snaky"
+    ]
+  },
+  {
+    "pattern": "s_ale",
+    "items": [
+      "scale",
+      "shale",
+      "stale"
+    ]
+  },
+  {
+    "pattern": "s_all",
+    "items": [
+      "shall",
+      "small",
+      "stall"
+    ]
+  },
+  {
+    "pattern": "s_amp",
+    "items": [
+      "scamp",
+      "stamp",
+      "swamp"
+    ]
+  },
+  {
+    "pattern": "s_ank",
+    "items": [
+      "shank",
+      "spank",
+      "stank"
+    ]
+  },
+  {
+    "pattern": "s_ant",
+    "items": [
+      "scant",
+      "slant"
+    ]
+  },
+  {
+    "pattern": "s_are",
+    "items": [
+      "scare",
+      "share",
+      "snare",
+      "spare",
+      "stare"
+    ]
+  },
+  {
+    "pattern": "s_ark",
+    "items": [
+      "shark",
+      "spark",
+      "stark"
+    ]
+  },
+  {
+    "pattern": "s_art",
+    "items": [
+      "smart",
+      "start"
+    ]
+  },
+  {
+    "pattern": "s_ash",
+    "items": [
+      "slash",
+      "smash",
+      "stash",
+      "swash"
+    ]
+  },
+  {
+    "pattern": "s_ate",
+    "items": [
+      "skate",
+      "slate",
+      "state"
+    ]
+  },
+  {
+    "pattern": "s_ave",
+    "items": [
+      "shave",
+      "slave",
+      "stave",
+      "suave"
+    ]
+  },
+  {
+    "pattern": "s_eak",
+    "items": [
+      "sneak",
+      "speak",
+      "steak"
+    ]
+  },
+  {
+    "pattern": "s_ear",
+    "items": [
+      "shear",
+      "smear",
+      "spear",
+      "swear"
+    ]
+  },
+  {
+    "pattern": "s_eed",
+    "items": [
+      "speed",
+      "steed"
+    ]
+  },
+  {
+    "pattern": "s_eep",
+    "items": [
+      "sheep",
+      "sleep",
+      "steep",
+      "sweep"
+    ]
+  },
+  {
+    "pattern": "s_eer",
+    "items": [
+      "sheer",
+      "sneer",
+      "steer"
+    ]
+  },
+  {
+    "pattern": "s_eet",
+    "items": [
+      "sheet",
+      "sleet",
+      "sweet"
+    ]
+  },
+  {
+    "pattern": "s_ell",
+    "items": [
+      "shell",
+      "smell",
+      "spell",
+      "swell"
+    ]
+  },
+  {
+    "pattern": "s_elt",
+    "items": [
+      "smelt",
+      "spelt"
+    ]
+  },
+  {
+    "pattern": "s_ent",
+    "items": [
+      "scent",
+      "spent"
+    ]
+  },
+  {
+    "pattern": "s_ept",
+    "items": [
+      "slept",
+      "swept"
+    ]
+  },
+  {
+    "pattern": "s_ice",
+    "items": [
+      "slice",
+      "spice"
+    ]
+  },
+  {
+    "pattern": "s_ick",
+    "items": [
+      "slick",
+      "stick"
+    ]
+  },
+  {
+    "pattern": "s_ide",
+    "items": [
+      "slide",
+      "snide"
+    ]
+  },
+  {
+    "pattern": "s_ied",
+    "items": [
+      "shied",
+      "spied"
+    ]
+  },
+  {
+    "pattern": "s_iff",
+    "items": [
+      "skiff",
+      "sniff",
+      "stiff"
+    ]
+  },
+  {
+    "pattern": "s_ift",
+    "items": [
+      "shift",
+      "swift"
+    ]
+  },
+  {
+    "pattern": "s_ill",
+    "items": [
+      "skill",
+      "spill",
+      "still",
+      "swill"
+    ]
+  },
+  {
+    "pattern": "s_ilt",
+    "items": [
+      "spilt",
+      "stilt"
+    ]
+  },
+  {
+    "pattern": "s_ine",
+    "items": [
+      "shine",
+      "spine",
+      "swine"
+    ]
+  },
+  {
+    "pattern": "s_ing",
+    "items": [
+      "sling",
+      "sting",
+      "suing",
+      "swing"
+    ]
+  },
+  {
+    "pattern": "s_ink",
+    "items": [
+      "slink",
+      "stink"
+    ]
+  },
+  {
+    "pattern": "s_int",
+    "items": [
+      "saint",
+      "stint"
+    ]
+  },
+  {
+    "pattern": "s_iny",
+    "items": [
+      "shiny",
+      "spiny"
+    ]
+  },
+  {
+    "pattern": "s_ire",
+    "items": [
+      "shire",
+      "spire"
+    ]
+  },
+  {
+    "pattern": "s_irk",
+    "items": [
+      "shirk",
+      "smirk"
+    ]
+  },
+  {
+    "pattern": "s_irt",
+    "items": [
+      "shirt",
+      "skirt"
+    ]
+  },
+  {
+    "pattern": "s_ite",
+    "items": [
+      "smite",
+      "spite",
+      "suite"
+    ]
+  },
+  {
+    "pattern": "s_lky",
+    "items": [
+      "silky",
+      "sulky"
+    ]
+  },
+  {
+    "pattern": "s_lly",
+    "items": [
+      "sally",
+      "silly",
+      "sully"
+    ]
+  },
+  {
+    "pattern": "s_lve",
+    "items": [
+      "salve",
+      "solve"
+    ]
+  },
+  {
+    "pattern": "s_ock",
+    "items": [
+      "shock",
+      "smock",
+      "stock"
+    ]
+  },
+  {
+    "pattern": "s_oke",
+    "items": [
+      "smoke",
+      "spoke",
+      "stoke"
+    ]
+  },
+  {
+    "pattern": "s_one",
+    "items": [
+      "scone",
+      "shone",
+      "stone"
+    ]
+  },
+  {
+    "pattern": "s_ook",
+    "items": [
+      "shook",
+      "spook"
+    ]
+  },
+  {
+    "pattern": "s_ool",
+    "items": [
+      "spool",
+      "stool"
+    ]
+  },
+  {
+    "pattern": "s_oon",
+    "items": [
+      "spoon",
+      "swoon"
+    ]
+  },
+  {
+    "pattern": "s_oop",
+    "items": [
+      "scoop",
+      "sloop",
+      "snoop",
+      "stoop",
+      "swoop"
+    ]
+  },
+  {
+    "pattern": "s_ope",
+    "items": [
+      "scope",
+      "slope"
+    ]
+  },
+  {
+    "pattern": "s_ore",
+    "items": [
+      "score",
+      "shore",
+      "snore",
+      "spore",
+      "store",
+      "swore"
+    ]
+  },
+  {
+    "pattern": "s_orn",
+    "items": [
+      "scorn",
+      "shorn",
+      "sworn"
+    ]
+  },
+  {
+    "pattern": "s_ort",
+    "items": [
+      "short",
+      "snort",
+      "sport"
+    ]
+  },
+  {
+    "pattern": "s_oth",
+    "items": [
+      "sloth",
+      "sooth"
+    ]
+  },
+  {
+    "pattern": "s_out",
+    "items": [
+      "scout",
+      "shout",
+      "snout",
+      "spout",
+      "stout"
+    ]
+  },
+  {
+    "pattern": "s_ove",
+    "items": [
+      "shove",
+      "stove"
+    ]
+  },
+  {
+    "pattern": "s_owy",
+    "items": [
+      "showy",
+      "snowy"
+    ]
+  },
+  {
+    "pattern": "s_rap",
+    "items": [
+      "scrap",
+      "strap"
+    ]
+  },
+  {
+    "pattern": "s_ray",
+    "items": [
+      "spray",
+      "stray"
+    ]
+  },
+  {
+    "pattern": "s_ree",
+    "items": [
+      "scree",
+      "spree"
+    ]
+  },
+  {
+    "pattern": "s_rew",
+    "items": [
+      "screw",
+      "shrew"
+    ]
+  },
+  {
+    "pattern": "s_rub",
+    "items": [
+      "scrub",
+      "shrub"
+    ]
+  },
+  {
+    "pattern": "s_rum",
+    "items": [
+      "scrum",
+      "serum"
+    ]
+  },
+  {
+    "pattern": "s_ssy",
+    "items": [
+      "sassy",
+      "sissy"
+    ]
+  },
+  {
+    "pattern": "s_uck",
+    "items": [
+      "shuck",
+      "snuck",
+      "stuck"
+    ]
+  },
+  {
+    "pattern": "s_uff",
+    "items": [
+      "snuff",
+      "stuff"
+    ]
+  },
+  {
+    "pattern": "s_ump",
+    "items": [
+      "slump",
+      "stump"
+    ]
+  },
+  {
+    "pattern": "s_ung",
+    "items": [
+      "slung",
+      "stung",
+      "swung"
+    ]
+  },
+  {
+    "pattern": "s_unk",
+    "items": [
+      "skunk",
+      "slunk",
+      "spunk",
+      "stunk"
+    ]
+  },
+  {
+    "pattern": "s_unt",
+    "items": [
+      "shunt",
+      "stunt"
+    ]
+  },
+  {
+    "pattern": "s_ush",
+    "items": [
+      "shush",
+      "slush"
+    ]
+  },
+  {
+    "pattern": "s_wer",
+    "items": [
+      "sewer",
+      "sower"
+    ]
+  },
+  {
+    "pattern": "s_yly",
+    "items": [
+      "shyly",
+      "slyly"
+    ]
+  },
+  {
+    "pattern": "sa_er",
+    "items": [
+      "safer",
+      "saner"
+    ]
+  },
+  {
+    "pattern": "sa_ly",
+    "items": [
+      "sadly",
+      "sally"
+    ]
+  },
+  {
+    "pattern": "sal_y",
+    "items": [
+      "sally",
+      "salty"
+    ]
+  },
+  {
+    "pattern": "salv_",
+    "items": [
+      "salve",
+      "salvo"
+    ]
+  },
+  {
+    "pattern": "sau_e",
+    "items": [
+      "sauce",
+      "saute"
+    ]
+  },
+  {
+    "pattern": "sauc_",
+    "items": [
+      "sauce",
+      "saucy"
+    ]
+  },
+  {
+    "pattern": "sav_y",
+    "items": [
+      "savoy",
+      "savvy"
+    ]
+  },
+  {
+    "pattern": "savo_",
+    "items": [
+      "savor",
+      "savoy"
+    ]
+  },
+  {
+    "pattern": "sc_ld",
+    "items": [
+      "scald",
+      "scold"
+    ]
+  },
+  {
+    "pattern": "sc_ne",
+    "items": [
+      "scene",
+      "scone"
+    ]
+  },
+  {
+    "pattern": "sc_nt",
+    "items": [
+      "scant",
+      "scent"
+    ]
+  },
+  {
+    "pattern": "sc_re",
+    "items": [
+      "scare",
+      "score"
+    ]
+  },
+  {
+    "pattern": "sca_e",
+    "items": [
+      "scale",
+      "scare"
+    ]
+  },
+  {
+    "pattern": "sca_p",
+    "items": [
+      "scalp",
+      "scamp"
+    ]
+  },
+  {
+    "pattern": "sca_y",
+    "items": [
+      "scaly",
+      "scary"
+    ]
+  },
+  {
+    "pattern": "scal_",
+    "items": [
+      "scald",
+      "scale",
+      "scalp",
+      "scaly"
+    ]
+  },
+  {
+    "pattern": "scar_",
+    "items": [
+      "scare",
+      "scarf",
+      "scary"
+    ]
+  },
+  {
+    "pattern": "scen_",
+    "items": [
+      "scene",
+      "scent"
+    ]
+  },
+  {
+    "pattern": "sco_e",
+    "items": [
+      "scone",
+      "scope",
+      "score"
+    ]
+  },
+  {
+    "pattern": "scor_",
+    "items": [
+      "score",
+      "scorn"
+    ]
+  },
+  {
+    "pattern": "scou_",
+    "items": [
+      "scour",
+      "scout"
+    ]
+  },
+  {
+    "pattern": "scr_m",
+    "items": [
+      "scram",
+      "scrum"
+    ]
+  },
+  {
+    "pattern": "scra_",
+    "items": [
+      "scram",
+      "scrap"
+    ]
+  },
+  {
+    "pattern": "scre_",
+    "items": [
+      "scree",
+      "screw"
+    ]
+  },
+  {
+    "pattern": "scru_",
+    "items": [
+      "scrub",
+      "scrum"
+    ]
+  },
+  {
+    "pattern": "se_en",
+    "items": [
+      "semen",
+      "seven"
+    ]
+  },
+  {
+    "pattern": "se_er",
+    "items": [
+      "sever",
+      "sewer"
+    ]
+  },
+  {
+    "pattern": "seve_",
+    "items": [
+      "seven",
+      "sever"
+    ]
+  },
+  {
+    "pattern": "sh_ck",
+    "items": [
+      "shack",
+      "shock",
+      "shuck"
+    ]
+  },
+  {
+    "pattern": "sh_ft",
+    "items": [
+      "shaft",
+      "shift"
+    ]
+  },
+  {
+    "pattern": "sh_ll",
+    "items": [
+      "shall",
+      "shell"
+    ]
+  },
+  {
+    "pattern": "sh_ne",
+    "items": [
+      "shine",
+      "shone"
+    ]
+  },
+  {
+    "pattern": "sh_re",
+    "items": [
+      "share",
+      "shire",
+      "shore"
+    ]
+  },
+  {
+    "pattern": "sh_rk",
+    "items": [
+      "shark",
+      "shirk"
+    ]
+  },
+  {
+    "pattern": "sh_rt",
+    "items": [
+      "shirt",
+      "short"
+    ]
+  },
+  {
+    "pattern": "sh_ve",
+    "items": [
+      "shave",
+      "shove"
+    ]
+  },
+  {
+    "pattern": "sha_e",
+    "items": [
+      "shade",
+      "shake",
+      "shale",
+      "shame",
+      "shape",
+      "share",
+      "shave"
+    ]
+  },
+  {
+    "pattern": "sha_k",
+    "items": [
+      "shack",
+      "shank",
+      "shark"
+    ]
+  },
+  {
+    "pattern": "sha_l",
+    "items": [
+      "shall",
+      "shawl"
+    ]
+  },
+  {
+    "pattern": "sha_t",
+    "items": [
+      "shaft",
+      "shalt"
+    ]
+  },
+  {
+    "pattern": "sha_y",
+    "items": [
+      "shady",
+      "shaky"
+    ]
+  },
+  {
+    "pattern": "shad_",
+    "items": [
+      "shade",
+      "shady"
+    ]
+  },
+  {
+    "pattern": "shak_",
+    "items": [
+      "shake",
+      "shaky"
+    ]
+  },
+  {
+    "pattern": "shal_",
+    "items": [
+      "shale",
+      "shall",
+      "shalt"
+    ]
+  },
+  {
+    "pattern": "shar_",
+    "items": [
+      "shard",
+      "share",
+      "shark",
+      "sharp"
+    ]
+  },
+  {
+    "pattern": "she_r",
+    "items": [
+      "shear",
+      "sheer"
+    ]
+  },
+  {
+    "pattern": "shee_",
+    "items": [
+      "sheen",
+      "sheep",
+      "sheer",
+      "sheet"
+    ]
+  },
+  {
+    "pattern": "shel_",
+    "items": [
+      "shelf",
+      "shell"
+    ]
+  },
+  {
+    "pattern": "shi_e",
+    "items": [
+      "shine",
+      "shire"
+    ]
+  },
+  {
+    "pattern": "shi_t",
+    "items": [
+      "shift",
+      "shirt"
+    ]
+  },
+  {
+    "pattern": "shin_",
+    "items": [
+      "shine",
+      "shiny"
+    ]
+  },
+  {
+    "pattern": "shir_",
+    "items": [
+      "shire",
+      "shirk",
+      "shirt"
+    ]
+  },
+  {
+    "pattern": "sho_e",
+    "items": [
+      "shone",
+      "shore",
+      "shove"
+    ]
+  },
+  {
+    "pattern": "sho_k",
+    "items": [
+      "shock",
+      "shook"
+    ]
+  },
+  {
+    "pattern": "sho_n",
+    "items": [
+      "shorn",
+      "shown"
+    ]
+  },
+  {
+    "pattern": "sho_t",
+    "items": [
+      "shoot",
+      "short",
+      "shout"
+    ]
+  },
+  {
+    "pattern": "shoo_",
+    "items": [
+      "shook",
+      "shoot"
+    ]
+  },
+  {
+    "pattern": "shor_",
+    "items": [
+      "shore",
+      "shorn",
+      "short"
+    ]
+  },
+  {
+    "pattern": "show_",
+    "items": [
+      "shown",
+      "showy"
+    ]
+  },
+  {
+    "pattern": "shru_",
+    "items": [
+      "shrub",
+      "shrug"
+    ]
+  },
+  {
+    "pattern": "si_ge",
+    "items": [
+      "siege",
+      "singe"
+    ]
+  },
+  {
+    "pattern": "sie_e",
+    "items": [
+      "siege",
+      "sieve"
+    ]
+  },
+  {
+    "pattern": "sil_y",
+    "items": [
+      "silky",
+      "silly"
+    ]
+  },
+  {
+    "pattern": "sin_e",
+    "items": [
+      "since",
+      "singe"
+    ]
+  },
+  {
+    "pattern": "sixt_",
+    "items": [
+      "sixth",
+      "sixty"
+    ]
+  },
+  {
+    "pattern": "sk_ll",
+    "items": [
+      "skill",
+      "skull"
+    ]
+  },
+  {
+    "pattern": "sku_k",
+    "items": [
+      "skulk",
+      "skunk"
+    ]
+  },
+  {
+    "pattern": "skul_",
+    "items": [
+      "skulk",
+      "skull"
+    ]
+  },
+  {
+    "pattern": "sl_ck",
+    "items": [
+      "slack",
+      "slick"
+    ]
+  },
+  {
+    "pattern": "sl_ng",
+    "items": [
+      "slang",
+      "sling",
+      "slung"
+    ]
+  },
+  {
+    "pattern": "sl_nk",
+    "items": [
+      "slink",
+      "slunk"
+    ]
+  },
+  {
+    "pattern": "sl_sh",
+    "items": [
+      "slash",
+      "slosh",
+      "slush"
+    ]
+  },
+  {
+    "pattern": "sla_e",
+    "items": [
+      "slate",
+      "slave"
+    ]
+  },
+  {
+    "pattern": "slan_",
+    "items": [
+      "slang",
+      "slant"
+    ]
+  },
+  {
+    "pattern": "sle_t",
+    "items": [
+      "sleet",
+      "slept"
+    ]
+  },
+  {
+    "pattern": "slee_",
+    "items": [
+      "sleek",
+      "sleep",
+      "sleet"
+    ]
+  },
+  {
+    "pattern": "sli_e",
+    "items": [
+      "slice",
+      "slide",
+      "slime"
+    ]
+  },
+  {
+    "pattern": "sli_k",
+    "items": [
+      "slick",
+      "slink"
+    ]
+  },
+  {
+    "pattern": "slic_",
+    "items": [
+      "slice",
+      "slick"
+    ]
+  },
+  {
+    "pattern": "slim_",
+    "items": [
+      "slime",
+      "slimy"
+    ]
+  },
+  {
+    "pattern": "slin_",
+    "items": [
+      "sling",
+      "slink"
+    ]
+  },
+  {
+    "pattern": "slo_h",
+    "items": [
+      "slosh",
+      "sloth"
+    ]
+  },
+  {
+    "pattern": "slu_p",
+    "items": [
+      "slump",
+      "slurp"
+    ]
+  },
+  {
+    "pattern": "slun_",
+    "items": [
+      "slung",
+      "slunk"
+    ]
+  },
+  {
+    "pattern": "sm_ck",
+    "items": [
+      "smack",
+      "smock"
+    ]
+  },
+  {
+    "pattern": "sm_ll",
+    "items": [
+      "small",
+      "smell"
+    ]
+  },
+  {
+    "pattern": "sm_te",
+    "items": [
+      "smite",
+      "smote"
+    ]
+  },
+  {
+    "pattern": "smel_",
+    "items": [
+      "smell",
+      "smelt"
+    ]
+  },
+  {
+    "pattern": "smi_e",
+    "items": [
+      "smile",
+      "smite"
+    ]
+  },
+  {
+    "pattern": "smit_",
+    "items": [
+      "smite",
+      "smith"
+    ]
+  },
+  {
+    "pattern": "smo_e",
+    "items": [
+      "smoke",
+      "smote"
+    ]
+  },
+  {
+    "pattern": "smok_",
+    "items": [
+      "smoke",
+      "smoky"
+    ]
+  },
+  {
+    "pattern": "sn_ck",
+    "items": [
+      "snack",
+      "snuck"
+    ]
+  },
+  {
+    "pattern": "sn_ff",
+    "items": [
+      "sniff",
+      "snuff"
+    ]
+  },
+  {
+    "pattern": "sn_re",
+    "items": [
+      "snare",
+      "snore"
+    ]
+  },
+  {
+    "pattern": "sna_e",
+    "items": [
+      "snake",
+      "snare"
+    ]
+  },
+  {
+    "pattern": "sna_l",
+    "items": [
+      "snail",
+      "snarl"
+    ]
+  },
+  {
+    "pattern": "snak_",
+    "items": [
+      "snake",
+      "snaky"
+    ]
+  },
+  {
+    "pattern": "snar_",
+    "items": [
+      "snare",
+      "snarl"
+    ]
+  },
+  {
+    "pattern": "sni_e",
+    "items": [
+      "snide",
+      "snipe"
+    ]
+  },
+  {
+    "pattern": "sno_t",
+    "items": [
+      "snort",
+      "snout"
+    ]
+  },
+  {
+    "pattern": "snor_",
+    "items": [
+      "snore",
+      "snort"
+    ]
+  },
+  {
+    "pattern": "so_ar",
+    "items": [
+      "solar",
+      "sonar"
+    ]
+  },
+  {
+    "pattern": "so_er",
+    "items": [
+      "sober",
+      "sower"
+    ]
+  },
+  {
+    "pattern": "so_th",
+    "items": [
+      "sooth",
+      "south"
+    ]
+  },
+  {
+    "pattern": "soot_",
+    "items": [
+      "sooth",
+      "sooty"
+    ]
+  },
+  {
+    "pattern": "sp_ce",
+    "items": [
+      "space",
+      "spice"
+    ]
+  },
+  {
+    "pattern": "sp_ed",
+    "items": [
+      "speed",
+      "spied"
+    ]
+  },
+  {
+    "pattern": "sp_ke",
+    "items": [
+      "spike",
+      "spoke"
+    ]
+  },
+  {
+    "pattern": "sp_ll",
+    "items": [
+      "spell",
+      "spill"
+    ]
+  },
+  {
+    "pattern": "sp_lt",
+    "items": [
+      "spelt",
+      "spilt"
+    ]
+  },
+  {
+    "pattern": "sp_nk",
+    "items": [
+      "spank",
+      "spunk"
+    ]
+  },
+  {
+    "pattern": "sp_re",
+    "items": [
+      "spare",
+      "spire",
+      "spore"
+    ]
+  },
+  {
+    "pattern": "sp_rt",
+    "items": [
+      "sport",
+      "spurt"
+    ]
+  },
+  {
+    "pattern": "spa_e",
+    "items": [
+      "space",
+      "spade",
+      "spare"
+    ]
+  },
+  {
+    "pattern": "spa_k",
+    "items": [
+      "spank",
+      "spark"
+    ]
+  },
+  {
+    "pattern": "spar_",
+    "items": [
+      "spare",
+      "spark"
+    ]
+  },
+  {
+    "pattern": "spe_d",
+    "items": [
+      "speed",
+      "spend"
+    ]
+  },
+  {
+    "pattern": "spe_k",
+    "items": [
+      "speak",
+      "speck"
+    ]
+  },
+  {
+    "pattern": "spe_t",
+    "items": [
+      "spelt",
+      "spent"
+    ]
+  },
+  {
+    "pattern": "spea_",
+    "items": [
+      "speak",
+      "spear"
+    ]
+  },
+  {
+    "pattern": "spel_",
+    "items": [
+      "spell",
+      "spelt"
+    ]
+  },
+  {
+    "pattern": "spen_",
+    "items": [
+      "spend",
+      "spent"
+    ]
+  },
+  {
+    "pattern": "spi_e",
+    "items": [
+      "spice",
+      "spike",
+      "spine",
+      "spire",
+      "spite"
+    ]
+  },
+  {
+    "pattern": "spi_l",
+    "items": [
+      "spiel",
+      "spill"
+    ]
+  },
+  {
+    "pattern": "spi_y",
+    "items": [
+      "spicy",
+      "spiky",
+      "spiny"
+    ]
+  },
+  {
+    "pattern": "spic_",
+    "items": [
+      "spice",
+      "spicy"
+    ]
+  },
+  {
+    "pattern": "spie_",
+    "items": [
+      "spied",
+      "spiel"
+    ]
+  },
+  {
+    "pattern": "spik_",
+    "items": [
+      "spike",
+      "spiky"
+    ]
+  },
+  {
+    "pattern": "spil_",
+    "items": [
+      "spill",
+      "spilt"
+    ]
+  },
+  {
+    "pattern": "spin_",
+    "items": [
+      "spine",
+      "spiny"
+    ]
+  },
+  {
+    "pattern": "spl_t",
+    "items": [
+      "splat",
+      "split"
+    ]
+  },
+  {
+    "pattern": "spo_e",
+    "items": [
+      "spoke",
+      "spore"
+    ]
+  },
+  {
+    "pattern": "spo_l",
+    "items": [
+      "spoil",
+      "spool"
+    ]
+  },
+  {
+    "pattern": "spo_t",
+    "items": [
+      "sport",
+      "spout"
+    ]
+  },
+  {
+    "pattern": "spoo_",
+    "items": [
+      "spoof",
+      "spook",
+      "spool",
+      "spoon"
+    ]
+  },
+  {
+    "pattern": "spor_",
+    "items": [
+      "spore",
+      "sport"
+    ]
+  },
+  {
+    "pattern": "spur_",
+    "items": [
+      "spurn",
+      "spurt"
+    ]
+  },
+  {
+    "pattern": "squa_",
+    "items": [
+      "squad",
+      "squat"
+    ]
+  },
+  {
+    "pattern": "st_ck",
+    "items": [
+      "stack",
+      "stick",
+      "stock",
+      "stuck"
+    ]
+  },
+  {
+    "pattern": "st_ff",
+    "items": [
+      "staff",
+      "stiff",
+      "stuff"
+    ]
+  },
+  {
+    "pattern": "st_in",
+    "items": [
+      "stain",
+      "stein"
+    ]
+  },
+  {
+    "pattern": "st_ke",
+    "items": [
+      "stake",
+      "stoke"
+    ]
+  },
+  {
+    "pattern": "st_le",
+    "items": [
+      "stale",
+      "stole",
+      "style"
+    ]
+  },
+  {
+    "pattern": "st_ll",
+    "items": [
+      "stall",
+      "still"
+    ]
+  },
+  {
+    "pattern": "st_mp",
+    "items": [
+      "stamp",
+      "stomp",
+      "stump"
+    ]
+  },
+  {
+    "pattern": "st_ng",
+    "items": [
+      "sting",
+      "stung"
+    ]
+  },
+  {
+    "pattern": "st_nk",
+    "items": [
+      "stank",
+      "stink",
+      "stunk"
+    ]
+  },
+  {
+    "pattern": "st_nt",
+    "items": [
+      "stint",
+      "stunt"
+    ]
+  },
+  {
+    "pattern": "st_re",
+    "items": [
+      "stare",
+      "store"
+    ]
+  },
+  {
+    "pattern": "st_rk",
+    "items": [
+      "stark",
+      "stork"
+    ]
+  },
+  {
+    "pattern": "st_ut",
+    "items": [
+      "stout",
+      "strut"
+    ]
+  },
+  {
+    "pattern": "st_ve",
+    "items": [
+      "stave",
+      "stove"
+    ]
+  },
+  {
+    "pattern": "sta_d",
+    "items": [
+      "staid",
+      "stand"
+    ]
+  },
+  {
+    "pattern": "sta_e",
+    "items": [
+      "stage",
+      "stake",
+      "stale",
+      "stare",
+      "state",
+      "stave"
+    ]
+  },
+  {
+    "pattern": "sta_k",
+    "items": [
+      "stack",
+      "stalk",
+      "stank",
+      "stark"
+    ]
+  },
+  {
+    "pattern": "stai_",
+    "items": [
+      "staid",
+      "stain",
+      "stair"
+    ]
+  },
+  {
+    "pattern": "stal_",
+    "items": [
+      "stale",
+      "stalk",
+      "stall"
+    ]
+  },
+  {
+    "pattern": "stan_",
+    "items": [
+      "stand",
+      "stank"
+    ]
+  },
+  {
+    "pattern": "star_",
+    "items": [
+      "stare",
+      "stark",
+      "start"
+    ]
+  },
+  {
+    "pattern": "ste_d",
+    "items": [
+      "stead",
+      "steed"
+    ]
+  },
+  {
+    "pattern": "ste_l",
+    "items": [
+      "steal",
+      "steel"
+    ]
+  },
+  {
+    "pattern": "ste_n",
+    "items": [
+      "stein",
+      "stern"
+    ]
+  },
+  {
+    "pattern": "stea_",
+    "items": [
+      "stead",
+      "steak",
+      "steal",
+      "steam"
+    ]
+  },
+  {
+    "pattern": "stee_",
+    "items": [
+      "steed",
+      "steel",
+      "steep",
+      "steer"
+    ]
+  },
+  {
+    "pattern": "sti_k",
+    "items": [
+      "stick",
+      "stink"
+    ]
+  },
+  {
+    "pattern": "sti_t",
+    "items": [
+      "stilt",
+      "stint"
+    ]
+  },
+  {
+    "pattern": "stil_",
+    "items": [
+      "still",
+      "stilt"
+    ]
+  },
+  {
+    "pattern": "stin_",
+    "items": [
+      "sting",
+      "stink",
+      "stint"
+    ]
+  },
+  {
+    "pattern": "sto_e",
+    "items": [
+      "stoke",
+      "stole",
+      "stone",
+      "store",
+      "stove"
+    ]
+  },
+  {
+    "pattern": "sto_k",
+    "items": [
+      "stock",
+      "stork"
+    ]
+  },
+  {
+    "pattern": "sto_p",
+    "items": [
+      "stomp",
+      "stoop"
+    ]
+  },
+  {
+    "pattern": "sto_y",
+    "items": [
+      "stony",
+      "story"
+    ]
+  },
+  {
+    "pattern": "ston_",
+    "items": [
+      "stone",
+      "stony"
+    ]
+  },
+  {
+    "pattern": "stoo_",
+    "items": [
+      "stood",
+      "stool",
+      "stoop"
+    ]
+  },
+  {
+    "pattern": "stor_",
+    "items": [
+      "store",
+      "stork",
+      "storm",
+      "story"
+    ]
+  },
+  {
+    "pattern": "str_p",
+    "items": [
+      "strap",
+      "strip"
+    ]
+  },
+  {
+    "pattern": "stra_",
+    "items": [
+      "strap",
+      "straw",
+      "stray"
+    ]
+  },
+  {
+    "pattern": "stu_k",
+    "items": [
+      "stuck",
+      "stunk"
+    ]
+  },
+  {
+    "pattern": "stun_",
+    "items": [
+      "stung",
+      "stunk",
+      "stunt"
+    ]
+  },
+  {
+    "pattern": "su_er",
+    "items": [
+      "super",
+      "surer"
+    ]
+  },
+  {
+    "pattern": "su_ly",
+    "items": [
+      "sully",
+      "surly"
+    ]
+  },
+  {
+    "pattern": "sul_y",
+    "items": [
+      "sulky",
+      "sully"
+    ]
+  },
+  {
+    "pattern": "sw_ll",
+    "items": [
+      "swell",
+      "swill"
+    ]
+  },
+  {
+    "pattern": "sw_ng",
+    "items": [
+      "swing",
+      "swung"
+    ]
+  },
+  {
+    "pattern": "sw_sh",
+    "items": [
+      "swash",
+      "swish"
+    ]
+  },
+  {
+    "pattern": "swa_h",
+    "items": [
+      "swash",
+      "swath"
+    ]
+  },
+  {
+    "pattern": "swam_",
+    "items": [
+      "swami",
+      "swamp"
+    ]
+  },
+  {
+    "pattern": "swe_t",
+    "items": [
+      "sweat",
+      "sweet",
+      "swept"
+    ]
+  },
+  {
+    "pattern": "swea_",
+    "items": [
+      "swear",
+      "sweat"
+    ]
+  },
+  {
+    "pattern": "swee_",
+    "items": [
+      "sweep",
+      "sweet"
+    ]
+  },
+  {
+    "pattern": "swi_l",
+    "items": [
+      "swill",
+      "swirl"
+    ]
+  },
+  {
+    "pattern": "swin_",
+    "items": [
+      "swine",
+      "swing"
+    ]
+  },
+  {
+    "pattern": "swo_n",
+    "items": [
+      "swoon",
+      "sworn"
+    ]
+  },
+  {
+    "pattern": "swoo_",
+    "items": [
+      "swoon",
+      "swoop"
+    ]
+  },
+  {
+    "pattern": "swor_",
+    "items": [
+      "sword",
+      "swore",
+      "sworn"
+    ]
+  },
+  {
+    "pattern": "t_ddy",
+    "items": [
+      "teddy",
+      "toddy"
+    ]
+  },
+  {
+    "pattern": "t_ice",
+    "items": [
+      "trice",
+      "twice"
+    ]
+  },
+  {
+    "pattern": "t_ick",
+    "items": [
+      "thick",
+      "trick"
+    ]
+  },
+  {
+    "pattern": "t_ing",
+    "items": [
+      "thing",
+      "tying"
+    ]
+  },
+  {
+    "pattern": "t_ken",
+    "items": [
+      "taken",
+      "token"
+    ]
+  },
+  {
+    "pattern": "t_mer",
+    "items": [
+      "tamer",
+      "timer"
+    ]
+  },
+  {
+    "pattern": "t_nic",
+    "items": [
+      "tonic",
+      "tunic"
+    ]
+  },
+  {
+    "pattern": "t_sty",
+    "items": [
+      "tasty",
+      "testy"
+    ]
+  },
+  {
+    "pattern": "t_ump",
+    "items": [
+      "thump",
+      "trump"
+    ]
+  },
+  {
+    "pattern": "ta_er",
+    "items": [
+      "taker",
+      "tamer",
+      "taper"
+    ]
+  },
+  {
+    "pattern": "ta_nt",
+    "items": [
+      "taint",
+      "taunt"
+    ]
+  },
+  {
+    "pattern": "ta_ty",
+    "items": [
+      "tasty",
+      "tatty"
+    ]
+  },
+  {
+    "pattern": "take_",
+    "items": [
+      "taken",
+      "taker"
+    ]
+  },
+  {
+    "pattern": "tang_",
+    "items": [
+      "tango",
+      "tangy"
+    ]
+  },
+  {
+    "pattern": "tap_r",
+    "items": [
+      "taper",
+      "tapir"
+    ]
+  },
+  {
+    "pattern": "tast_",
+    "items": [
+      "taste",
+      "tasty"
+    ]
+  },
+  {
+    "pattern": "te_se",
+    "items": [
+      "tease",
+      "tense",
+      "terse"
+    ]
+  },
+  {
+    "pattern": "te_th",
+    "items": [
+      "teeth",
+      "tenth"
+    ]
+  },
+  {
+    "pattern": "th_me",
+    "items": [
+      "theme",
+      "thyme"
+    ]
+  },
+  {
+    "pattern": "th_ng",
+    "items": [
+      "thing",
+      "thong"
+    ]
+  },
+  {
+    "pattern": "th_nk",
+    "items": [
+      "thank",
+      "think"
+    ]
+  },
+  {
+    "pattern": "th_se",
+    "items": [
+      "these",
+      "those"
+    ]
+  },
+  {
+    "pattern": "the_e",
+    "items": [
+      "theme",
+      "there",
+      "these"
+    ]
+  },
+  {
+    "pattern": "thi_k",
+    "items": [
+      "thick",
+      "think"
+    ]
+  },
+  {
+    "pattern": "thin_",
+    "items": [
+      "thing",
+      "think"
+    ]
+  },
+  {
+    "pattern": "thr_w",
+    "items": [
+      "threw",
+      "throw"
+    ]
+  },
+  {
+    "pattern": "thre_",
+    "items": [
+      "three",
+      "threw"
+    ]
+  },
+  {
+    "pattern": "thro_",
+    "items": [
+      "throb",
+      "throw"
+    ]
+  },
+  {
+    "pattern": "thum_",
+    "items": [
+      "thumb",
+      "thump"
+    ]
+  },
+  {
+    "pattern": "ti_er",
+    "items": [
+      "tiger",
+      "timer"
+    ]
+  },
+  {
+    "pattern": "tit_e",
+    "items": [
+      "tithe",
+      "title"
+    ]
+  },
+  {
+    "pattern": "to_al",
+    "items": [
+      "tonal",
+      "total"
+    ]
+  },
+  {
+    "pattern": "to_ch",
+    "items": [
+      "torch",
+      "touch"
+    ]
+  },
+  {
+    "pattern": "to_ic",
+    "items": [
+      "tonic",
+      "topic",
+      "toxic"
+    ]
+  },
+  {
+    "pattern": "tod_y",
+    "items": [
+      "today",
+      "toddy"
+    ]
+  },
+  {
+    "pattern": "tou_h",
+    "items": [
+      "touch",
+      "tough"
+    ]
+  },
+  {
+    "pattern": "towe_",
+    "items": [
+      "towel",
+      "tower"
+    ]
+  },
+  {
+    "pattern": "toxi_",
+    "items": [
+      "toxic",
+      "toxin"
+    ]
+  },
+  {
+    "pattern": "tr_ad",
+    "items": [
+      "tread",
+      "triad"
+    ]
+  },
+  {
+    "pattern": "tr_ce",
+    "items": [
+      "trace",
+      "trice",
+      "truce"
+    ]
+  },
+  {
+    "pattern": "tr_ck",
+    "items": [
+      "track",
+      "trick",
+      "truck"
+    ]
+  },
+  {
+    "pattern": "tr_mp",
+    "items": [
+      "tramp",
+      "trump"
+    ]
+  },
+  {
+    "pattern": "tr_pe",
+    "items": [
+      "tripe",
+      "trope"
+    ]
+  },
+  {
+    "pattern": "tr_st",
+    "items": [
+      "trust",
+      "tryst"
+    ]
+  },
+  {
+    "pattern": "tra_e",
+    "items": [
+      "trace",
+      "trade"
+    ]
+  },
+  {
+    "pattern": "tra_l",
+    "items": [
+      "trail",
+      "trawl"
+    ]
+  },
+  {
+    "pattern": "tra_t",
+    "items": [
+      "tract",
+      "trait"
+    ]
+  },
+  {
+    "pattern": "trac_",
+    "items": [
+      "trace",
+      "track",
+      "tract"
+    ]
+  },
+  {
+    "pattern": "trai_",
+    "items": [
+      "trail",
+      "train",
+      "trait"
+    ]
+  },
+  {
+    "pattern": "tre_d",
+    "items": [
+      "tread",
+      "trend"
+    ]
+  },
+  {
+    "pattern": "trea_",
+    "items": [
+      "tread",
+      "treat"
+    ]
+  },
+  {
+    "pattern": "tri_d",
+    "items": [
+      "triad",
+      "tried"
+    ]
+  },
+  {
+    "pattern": "tri_e",
+    "items": [
+      "tribe",
+      "trice",
+      "tripe",
+      "trite"
+    ]
+  },
+  {
+    "pattern": "tria_",
+    "items": [
+      "triad",
+      "trial"
+    ]
+  },
+  {
+    "pattern": "tric_",
+    "items": [
+      "trice",
+      "trick"
+    ]
+  },
+  {
+    "pattern": "tro_e",
+    "items": [
+      "trope",
+      "trove"
+    ]
+  },
+  {
+    "pattern": "tru_k",
+    "items": [
+      "truck",
+      "trunk"
+    ]
+  },
+  {
+    "pattern": "truc_",
+    "items": [
+      "truce",
+      "truck"
+    ]
+  },
+  {
+    "pattern": "trus_",
+    "items": [
+      "truss",
+      "trust"
+    ]
+  },
+  {
+    "pattern": "tu_or",
+    "items": [
+      "tumor",
+      "tutor"
+    ]
+  },
+  {
+    "pattern": "twee_",
+    "items": [
+      "tweed",
+      "tweet"
+    ]
+  },
+  {
+    "pattern": "twi_e",
+    "items": [
+      "twice",
+      "twine"
+    ]
+  },
+  {
+    "pattern": "twi_t",
+    "items": [
+      "twist",
+      "twixt"
+    ]
+  },
+  {
+    "pattern": "u_der",
+    "items": [
+      "udder",
+      "under"
+    ]
+  },
+  {
+    "pattern": "u_set",
+    "items": [
+      "unset",
+      "upset"
+    ]
+  },
+  {
+    "pattern": "un_ed",
+    "items": [
+      "unfed",
+      "unwed"
+    ]
+  },
+  {
+    "pattern": "un_et",
+    "items": [
+      "unmet",
+      "unset"
+    ]
+  },
+  {
+    "pattern": "un_it",
+    "items": [
+      "unfit",
+      "unlit"
+    ]
+  },
+  {
+    "pattern": "uni_y",
+    "items": [
+      "unify",
+      "unity"
+    ]
+  },
+  {
+    "pattern": "unit_",
+    "items": [
+      "unite",
+      "unity"
+    ]
+  },
+  {
+    "pattern": "unti_",
+    "items": [
+      "untie",
+      "until"
+    ]
+  },
+  {
+    "pattern": "v_gue",
+    "items": [
+      "vague",
+      "vogue"
+    ]
+  },
+  {
+    "pattern": "va_id",
+    "items": [
+      "valid",
+      "vapid"
+    ]
+  },
+  {
+    "pattern": "va_or",
+    "items": [
+      "valor",
+      "vapor"
+    ]
+  },
+  {
+    "pattern": "va_ue",
+    "items": [
+      "vague",
+      "value"
+    ]
+  },
+  {
+    "pattern": "val_e",
+    "items": [
+      "value",
+      "valve"
+    ]
+  },
+  {
+    "pattern": "vau_t",
+    "items": [
+      "vault",
+      "vaunt"
+    ]
+  },
+  {
+    "pattern": "ver_e",
+    "items": [
+      "verge",
+      "verse",
+      "verve"
+    ]
+  },
+  {
+    "pattern": "vers_",
+    "items": [
+      "verse",
+      "verso"
+    ]
+  },
+  {
+    "pattern": "vi_al",
+    "items": [
+      "viral",
+      "vital"
+    ]
+  },
+  {
+    "pattern": "vi_la",
+    "items": [
+      "villa",
+      "viola"
+    ]
+  },
+  {
+    "pattern": "vi_or",
+    "items": [
+      "vigor",
+      "visor"
+    ]
+  },
+  {
+    "pattern": "w_ack",
+    "items": [
+      "whack",
+      "wrack"
+    ]
+  },
+  {
+    "pattern": "w_ist",
+    "items": [
+      "waist",
+      "wrist"
+    ]
+  },
+  {
+    "pattern": "w_ite",
+    "items": [
+      "white",
+      "write"
+    ]
+  },
+  {
+    "pattern": "w_nch",
+    "items": [
+      "wench",
+      "winch"
+    ]
+  },
+  {
+    "pattern": "w_tch",
+    "items": [
+      "watch",
+      "witch"
+    ]
+  },
+  {
+    "pattern": "wa_er",
+    "items": [
+      "wafer",
+      "wager",
+      "water",
+      "waver"
+    ]
+  },
+  {
+    "pattern": "we_ch",
+    "items": [
+      "welch",
+      "wench"
+    ]
+  },
+  {
+    "pattern": "wel_h",
+    "items": [
+      "welch",
+      "welsh"
+    ]
+  },
+  {
+    "pattern": "wh_le",
+    "items": [
+      "whale",
+      "while",
+      "whole"
+    ]
+  },
+  {
+    "pattern": "whi_e",
+    "items": [
+      "while",
+      "whine",
+      "white"
+    ]
+  },
+  {
+    "pattern": "whin_",
+    "items": [
+      "whine",
+      "whiny"
+    ]
+  },
+  {
+    "pattern": "who_e",
+    "items": [
+      "whole",
+      "whose"
+    ]
+  },
+  {
+    "pattern": "wi_ch",
+    "items": [
+      "winch",
+      "witch"
+    ]
+  },
+  {
+    "pattern": "wi_er",
+    "items": [
+      "wider",
+      "wiser"
+    ]
+  },
+  {
+    "pattern": "wide_",
+    "items": [
+      "widen",
+      "wider"
+    ]
+  },
+  {
+    "pattern": "winc_",
+    "items": [
+      "wince",
+      "winch"
+    ]
+  },
+  {
+    "pattern": "wo_dy",
+    "items": [
+      "woody",
+      "wordy"
+    ]
+  },
+  {
+    "pattern": "wo_en",
+    "items": [
+      "woken",
+      "women",
+      "woven"
+    ]
+  },
+  {
+    "pattern": "wo_ld",
+    "items": [
+      "world",
+      "would"
+    ]
+  },
+  {
+    "pattern": "wom_n",
+    "items": [
+      "woman",
+      "women"
+    ]
+  },
+  {
+    "pattern": "woo_y",
+    "items": [
+      "woody",
+      "wooly",
+      "woozy"
+    ]
+  },
+  {
+    "pattern": "wor_y",
+    "items": [
+      "wordy",
+      "worry"
+    ]
+  },
+  {
+    "pattern": "wors_",
+    "items": [
+      "worse",
+      "worst"
+    ]
+  },
+  {
+    "pattern": "wou_d",
+    "items": [
+      "would",
+      "wound"
+    ]
+  },
+  {
+    "pattern": "wr_ck",
+    "items": [
+      "wrack",
+      "wreck"
+    ]
+  },
+  {
+    "pattern": "wr_ng",
+    "items": [
+      "wring",
+      "wrong",
+      "wrung"
+    ]
+  },
+  {
+    "pattern": "wr_st",
+    "items": [
+      "wrest",
+      "wrist"
+    ]
+  },
+  {
+    "pattern": "wr_te",
+    "items": [
+      "write",
+      "wrote"
+    ]
+  },
+  {
+    "pattern": "wre_k",
+    "items": [
+      "wreak",
+      "wreck"
+    ]
+  }
+]

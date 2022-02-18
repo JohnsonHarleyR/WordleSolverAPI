@@ -40,9 +40,9 @@ namespace WordleSolverAPI.Controllers
         }
 
         [HttpGet]
-        public ActionResult GetWordleGuesses(string correctAnswer)
+        public ActionResult GetWordleGuesses(string correctAnswer, bool isForContest = false)
         {
-            WordleGuesses result = WordSorter.GuessWordleSolution(correctAnswer.Trim().ToLower());
+            WordleGuesses result = WordSorter.GuessWordleSolution(correctAnswer.Trim().ToLower(), isForContest);
 
             return new JsonResult(result);
         }
@@ -96,6 +96,14 @@ namespace WordleSolverAPI.Controllers
         }
 
         [HttpGet]
+        public ActionResult GetCommonWordleWords()
+        {
+            List<string> words = WordSorter.GetAllWords(Logic.Enums.WordListType.WordleCommon);
+            words.Sort();
+            return new JsonResult(words);
+        }
+
+        [HttpGet]
         public ActionResult GetFailedWords(int startIndex, int howMany)
         {
             return new JsonResult(WordSorter.GetFailingWords(startIndex, howMany));
@@ -124,6 +132,18 @@ namespace WordleSolverAPI.Controllers
         //{
         //    return new JsonResult(WordSorter.GetWordsWithPattern(pattern, checkFailing, includeSEnding));
         //}
+
+        [HttpGet]
+        public ActionResult AnalyzePattern(string pattern, bool checkFailing, bool includeSEnding = true)
+        {
+            return new JsonResult(WordSorter.AnalyzePattern(pattern, checkFailing, includeSEnding));
+        }
+
+        [HttpGet]
+        public ActionResult Get4LetterPatternsWithExamples()
+        {
+            return new JsonResult(FailAnalyzer.GetAll4LetterPatternsWithItems(WordSorter.GetAllWords(Logic.Enums.WordListType.WordleCommon)));
+        }
 
         [HttpGet]
         public ActionResult GetWordsWithPatternAndAnalysis(string pattern, bool checkFailing = false, bool includeSEnding = true)

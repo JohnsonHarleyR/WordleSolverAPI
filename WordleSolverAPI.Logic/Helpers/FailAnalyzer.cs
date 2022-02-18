@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -236,6 +237,74 @@ namespace WordleSolverAPI.Logic
             {
                 FurtherPatternStatistics = patternPercents.OrderBy(p => p.Percent).Reverse().ToList()
             };
+        }
+
+        public static int CountBlanksInPatternString(string pattern)
+        {
+            int count = 0;
+            for (int i = 0; i < pattern.Length; i++)
+            {
+                if (pattern.Substring(i, 1) == "_")
+                {
+                    count++;
+                }
+            }
+            return count;
+        }
+
+        public static List<PatternItems> GetAll4LetterPatternsWithItems(List<string> words)
+        {
+            List<PatternItems> patternItems = new List<PatternItems>();
+
+            // get all 4 letter patterns
+            List<string> allPatterns = GetAll4LetterPatterns(words);
+            allPatterns.Sort();
+
+            // now create class objects to hold each pattern and its examples
+            foreach (var pattern in allPatterns)
+            {
+                List<string> itemList = MatchWordsToPattern(words, pattern, true);
+                itemList.Sort();
+                PatternItems newItems = new PatternItems()
+                {
+                    Pattern = pattern,
+                    Items = itemList
+                };
+                patternItems.Add(newItems);
+            }
+
+            return patternItems;
+        }
+
+        public static List<string> GetAll4LetterPatterns(List<string> words)
+        {
+            // TEMP
+            //int patternCount = 0;
+
+            // determine existing patterns
+            List<string> allPatterns = new List<string>();
+            for (int i = 0; i < words.Count - 1; i++)
+            {
+                //if (patternCount > 100)
+                //{
+                //    break;
+                //}
+                for (int n = i + 1; n < words.Count; n++)
+                {
+                    //if (patternCount > 100)
+                    //{
+                    //    break;
+                    //}
+                    string newPattern = GetPatternStringFromWords(words[i], words[n]);
+                    if (CountBlanksInPatternString(newPattern) == 1 &&
+                        !allPatterns.Contains(newPattern))
+                    {
+                        allPatterns.Add(newPattern);
+                        //patternCount++;
+                    }
+                }
+            }
+            return allPatterns;
         }
 
         public static double GetPercent(int count, int totalCount)
@@ -720,6 +789,52 @@ namespace WordleSolverAPI.Logic
             }
 
             return finalList;
+        }
+
+        public static List<PatternItems> LoadContestPatternJson(WordListType listType = WordListType.Scrabble)
+        {
+            //string dictionaryPath = $".\\files\\word-list.txt";
+            string path = $".\\files\\contest-pattern-dissect2.json";
+            List<PatternItems> list = null;
+
+            using (StreamReader r = new StreamReader(path))
+            {
+                string json = r.ReadToEnd();
+                list = JsonConvert.DeserializeObject<List<PatternItems>>(json);
+            }
+            return list;
+        }
+
+        public static List<string> GetCommonPatternWordsForContest(string pattern, List<PatternItems> items)
+        {
+            List<string> allPatternWords = GetMatchingContestPatternItems(pattern, items);
+
+            //if (allPatternWords == null)
+            //{
+            //    return null;
+            //}
+            //List<string> finalList = new List<string>();
+            //foreach (var word in allPatternWords)
+            //{
+            //    if (word.Substring(word.Length - 1, 1) == "*")
+            //    {
+            //        finalList.Add(word.Substring(0, word.Length - 1));
+            //    }
+            //}
+            //return finalList;
+            return allPatternWords;
+        }
+
+        public static List<string> GetMatchingContestPatternItems(string pattern, List<PatternItems> items)
+        {
+            foreach (var item in items)
+            {
+                if (item.Pattern == pattern)
+                {
+                    return item.Items;
+                }
+            }
+            return null;
         }
 
 
