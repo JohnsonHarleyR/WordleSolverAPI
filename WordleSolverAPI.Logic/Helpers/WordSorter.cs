@@ -30,6 +30,9 @@ namespace WordleSolverAPI.Logic
             // currently, 75% of failing words end with the letter s
             List<string> failingWords = FailAnalyzer.GetFailedWords();
 
+            List<LetterWrongPositions> letterWrongPositions = new List<LetterWrongPositions>();
+            List<LetterPosition> correctPositions = new List<LetterPosition>();
+
             // guess up to 6 times to get correct answer
             for (int i = 0; i < 6; i++)
             {
@@ -93,6 +96,10 @@ namespace WordleSolverAPI.Logic
                     //}
 
                     WordGuess lastGuess = endResult.Guesses[i - 1];
+                    // modify wrong position possibilities - add correct letters
+                    List<LetterPosition> newCorrectPositions = ModifyCorrectPositionsGetNew(correctPositions, lastGuess);
+                    letterWrongPositions = AddToWrongPositionLetters(letterWrongPositions, lastGuess, newCorrectPositions);
+
 
                     // check first if the word is likely to be on the fail list or not before using special mode
                     if (solveMode == SolveMode.Pattern)
@@ -109,7 +116,7 @@ namespace WordleSolverAPI.Logic
                     // guess differently depending on solving mode
                     if (solveMode == SolveMode.Normal)
                     {
-                        newGuessWord = GetGuessWordByLetterDistribution(possibleWords, lastGuess);
+                        newGuessWord = GetGuessWordByLetterDistribution(possibleWords, lastGuess, letterWrongPositions);
                         if (correctAnswer != "error" && newGuessWord == "error")
                         {
                             hasError = true;
@@ -133,11 +140,11 @@ namespace WordleSolverAPI.Logic
 
                         if (allWordsAreTies)
                         {
-                            newGuessWord = GetGuessWordByCompleteLetterDistribution(concernedWords, allWords);
+                            newGuessWord = GetGuessWordByCompleteLetterDistribution(concernedWords, allWords, letterWrongPositions);
                         }
                         else
                         {
-                            newGuessWord = GetGuessWordByLetterDistribution(concernedWords, lastGuess);
+                            newGuessWord = GetGuessWordByLetterDistribution(concernedWords, lastGuess, letterWrongPositions);
                         }
                         //newGuessWord = GetGuessWordByLetterDistribution(concernedWords, lastGuess);
                         if (correctAnswer != "error" && newGuessWord == "error")
@@ -190,7 +197,7 @@ namespace WordleSolverAPI.Logic
                         int y5Count = FailAnalyzer.MatchWordsToPattern(possibleWords, "____y", true).Count;
 
                         // NOTE consider using GetInitialGuessWord or methods in there to decide
-                        newGuessWord = GetGuessWordByLetterDistribution(possibleWords, lastGuess);
+                        newGuessWord = GetGuessWordByLetterDistribution(possibleWords, lastGuess, letterWrongPositions);
                     }
                     else if (solveMode == SolveMode.Turbo) // This is where failing words will become accounted for
                     {
@@ -359,7 +366,7 @@ namespace WordleSolverAPI.Logic
                         //}
 
                         // only 12% of failing words ending in s have double letters
-                        newGuessWord = GetGuessWordByLetterDistribution(concernedWords, lastGuess);
+                        newGuessWord = GetGuessWordByLetterDistribution(concernedWords, lastGuess, letterWrongPositions);
                         //if (concernedWords.Count > 1 && FailAnalyzer.AllWordsAreTies(concernedWords, 1))
                         //{
                         //    int failedCount = concernedWords.Where(word => failingWords.Contains(word)).ToList().Count;
@@ -792,6 +799,8 @@ namespace WordleSolverAPI.Logic
             }
 
             // eliminate words that have a letter in a wrong position or incorrect letter in position
+            // this is because if it's the same as a wrong position letter, you don't want to eliminate all words that have that letter,
+            // you only want to eliminate words with that letter in that position
             foreach (var incorrectLetter in incorrectLetters)
             {
                 bool isContainedInWrongPositions = false;
@@ -818,6 +827,8 @@ namespace WordleSolverAPI.Logic
                 possibleWords = GetWordsWithNoLetterInPosition(possibleWords, wrongPosLetter.Letter, wrongPosLetter.Position);
             }
 
+            // now figure out which positions are possible for the wrong position letters and eliminate words without the wrong
+            // position letters in one of the remaining positions
             List<string> possibleWordsFinal = new List<string>();
             foreach (var word in possibleWords)
             {
@@ -858,6 +869,35 @@ namespace WordleSolverAPI.Logic
             }
 
             return possibleWordsFinal;
+        }
+
+        public static List<LetterPosition> ModifyCorrectPositionsGetNew(List<LetterPosition> correctPos, WordGuess lastGuess)
+        {
+            List<LetterPosition> newPositions = new List<LetterPosition>();
+            foreach (var pos in lastGuess.Result)
+            {
+                bool isInList = false;
+                foreach (var c in correctPos)
+                {
+                    if (c.Letter == pos.Letter &&
+                        c.Position == pos.Position)
+                    {
+                        isInList = true;
+                        break;
+                    }
+                }
+
+                if (!isInList)
+                {
+                    if (pos.Status == LetterStatus.Correct)
+                    {
+                        newPositions.Add(pos);
+                        correctPos.Add(pos);
+                    }
+                }
+
+            }
+            return newPositions;
         }
 
         public static double GetPercentOfWordsWithPattern(string pattern, bool checkFailing, bool includeSEnding = true)
@@ -1360,48 +1400,269 @@ namespace WordleSolverAPI.Logic
         }
 
         public static string GetGuessWordByLetterDistribution(List<string> words,
-            WordGuess guess)
+            WordGuess guess, List<LetterWrongPositions> wrongPosLetters)
         {
             if (words.Count == 0)
             {
                 return "error";
             }
 
-            List<WordProbability> probabilities = GetWordScoresByLetterDistribution(words, guess);
+            List<WordProbability> probabilities = GetWordScoresByLetterDistribution(words, guess,
+                wrongPosLetters);
             return probabilities[0].Word;
         }
 
-        public static string GetGuessWordByCompleteLetterDistribution(List<string> words, List<string> allWords)
+        public static string GetGuessWordByCompleteLetterDistribution(List<string> words, List<string> allWords,
+            List<LetterWrongPositions> wrongPosLetters)
         {
             if (words.Count == 0)
             {
                 return "error";
             }
 
-            List<WordProbability> probabilities = GetCompleteWordScoresByLetterDistribution(words, allWords);
+            List<WordProbability> probabilities = GetCompleteWordScoresByLetterDistribution(words, allWords, wrongPosLetters);
             return probabilities[0].Word;
         }
 
         public static List<WordProbability> GetWordScoresByLetterDistribution(List<string> words,
-            WordGuess guess)
+            WordGuess guess, List<LetterWrongPositions> wrongPosLetters)
         {
             List<int> unknownPositions = new List<int>();
+            List<int> wrongPositions = new List<int>();
             foreach (var result in guess.Result)
             {
                 if (result.Status != LetterStatus.Correct)
                 {
                     unknownPositions.Add(result.Position);
                 }
+                else if (result.Status != LetterStatus.WrongPosition)
+                {
+                    wrongPositions.Add(result.Position);
+                }
             }
-            List<PositionLetterFrequencies> frequencies = GetLetterFrequenciesInUnknownPositions(words, unknownPositions, allLetters);
-
+            List<PositionLetterFrequencies> unknownFrequencies = GetLetterFrequenciesInUnknownPositions(words, unknownPositions, allLetters);
+            List<PositionLetterFrequencies> wrongPosFrequencies = GetLetterFrequenciesInWrongPositions(words, wrongPosLetters);
             List<WordProbability> wordScores = new List<WordProbability>();
             foreach (var word in words)
             {
-                wordScores.Add(GetWordScoreByLetterDistribution(word, frequencies));
+                wordScores.Add(GetWordScoreByLetterDistribution(word, unknownFrequencies, wrongPosFrequencies));
             }
 
             return wordScores.OrderBy(w => w.Score).Reverse().ToList();
+        }
+
+        public static List<LetterWrongPositions> AddToWrongPositionLetters(List<LetterWrongPositions> letterPosList, WordGuess newGuess,
+            List<LetterPosition> newCorrectPos)
+        {
+            // find which letters in the new guess are wrong positions
+            LetterPosition[] newResults = newGuess.Result;
+
+            // remove any new correct positions from the letterPosList if it matches letter and possible position
+            List<LetterWrongPositions> toRemove = new List<LetterWrongPositions>();
+            foreach (var newCorrect in newCorrectPos)
+            {
+                foreach (var lPos in letterPosList)
+                {
+                    if (newCorrect.Letter == lPos.Letter)
+                    {
+                        bool alreadyInCopy = false;
+                        if (toRemove.Contains(lPos))
+                        {
+                            alreadyInCopy = true;
+                        }
+                        if (!alreadyInCopy)
+                        {
+                            toRemove.Add(lPos);
+                        }
+                    }
+                }
+            }
+
+            // now remove any letter poses contained in toRemove
+            List<LetterWrongPositions> letterPosCopy = new List<LetterWrongPositions>();
+            foreach (var le in letterPosList)
+            {
+                bool isContained = false;
+                foreach (var r in toRemove)
+                {
+                    bool isCopy = true;
+                    if (le.Letter != r.Letter)
+                    {
+                        isCopy = false;
+                    }
+                    if (isCopy)
+                    {
+                        if (le.PossiblePositions.Count != r.PossiblePositions.Count)
+                        {
+                            isCopy = false;
+                        }
+                        if (isCopy)
+                        {
+                            for (int t = 0; t < r.PossiblePositions.Count; t++)
+                            {
+                                if (r.PossiblePositions[t] != le.PossiblePositions[t])
+                                {
+                                    isCopy = false;
+                                    break;
+                                }
+                            }
+                            if (isCopy)
+                            {
+                                if (le.WrongPositions.Count != r.WrongPositions.Count)
+                                {
+                                    isCopy = false;
+                                }
+                                if (isCopy)
+                                {
+                                    for (int t = 0; t < r.WrongPositions.Count; t++)
+                                    {
+                                        if (r.WrongPositions[t] != le.WrongPositions[t])
+                                        {
+                                            isCopy = false;
+                                            break;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    if (isCopy)
+                    {
+                        isContained = true;
+                    }
+                }
+
+                if (!isContained)
+                {
+                    letterPosCopy.Add(le);
+                }
+
+            }
+            letterPosList = letterPosCopy;
+
+            List<int> correctPositions = new List<int>();
+            // add correct positions to list so those can be added to wrong positions for letters
+            for (int i = 0; i < newResults.Length; i++)
+            {
+                if (newResults[i].Status == LetterStatus.Correct)
+                {
+                    correctPositions.Add(newResults[i].Position);
+                }
+            }
+
+            // now do wrong letter positions
+            for (int i = 0; i < newResults.Length; i++)
+            {
+                if (newResults[i].Status == LetterStatus.WrongPosition)
+                {
+                    // if it's the wrong position, see if that letter is in the list already
+                    bool isInList = false;
+                    int wrongPosCount = letterPosList.Where(l => l.Letter == newResults[i].Letter).Count();
+                    foreach (var item in letterPosList)
+                    {
+                        // count how many times it's in both lists
+                        int resultCount = newResults.Where(r => r.Letter == item.Letter && r.Status == LetterStatus.WrongPosition)
+                            .Count();
+                        if (item.Letter == newResults[i].Letter)
+                        {
+
+                            if (wrongPosCount == resultCount)
+                            {
+                                isInList = true;
+                                // if so, now see if that position is there still
+                                if (!item.WrongPositions.Contains(newResults[i].Position))
+                                {
+                                    item.WrongPositions.Add(newResults[i].Position);
+                                }
+                                break;
+                            }
+                        }
+                    }
+
+                    if (!isInList) // if that letter isn't counted yet, add it
+                    {
+                        // if it counts as "not in list" but that letter exists in the list, that means
+                        // there are duplicates and add that spot to the existing ones
+                        if (wrongPosCount > 0)
+                        {
+                            foreach (var l in letterPosList)
+                            {
+                                if (l.Letter == newResults[i].Letter &&
+                                    !l.WrongPositions.Contains(newResults[i].Position))
+                                {
+                                    l.WrongPositions.Add(wrongPosCount);
+                                }
+                            }
+                        }
+                        letterPosList.Add(new LetterWrongPositions(newResults[i].Letter, newResults[i].Position));
+
+                        // if there are duplicate letters, set them all to the one with the most wrong positions listed
+                        if (wrongPosCount > 0)
+                        {
+                            List<LetterWrongPositions> duplicates = letterPosList.Where(l => l.Letter == newResults[i].Letter).ToList();
+                            List<int> longest = new List<int>();
+                            foreach (var d in duplicates)
+                            {
+                                if (d.WrongPositions.Count > longest.Count)
+                                {
+                                    longest = d.WrongPositions;
+                                }
+                            }
+
+                            foreach (var l in letterPosList)
+                            {
+                                if (l.Letter == newResults[i].Letter)
+                                {
+                                    l.WrongPositions = longest;
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            // now add correct positions to wrong positions
+            foreach (var c in correctPositions)
+            {
+                // now add correct letter positions
+                foreach (var item in letterPosList)
+                {
+                    if (!item.WrongPositions.Contains(c))
+                    {
+                        item.WrongPositions.Add(c);
+                    }
+                }
+            }
+
+            // now calculate the possible positions for each item in wrong position letters
+            // now add correct letter positions
+            foreach (var item in letterPosList)
+            {
+                item.PossiblePositions.Clear();
+                int[] allPos = new int[] { 0, 1, 2, 3, 4 };
+                for (int i = 0; i < allPos.Length; i++)
+                {
+                    if (!item.WrongPositions.Contains(allPos[i]))
+                    {
+                        item.PossiblePositions.Add(allPos[i]);
+                    }
+                }
+            }
+
+            // double check that no positions are in the list that have no possibilities - because something was missed
+            List<LetterWrongPositions> letterPosCopy2 = new List<LetterWrongPositions>();
+            foreach (var le in letterPosList)
+            {
+                if (le.PossiblePositions.Count != 0)
+                {
+                    letterPosCopy2.Add(le);
+                }
+            }
+            letterPosList = letterPosCopy2;
+
+
+            return letterPosList;
         }
 
         public static string GetInitialGuessWord(List<string> words, List<string> allWords,
@@ -1431,15 +1692,16 @@ namespace WordleSolverAPI.Logic
             return wordScores.OrderBy(w => w.Score).Reverse().ToList();
         }
 
-        public static List<WordProbability> GetCompleteWordScoresByLetterDistribution(List<string> words, List<string> allWords)
+        public static List<WordProbability> GetCompleteWordScoresByLetterDistribution(List<string> words, List<string> allWords,
+            List<LetterWrongPositions> wrongPosLetters)
         {
             List<int> unknownPositions = new List<int>() { 0, 1, 2, 3, 4 };
             List<PositionLetterFrequencies> frequencies = GetLetterFrequenciesInUnknownPositions(allWords, unknownPositions, allLetters);
-
+            List<PositionLetterFrequencies> wrongPosFrequencies = GetLetterFrequenciesInWrongPositions(words, wrongPosLetters);
             List<WordProbability> wordScores = new List<WordProbability>();
             foreach (var word in words)
             {
-                wordScores.Add(GetWordScoreByLetterDistribution(word, frequencies));
+                wordScores.Add(GetWordScoreByLetterDistribution(word, frequencies, wrongPosFrequencies));
             }
 
             return wordScores.OrderBy(w => w.Score).Reverse().ToList();
@@ -1448,7 +1710,7 @@ namespace WordleSolverAPI.Logic
         public static WordProbability GetWordScoreByLetterDistribution(string word,
             List<PositionLetterFrequencies> positionLetterFrequencies)
         {
-            int score = 0;
+            double score = 0;
             foreach (var frequency in positionLetterFrequencies)
             {
                 string posLetter = word.Substring(frequency.Position, 1);
@@ -1457,6 +1719,44 @@ namespace WordleSolverAPI.Logic
                     if (letter.Letter == posLetter)
                     {
                         score += letter.Count;
+                        break;
+                    }
+                }
+            }
+
+            return new WordProbability()
+            {
+                Word = word,
+                Score = score
+            };
+        }
+
+        public static WordProbability GetWordScoreByLetterDistribution(string word,
+            List<PositionLetterFrequencies> positionLetterFrequencies,
+            List<PositionLetterFrequencies> wrongLetterFrequencies)
+        {
+            double score = 0;
+            foreach (var frequency in positionLetterFrequencies)
+            {
+                string posLetter = word.Substring(frequency.Position, 1);
+                foreach (var letter in frequency.LetterCounts)
+                {
+                    if (letter.Letter == posLetter)
+                    {
+                        score += letter.Count;
+                        break;
+                    }
+                }
+            }
+
+            foreach (var frequency in wrongLetterFrequencies)
+            {
+                string posLetter = word.Substring(frequency.Position, 1);
+                foreach (var letter in frequency.LetterCounts)
+                {
+                    if (letter.Letter == posLetter)
+                    {
+                        score += (letter.Count * 0.5);
                         break;
                     }
                 }
@@ -1480,6 +1780,38 @@ namespace WordleSolverAPI.Logic
                     Position = position,
                     LetterCounts = GetLetterFrequenciesInPosition(words, position, letters)
                 });
+            }
+            return positionFrequencies;
+        }
+
+        public static List<PositionLetterFrequencies> GetLetterFrequenciesInWrongPositions(List<string> words,
+            List<LetterWrongPositions> wrongPosLetters)
+        {
+            List<PositionLetterFrequencies> positionFrequencies = new List<PositionLetterFrequencies>();
+            int[] allPos = new int[] { 0, 1, 2, 3, 4 };
+            for (int i = 0; i < allPos.Length; i++)
+            {
+                int pos = allPos[i];
+                int letterCount = 0;
+                List<string> lettersList = new List<string>();
+                foreach (var letter in wrongPosLetters)
+                {
+                    if (letter.PossiblePositions.Contains(pos))
+                    {
+                        letterCount++;
+                        lettersList.Add(letter.Letter);
+                    }
+                }
+                string[] lettersArray = lettersList.ToArray();
+                List<LetterCount> letterCounts = GetLetterFrequenciesInPosition(words, pos, lettersArray);
+                if (letterCounts.Count != 0)
+                {
+                    positionFrequencies.Add(new PositionLetterFrequencies()
+                    {
+                        Position = pos,
+                        LetterCounts = letterCounts
+                    });
+                }
             }
             return positionFrequencies;
         }
