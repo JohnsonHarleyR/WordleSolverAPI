@@ -1831,14 +1831,31 @@ namespace WordleSolverAPI.Logic
             return letterCounts.OrderBy(w => w.Count).Reverse().ToList();
         }
 
-        public static bool DoesWordExist(string word)
+        public static bool DoesWordExist(string word, bool isForContest = false,
+            bool userIsGuessing = true)
         {
-            List<string> words = GetAllWords(WordListType.Full);
+            List<string> words;
+            if (userIsGuessing)
+            {
+                words = GetAllWords(WordListType.Full);
+            }
+            else
+            {
+                if (isForContest)
+                {
+                    words = GetAllWords(WordListType.WordleCommon);
+                }
+                else
+                {
+                    words = GetAllWords(WordListType.Scrabble);
+                }
+            }
+
             bool doesExist = false;
 
             foreach (var w in words)
             {
-                if (w.Trim() == word)
+                if (w.ToLower().Trim() == word)
                 {
                     doesExist = true;
                     break;

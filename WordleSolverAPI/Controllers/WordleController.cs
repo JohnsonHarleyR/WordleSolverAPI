@@ -56,9 +56,10 @@ namespace WordleSolverAPI.Controllers
         }
 
         [HttpGet]
-        public ActionResult DoesWordExist(string word)
+        public ActionResult DoesWordExist(string word, bool isForContest = false,
+            bool userIsGuessing = true)
         {
-            return new JsonResult(WordSorter.DoesWordExist(word));
+            return new JsonResult(WordSorter.DoesWordExist(word, isForContest, userIsGuessing));
         }
 
         [HttpGet]
